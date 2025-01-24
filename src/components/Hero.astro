@@ -1,18 +1,52 @@
 ---
 // import { Image } from "astro:assets";
 import { Image } from "@unpic/astro";
+import bgAi from "../assets/bg-ai.jpg";
+import bgFintech from "../assets/bg-fintech.jpg";
 import bgHome from "../assets/bg-home.jpg";
+import bgMedtech from "../assets/bg-medtech.jpg";
 ---
 
 <section class="hero">
   <div class="hero-background">
-    <Image
-      src={bgHome}
-      width={bgHome.width}
-      height={bgHome.height}
-      alt="Hero Background"
-      class="hero-image"
-    />
+    <div class="carousel">
+      <div class="carousel-slide" data-index="0">
+        <Image
+          src={bgHome}
+          width={bgHome.width}
+          height={bgHome.height}
+          alt="Hero Background"
+          class="hero-image"
+        />
+      </div>
+      <div class="carousel-slide" data-index="1">
+        <Image
+          src={bgAi}
+          width={bgAi.width}
+          height={bgAi.height}
+          alt="AI integrations"
+          class="hero-image"
+        />
+      </div>
+      <div class="carousel-slide" data-index="2">
+        <Image
+          src={bgMedtech}
+          width={bgMedtech.width}
+          height={bgMedtech.height}
+          alt="Digital health"
+          class="hero-image"
+        />
+      </div>
+      <div class="carousel-slide" data-index="3">
+        <Image
+          src={bgFintech}
+          width={bgFintech.width}
+          height={bgFintech.height}
+          alt="Fintech"
+          class="hero-image"
+        />
+      </div>
+    </div>
   </div>
   <div class="hero-content">
     <h1>Building AI-Powered<br />Web Solutions</h1>
@@ -46,7 +80,7 @@ import bgHome from "../assets/bg-home.jpg";
     left: 0;
     width: 100%;
     height: 100%;
-    /* z-index: -1; */
+    z-index: 0;
   }
 
   .hero-background::before {
@@ -59,10 +93,37 @@ import bgHome from "../assets/bg-home.jpg";
     background: linear-gradient(
       90deg,
       rgba(0, 0, 0, 0.85) 0%,
-      rgba(0, 0, 0, 0.7) 75%,
+      rgba(0, 0, 0, 0.6) 45%,
       rgba(0, 0, 0, 0.4) 100%
     );
-    z-index: 1;
+    z-index: 2;
+  }
+
+  .carousel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  .carousel-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    will-change: opacity, transform;
+    transform: translateZ(0) scale(1);
+    backface-visibility: hidden;
+    perspective: 1000px;
+    transition:
+      opacity 0.8s ease-in-out,
+      transform 2s ease-in-out;
+  }
+
+  .carousel-slide.active {
+    opacity: 1;
+    transform: translateZ(0) scale(1.05);
   }
 
   .hero-image {
@@ -85,9 +146,9 @@ import bgHome from "../assets/bg-home.jpg";
   }
 
   .hero-content {
-    max-width: 600px;
     position: relative;
     z-index: 2;
+    max-width: 600px;
   }
 
   h1 {
@@ -139,3 +200,27 @@ import bgHome from "../assets/bg-home.jpg";
     background-color: rgba(255, 255, 255, 0.1);
   }
 </style>
+
+<script>
+  let currentSlide = 0;
+  const slides = document.querySelectorAll(".carousel-slide");
+  const totalSlides = slides.length;
+
+  function showSlide(index: number) {
+    slides.forEach((slide) => {
+      slide.classList.remove("active");
+    });
+    slides[index].classList.add("active");
+  }
+
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % totalSlides;
+    showSlide(currentSlide);
+  }
+
+  // Initialize first slide
+  showSlide(0);
+
+  // Start the carousel
+  setInterval(nextSlide, 6000);
+</script>
