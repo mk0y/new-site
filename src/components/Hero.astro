@@ -5,6 +5,7 @@ import bgAi from "../assets/bg-ai.jpg";
 import bgFintech from "../assets/bg-fintech.jpg";
 import bgHome from "../assets/bg-home.jpg";
 import bgMedtech from "../assets/bg-medtech.jpg";
+import HeroItems from "./HeroItems.astro";
 ---
 
 <section class="hero">
@@ -60,6 +61,7 @@ import bgMedtech from "../assets/bg-medtech.jpg";
       <button class="secondary">Learn More</button>
     </div>
   </div>
+  <HeroItems client:load />
 </section>
 
 <style>
@@ -211,6 +213,13 @@ import bgMedtech from "../assets/bg-medtech.jpg";
       slide.classList.remove("active");
     });
     slides[index].classList.add("active");
+
+    // Dispatch custom event for slide change
+    document.dispatchEvent(
+      new CustomEvent("slideChange", {
+        detail: { currentSlide: index },
+      })
+    );
   }
 
   function nextSlide() {

@@ -1,0 +1,119 @@
+---
+const items = [
+  "Web & App Development",
+  "AI Integrations & Development",
+  "Digital Health Solutions",
+  "Fintech Solutions & Integrations",
+];
+---
+
+<div class="industry-items">
+  {
+    items.map((item, index) => (
+      <div class="industry-item">
+        <div class="loading-bar">
+          <div class="loading-progress" data-index={index} />
+        </div>
+        <h3>{item}</h3>
+      </div>
+    ))
+  }
+</div>
+
+<style>
+  .industry-items {
+    position: absolute;
+    bottom: 2rem;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    z-index: 2;
+    padding: 0 4%;
+  }
+
+  .industry-item {
+    flex: 1;
+    max-width: 300px;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    position: relative;
+    transition: all 0.3s ease;
+    overflow: hidden;
+  }
+
+  .loading-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+  }
+
+  .loading-progress {
+    width: 100%;
+    height: 100%;
+    background: white;
+    transform: translateX(-100%);
+  }
+
+  .loading-progress.active {
+    animation: loading 6s linear;
+  }
+
+  @keyframes loading {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  .industry-item::after {
+    content: "";
+    position: absolute;
+    inset: 2px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 6px;
+    z-index: -1;
+  }
+
+  .industry-item:hover {
+    transform: translateY(-5px);
+  }
+
+  .industry-item h3 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+    color: white;
+  }
+
+  @media (max-width: 768px) {
+    .industry-items {
+      display: none;
+    }
+  }
+</style>
+
+<script>
+  function updateLoadingBars(currentSlide: number) {
+    const progressBars = document.querySelectorAll(".loading-progress");
+    progressBars.forEach((bar) => bar.classList.remove("active"));
+    progressBars[currentSlide].classList.add("active");
+  }
+
+  // Listen for slide changes
+  document.addEventListener("slideChange", ((event: CustomEvent) => {
+    updateLoadingBars(event.detail.currentSlide);
+  }) as EventListener);
+
+  // Initialize first loading bar
+  updateLoadingBars(0);
+</script>
