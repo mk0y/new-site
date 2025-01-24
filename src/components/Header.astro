@@ -1,0 +1,231 @@
+---
+import { ChevronDown, Menu, Search, X } from "lucide-astro";
+---
+
+<header
+  class="fixed w-full top-0 z-50 bg-transparent py-4 border-b border-white/20"
+>
+  <div class="container mx-auto px-4 md:px-6">
+    <nav class="flex items-center justify-between">
+      <!-- Logo -->
+      <a href="/" class="text-2xl font-bold text-white">Nearup</a>
+
+      <!-- Desktop Navigation -->
+      <div class="hidden md:flex items-center space-x-8">
+        <a href="/" class="text-white hover:text-gray-200">Home Page</a>
+        <a href="/services" class="text-white hover:text-gray-200"
+          >Our Services</a
+        >
+        <a href="/success-stories" class="text-white hover:text-gray-200"
+          >Success Stories</a
+        >
+        <div class="relative group">
+          <button class="flex items-center text-white hover:text-gray-200">
+            Resources
+            <ChevronDown class="w-4 h-4 ml-1" />
+          </button>
+          <div
+            class="absolute hidden group-hover:block w-48 bg-white rounded-lg shadow-lg py-2 mt-2"
+          >
+            <a
+              href="/blog"
+              class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Blog</a
+            >
+            <a
+              href="/docs"
+              class="block px-4 py-2 text-gray-800 hover:bg-gray-100"
+              >Documentation</a
+            >
+            <a
+              href="/guides"
+              class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Guides</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- Search Component -->
+      <div class="hidden md:flex items-center">
+        <div class="relative" id="search-container">
+          <button
+            class="text-white p-2 hover:text-gray-200 transition-colors"
+            id="search-toggle"
+          >
+            <Search class="w-5 h-5" />
+          </button>
+          <div
+            class="absolute right-0 top-full mt-2 hidden"
+            id="search-input-container"
+          >
+            <div
+              class="flex items-center bg-white rounded-lg shadow-lg overflow-hidden"
+            >
+              <input
+                type="text"
+                placeholder="Search..."
+                class="w-64 px-4 py-2 text-gray-800 focus:outline-none"
+                id="search-input"
+              />
+              <button
+                class="p-2 text-gray-600 hover:text-gray-800"
+                id="search-close"
+              >
+                <X class="w-5 h-5" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button class="md:hidden text-white" id="mobile-menu-button">
+        <Menu class="w-6 h-6" />
+      </button>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <div class="md:hidden hidden" id="mobile-menu">
+      <div class="pt-4 pb-3 space-y-3">
+        <a href="/" class="block text-white hover:text-gray-200">Home Page</a>
+        <a href="/services" class="block text-white hover:text-gray-200"
+          >Our Services</a
+        >
+        <a href="/success-stories" class="block text-white hover:text-gray-200"
+          >Success Stories</a
+        >
+        <button
+          class="flex items-center text-white hover:text-gray-200 w-full justify-between"
+          id="mobile-resources-button"
+        >
+          Resources
+          <ChevronDown class="w-4 h-4" />
+        </button>
+        <div class="hidden pl-4 space-y-2" id="mobile-resources-menu">
+          <a href="/blog" class="block text-white hover:text-gray-200">Blog</a>
+          <a href="/docs" class="block text-white hover:text-gray-200"
+            >Documentation</a
+          >
+          <a href="/guides" class="block text-white hover:text-gray-200"
+            >Guides</a
+          >
+        </div>
+        <!-- Mobile Search -->
+        <div class="relative mt-4">
+          <div class="flex items-center bg-white/10 rounded-lg overflow-hidden">
+            <input
+              type="text"
+              placeholder="Search..."
+              class="w-full px-4 py-2 bg-transparent text-white placeholder-gray-300 focus:outline-none"
+            />
+            <button class="p-2 text-white">
+              <Search class="w-5 h-5" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<script>
+  // Mobile menu toggle
+  const mobileMenuButton = document.getElementById("mobile-menu-button");
+  const mobileMenu = document.getElementById("mobile-menu");
+  const mobileResourcesButton = document.getElementById(
+    "mobile-resources-button"
+  );
+  const mobileResourcesMenu = document.getElementById("mobile-resources-menu");
+
+  // Search functionality
+  const searchToggle = document.getElementById("search-toggle");
+  const searchContainer = document.getElementById("search-container");
+  const searchInputContainer = document.getElementById(
+    "search-input-container"
+  );
+  const searchInput = document.getElementById(
+    "search-input"
+  ) as HTMLInputElement;
+  const searchClose = document.getElementById("search-close");
+
+  mobileMenuButton?.addEventListener("click", () => {
+    mobileMenu?.classList.toggle("hidden");
+  });
+
+  mobileResourcesButton?.addEventListener("click", () => {
+    mobileResourcesMenu?.classList.toggle("hidden");
+  });
+
+  // Handle search toggle with animation
+  searchToggle?.addEventListener("click", (e) => {
+    e.stopPropagation();
+    searchInputContainer?.classList.remove("hidden");
+    setTimeout(() => searchInput?.focus(), 100);
+  });
+
+  searchClose?.addEventListener("click", (e) => {
+    e.stopPropagation();
+    if (searchInput) searchInput.value = "";
+    searchInputContainer?.classList.add("hidden");
+  });
+
+  // Close search on click outside
+  document.addEventListener("click", (event) => {
+    const target = event.target as HTMLElement;
+    if (!searchContainer?.contains(target)) {
+      if (searchInput) searchInput.value = "";
+      searchInputContainer?.classList.add("hidden");
+    }
+  });
+</script>
+
+<style>
+  /* Add backdrop blur when scrolling */
+  header {
+    transition: background-color 0.3s ease;
+  }
+
+  header.scrolled {
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(8px);
+  }
+
+  /* Enhanced Search animation */
+  #search-input-container {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px) scale(0.95);
+  }
+
+  #search-input-container:not(.hidden) {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+  }
+
+  /* Search input animation */
+  #search-input {
+    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    width: 200px;
+  }
+
+  #search-input:focus {
+    width: 300px;
+  }
+
+  /* Mobile search animation */
+  .mobile-search-enter {
+    animation: slideDown 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
