@@ -48,7 +48,17 @@
     "aiPoweredChatbots": "AI-Powered Chatbots",
     "ragRetrievalAugmentedGeneration": "RAG (Retrieval-Augmented Generation)",
     "careers": "Careers",
-    "contact": "Contact"
+    "contact": "Contact",
+    "innovative": "Innovative",
+    "servicesHeadline": "Our Comprehensive Services for Your Business",
+    "servicesSubheadline": "NearUp offers tailored software development, IT consulting, nearshoring, and AI development. Our solutions are designed to meet your company's specific requirements.",
+    "softwareDevelopmentDesc": "We develop custom software solutions that optimize your business processes.",
+    "itConsultingDesc": "Our experts help you optimize your IT strategy.",
+    "nearshoringDesc": "Use our nearby resources for your projects.",
+    "aiSolutionsDesc": "Cutting-edge AI solutions for your business challenges.",
+    "learnMore": "Learn More",
+    "advantagesHeadline": "The Benefits of NearUp at a Glance",
+    "advantagesSubheadline": "With NearUp, you receive tailored solutions that are perfectly aligned with your business needs. Our industry expertise and innovative approaches guarantee you a competitive advantage."
   },
   "footer": {
     "quickLinks": "Quick Links",
