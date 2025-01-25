@@ -1,0 +1,25 @@
+{
+  "common": {
+    "home": "Startseite",
+    "aboutUs": "Über Uns",
+    "blog": "Blog",
+    "homePage": "Startseite",
+    "ourServices": "Unsere Services",
+    "successStories": "Erfolgsszenarien",
+    "softwareDevelopment": "Software Entwicklung",
+    "aiIntegrations": "KI Integration",
+    "aiSolutions": "KI Lösungen",
+    "aiConsulting": "KI Beratung",
+    "consulting": "Beratung"
+  },
+  "footer": {
+    "quickLinks": "Quick Links",
+    "legalDocuments": "Rechtliches",
+    "socialMedia": "Social Media",
+    "cookiePrivacyPolicy": "Cookie & Privacy Policy",
+    "imprint": "Impressum",
+    "ourServices": "Unsere Services",
+    "tagline": "NearUp verbindet SMBs und SMEs mit einem Full-Cycle-KI-Integration, Web- und Mobilsoftware-Entwicklungsteam, um Lösungen zu entwickeln, die ihren spezifischen Anforderungen entsprechen.",
+    "copyright": "ALLE RECHTE VORBEHALTEN FÜR NEARUP.IO UND NEARUP-IT.DE."
+  }
+}

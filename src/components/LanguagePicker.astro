@@ -1,0 +1,85 @@
+---
+import ChevronDown from "../icons/ChevronDown.astro";
+const { currentLang } = Astro.props;
+---
+
+<!-- Language Picker -->
+<div class="relative" id="language-container">
+  <button
+    class="flex items-center text-white hover:text-gray-200 space-x-1 px-2 py-1 rounded-md transition-colors"
+    id="language-toggle"
+  >
+    <span class="text-sm font-medium">{currentLang.toUpperCase()}</span>
+    <ChevronDown
+      classes="w-4 h-4 transform transition-transform duration-300 ease-in-out"
+    />
+  </button>
+  <div class="absolute right-0 top-full hidden w-32" id="language-menu">
+    <div class="h-2 -mt-2"></div>
+    <div
+      class="bg-black/20 backdrop-blur-xl rounded-lg shadow-lg py-2 border border-white/10"
+    >
+      <a
+        href={import.meta.env.PUBLIC_SITE_URL_EN}
+        class="w-full text-left px-4 py-2 text-white hover:bg-white/10 flex items-center space-x-2 transition-colors"
+        data-lang="en"
+      >
+        <span class="w-6">🇬🇧</span>
+        <span>English</span>
+      </a>
+      <a
+        href={import.meta.env.PUBLIC_SITE_URL_DE}
+        class="w-full text-left px-4 py-2 text-white hover:bg-white/10 flex items-center space-x-2 transition-colors"
+        data-lang="de"
+      >
+        <span class="w-6">🇩🇪</span>
+        <span>Deutsch</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Language picker functionality
+  const languageToggle = document.getElementById("language-toggle");
+  const languageContainer = document.getElementById("language-container");
+  const languageMenu = document.getElementById("language-menu");
+  const languageButtons = document.querySelectorAll("[data-lang]");
+
+  // Language picker handlers
+  languageToggle?.addEventListener("click", (e) => {
+    e.stopPropagation();
+    const chevron = languageToggle.querySelector("svg");
+    chevron?.classList.toggle("rotate-180");
+    languageMenu?.classList.toggle("hidden");
+  });
+
+  // Close dropdowns on click outside
+  document.addEventListener("click", (event) => {
+    const target = event.target as HTMLElement;
+
+    // Close language menu
+    if (!languageContainer?.contains(target)) {
+      const chevron = languageToggle?.querySelector("svg");
+      chevron?.classList.remove("rotate-180");
+      languageMenu?.classList.add("hidden");
+    }
+  });
+</script>
+
+<style>
+  /* Language menu animation */
+  #language-menu {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+  }
+
+  #language-menu:not(.hidden) {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+</style>
+

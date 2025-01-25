@@ -1,0 +1,125 @@
+---
+import { getCurrentLang, getCurrentTranslations } from "../utils";
+
+const lang = getCurrentLang(Astro.url.host);
+const i18nData = await getCurrentTranslations(lang);
+const year = new Date().getFullYear();
+---
+
+<footer class="bg-gray-c text-white-text py-16 color-white-text">
+  <div class="container mx-auto px-4">
+    <div class="grid grid-cols-1 md:grid-cols-5 gap-8 mb-16">
+      <!-- Logo and Description -->
+      <div class="col-span-1">
+        <a
+          href="/"
+          class="mb-6 flex items-center gap-2 hover:text-primary-1a transition-colors w-fit"
+        >
+          <img src={import.meta.env.PUBLIC_LOGO_URL} alt={import.meta.env.PUBLIC_SITE_NAME} class="h-8" />
+          <span class="text-2xl font-bold">{import.meta.env.PUBLIC_SITE_NAME}</span>
+        </a>
+        <p class="text-sm leading-relaxed opacity-90">
+          {i18nData.footer.tagline}
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-span-1">
+        <h3 class="text-primary-1a font-medium mb-6">
+          {i18nData.footer.quickLinks}
+        </h3>
+        <nav class="space-y-4">
+          <a
+            href="/"
+            class="block text-sm hover:text-primary-1a transition-colors w-fit"
+            >{i18nData.common.home}</a
+          >
+          <a
+            href="/about"
+            class="block text-sm hover:text-primary-1a transition-colors w-fit"
+            >{i18nData.common.aboutUs}</a
+          >
+          <a
+            href="/services"
+            class="block text-sm hover:text-primary-1a transition-colors w-fit"
+            >{i18nData.common.aiConsulting}</a
+          >
+          <a
+            href="/blog"
+            class="block text-sm hover:text-primary-1a transition-colors w-fit"
+            >Blog</a
+          >
+        </nav>
+      </div>
+
+      <!-- Our Services -->
+      <div class="col-span-1">
+        <h3 class="text-primary-1a font-medium mb-6">
+          {i18nData.footer.ourServices}
+        </h3>
+        <nav class="space-y-4">
+          <a
+            href="/about"
+            class="block text-sm hover:text-primary-1a transition-colors w-fit"
+            >{i18nData.common.aiIntegrations}</a
+          >
+          <a
+            href="/services"
+            class="block text-sm hover:text-primary-1a transition-colors w-fit"
+            >{i18nData.common.aiSolutions}</a
+          >
+          <a
+            href="/"
+            class="block text-sm hover:text-primary-1a transition-colors w-fit"
+            >{i18nData.common.softwareDevelopment}</a
+          >
+          <a
+            href="/"
+            class="block text-sm hover:text-primary-1a transition-colors w-fit"
+            >{i18nData.common.consulting}</a
+          >
+        </nav>
+      </div>
+
+      <!-- Legal Documents -->
+      <div class="col-span-1">
+        <h3 class="text-primary-1a font-medium mb-6">
+          {i18nData.footer.legalDocuments}
+        </h3>
+        <nav class="space-y-4">
+          <a
+            href="/privacy"
+            class="block text-sm hover:text-primary-1a transition-colors w-fit"
+            >{i18nData.footer.cookiePrivacyPolicy}</a
+          >
+          <a
+            href={lang === "en" ? "/imprint" : "/impressum"}
+            class="block text-sm hover:text-primary-1a transition-colors w-fit"
+            >{i18nData.footer.imprint}</a
+          >
+        </nav>
+      </div>
+
+      <!-- Social Media -->
+      <div class="col-span-1">
+        <h3 class="text-primary-1a font-medium mb-6">
+          {i18nData.footer.socialMedia}
+        </h3>
+        <nav class="space-y-4">
+          <a
+            href="https://linkedin.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="block text-sm hover:text-primary-1a transition-colors w-fit"
+            >LinkedIn</a
+          >
+        </nav>
+      </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="text-sm text-center pt-8 border-t border-white-borders/20">
+      © {year} {i18nData.footer.copyright}
+    </div>
+  </div>
+</footer>

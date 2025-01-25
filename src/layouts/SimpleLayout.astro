@@ -3,6 +3,7 @@
 import "@fontsource-variable/quicksand";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import Container from "../components/Container.astro";
 ---
 
 <!doctype html>
@@ -12,11 +13,17 @@ import Footer from "../components/Footer.astro";
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>{import.meta.env.PUBLIC_SITE_NAME} - AI & Web Development Agency</title>
+    <title>
+      {import.meta.env.PUBLIC_SITE_NAME} - AI & Web Development Agency
+    </title>
   </head>
   <body>
-    <Header />
-    <slot />
+    <Header isStatic={false} />
+    <Container>
+      <slot />
+    </Container>
+    <!-- spacer -->
+    <div class="h-20"></div>
     <Footer />
   </body>
 </html>
@@ -27,7 +34,7 @@ import Footer from "../components/Footer.astro";
     margin: 0;
     width: 100%;
     height: 100%;
-    background-color: #000000;
+    background-color: #ffffff;
     font-family: "Quicksand Variable", sans-serif;
   }
 </style>
