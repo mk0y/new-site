@@ -3,7 +3,7 @@ import ChevronDown from "../icons/ChevronDown.astro";
 import Search from "../icons/Search.astro";
 import X from "../icons/X.astro";
 import Menu from "../icons/Menu.astro";
-import { getCurrentLang, getCurrentTranslations } from "../utils";
+import { getCurrentLang, getCurrentTranslations, kebabCase } from "../utils";
 import LanguagePicker from "./LanguagePicker.astro";
 const currentLang = getCurrentLang(Astro.url.host);
 const i18nData = await getCurrentTranslations(currentLang);
@@ -13,10 +13,10 @@ const { isStatic = true, type = "white" } = Astro.props;
 <header
   id="site-header"
   class:list={[
-    "fixed w-full group top-0 z-50 py-4 border-b border-white/20",
-    // isStatic ? "fixed" : "relative mb-20",
+    "fixed w-full z-50 py-4 border-b border-white/20 transition-all duration-300",
     type === "black" ? "bg-black" : "bg-transparent",
   ]}
+  style="top: var(--top-header-height, 0);"
 >
   <div class="container mx-auto px-4 md:px-6">
     <nav class="flex items-center justify-between">
@@ -36,57 +36,322 @@ const { isStatic = true, type = "white" } = Astro.props;
       </a>
 
       <!-- Desktop Navigation -->
-      <div class="hidden md:flex items-center space-x-8">
-        <a href="/" class="text-white hover:text-gray-200"
-          >{i18nData.common.homePage}</a
+      <div class="hidden md:flex items-center space-x-8 main-nav">
+        <a href="/" class="nav-item text-white hover:text-primary-1a"
+          >{i18nData.common.home}</a
         >
-        <a href="/services" class="text-white hover:text-gray-200"
-          >{i18nData.common.ourServices}</a
-        >
-        <a href="/success-stories" class="text-white hover:text-gray-200"
-          >{i18nData.common.successStories}</a
-        >
-        <div class="relative submenu-group group">
+        <div class="relative mega-menu-group">
           <button
-            class="flex items-center gap-0.5 text-white hover:text-gray-200"
+            class="nav-item flex cursor-pointer items-center gap-0.5 text-white hover:text-primary-1a"
+            id="services-menu-button"
+            aria-expanded="false"
           >
-            Resources
+            {i18nData.common.services}
             <ChevronDown
-              classes="mt-0.5 transform transition-transform duration-300 ease-in-out group-hover:rotate-180"
+              classes="mt-0.5 transform transition-transform duration-300 ease-in-out"
             />
           </button>
-          <div class="absolute hidden group-hover:block w-48 top-full">
-            <div class="h-2 -mt-1"></div>
+          <div
+            class="fixed hidden w-[90vw] left-1/2 -translate-x-1/2"
+            id="services-menu"
+            role="menu"
+            aria-labelledby="services-menu-button"
+            style="top: var(--header-height);"
+          >
+            <div class="h-4"></div>
             <div
               class:list={[
-                "submenu backdrop-blur-xl rounded-lg shadow-lg py-2 border border-white/10",
-                type === "black" ? "bg-black/80" : "bg-black/20",
+                "mega-menu backdrop-blur-xl rounded-lg shadow-lg py-8 border border-white/10 grid grid-cols-4 gap-8 px-12",
+                type === "black" ? "bg-black/95" : "bg-black/95",
               ]}
             >
-              <a
-                href="/blog"
-                class="block px-4 py-2 text-white hover:bg-white/10 transition-colors"
-                >Blog</a
-              >
-              <a
-                href="/docs"
-                class="block px-4 py-2 text-white hover:bg-white/10 transition-colors"
-                >Documentation</a
-              >
-              <a
-                href="/guides"
-                class="block px-4 py-2 text-white hover:bg-white/10 transition-colors"
-                >Guides</a
-              >
+              <!-- Software Development Column -->
+              <div class="space-y-4">
+                <h3 class="text-primary-1a font-semibold text-lg">
+                  {i18nData.common.softwareDevelopment}
+                </h3>
+                <ul class="space-y-2">
+                  <li>
+                    <a
+                      href="/services/custom-software-development"
+                      class="text-white/90 hover:text-primary-1a transition-colors text-sm block"
+                      >{i18nData.common.customSoftwareDevelopment}</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="/services/web-development"
+                      class="text-white/90 hover:text-primary-1a transition-colors text-sm block"
+                      >{i18nData.common.webDevelopment}</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="/services/mobile-development"
+                      class="text-white/90 hover:text-primary-1a transition-colors text-sm block"
+                      >{i18nData.common.mobileAppDevelopment}</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="/services/cloud-development"
+                      class="text-white/90 hover:text-primary-1a transition-colors text-sm block"
+                      >{i18nData.common.cloudDevelopment}</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="/services/api-development"
+                      class="text-white/90 hover:text-primary-1a transition-colors text-sm block"
+                      >{i18nData.common.apiDevelopment}</a
+                    >
+                  </li>
+                </ul>
+              </div>
+
+              <!-- IT Consulting Column -->
+              <div class="space-y-4">
+                <h3 class="text-primary-1a font-semibold text-lg">
+                  {i18nData.common.itConsulting}
+                </h3>
+                <ul class="space-y-2">
+                  <li>
+                    <a
+                      href="/services/it-strategy"
+                      class="text-white/90 hover:text-primary-1a transition-colors text-sm block"
+                      >{i18nData.common.itStrategyAndPlanning}</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="/services/technology-assessment"
+                      class="text-white/90 hover:text-primary-1a transition-colors text-sm block"
+                      >{i18nData.common.technologyAssessmentAndSelection}</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="/services/infrastructure-consulting"
+                      class="text-white/90 hover:text-primary-1a transition-colors text-sm block"
+                      >{i18nData.common.infrastructureConsulting}</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="/services/cybersecurity-consulting"
+                      class="text-white/90 hover:text-primary-1a transition-colors text-sm block"
+                      >{i18nData.common.cybersecurityConsulting}</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="/services/digital-transformation"
+                      class="text-white/90 hover:text-primary-1a transition-colors text-sm block"
+                      >{i18nData.common.digitalTransformationConsulting}</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="/services/compliance-risk"
+                      class="text-white/90 hover:text-primary-1a transition-colors text-sm block"
+                      >{i18nData.common.complianceAndRiskManagement}</a
+                    >
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Nearshoring Column -->
+              <div class="space-y-4">
+                <h3 class="text-primary-1a font-semibold text-lg">
+                  {i18nData.common.nearshoring}
+                </h3>
+                <ul class="space-y-2">
+                  <li>
+                    <a
+                      href="/services/dedicated-teams"
+                      class="text-white/90 hover:text-primary-1a transition-colors text-sm block"
+                      >{i18nData.common.dedicatedDevelopmentTeams}</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="/services/project-nearshoring"
+                      class="text-white/90 hover:text-primary-1a transition-colors text-sm block"
+                      >{i18nData.common.projectBasedNearshoring}</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="/services/staff-augmentation"
+                      class="text-white/90 hover:text-primary-1a transition-colors text-sm block"
+                      >{i18nData.common.staffAugmentation}</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="/services/quality-assurance"
+                      class="text-white/90 hover:text-primary-1a transition-colors text-sm block"
+                      >{i18nData.common.qualityAssuranceAndTesting}</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="/services/maintenance-support"
+                      class="text-white/90 hover:text-primary-1a transition-colors text-sm block"
+                      >{i18nData.common.maintenanceAndSupport}</a
+                    >
+                  </li>
+                </ul>
+              </div>
+
+              <!-- AI Development Column -->
+              <div class="space-y-4">
+                <h3 class="text-primary-1a font-semibold text-lg">
+                  {i18nData.common.aiDevelopment}
+                </h3>
+                <ul class="space-y-2">
+                  <li>
+                    <a
+                      href="/services/machine-learning"
+                      class="text-white/90 hover:text-primary-1a transition-colors text-sm block"
+                      >{i18nData.common.machineLearningSolutions}</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="/services/nlp"
+                      class="text-white/90 hover:text-primary-1a transition-colors text-sm block"
+                      >{i18nData.common.naturalLanguageProcessing}</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="/services/computer-vision"
+                      class="text-white/90 hover:text-primary-1a transition-colors text-sm block"
+                      >{i18nData.common.computerVisionApplications}</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="/services/predictive-analytics"
+                      class="text-white/90 hover:text-primary-1a transition-colors text-sm block"
+                      >{i18nData.common.predictiveAnalytics}</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="/services/ai-chatbots"
+                      class="text-white/90 hover:text-primary-1a transition-colors text-sm block"
+                      >{i18nData.common.aiPoweredChatbots}</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="/services/rag"
+                      class="text-white/90 hover:text-primary-1a transition-colors text-sm block"
+                      >{i18nData.common.ragRetrievalAugmentedGeneration}</a
+                    >
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
+        <div class="relative submenu-group">
+          <button
+            class="nav-item flex cursor-pointer items-center gap-0.5 text-white hover:text-primary-1a"
+            id="industries-menu-button"
+            aria-expanded="false"
+          >
+            {i18nData.common.industries}
+            <ChevronDown
+              classes="mt-0.5 transform transition-transform duration-300 ease-in-out"
+            />
+          </button>
+          <div
+            class="absolute hidden w-64"
+            id="industries-menu"
+            role="menu"
+            aria-labelledby="industries-menu-button"
+            style="top: calc(var(--header-height) - var(--current-top)); left: 0;"
+          >
+            <div class="h-4"></div>
+            <div
+              class:list={[
+                "backdrop-blur-xl rounded-lg shadow-lg py-2 border border-white/10",
+                type === "black" ? "bg-black/95" : "bg-black/95",
+              ]}
+            >
+              <a
+                href={`/${kebabCase(i18nData.common.startups)}`}
+                class="block px-4 py-2 text-white/90 hover:text-primary-1a hover:bg-white/5 transition-colors text-sm"
+              >
+                {i18nData.common.startups}
+              </a>
+              <a
+                href={`/${kebabCase(i18nData.common.healthcare)}`}
+                class="block px-4 py-2 text-white/90 hover:text-primary-1a hover:bg-white/5 transition-colors text-sm"
+              >
+                {i18nData.common.healthcare}
+              </a>
+              <a
+                href={`/${kebabCase(i18nData.common.fintech)}`}
+                class="block px-4 py-2 text-white/90 hover:text-primary-1a hover:bg-white/5 transition-colors text-sm"
+              >
+                {i18nData.common.fintech}
+              </a>
+              <a
+                href={`/${kebabCase(i18nData.common.retail)}`}
+                class="block px-4 py-2 text-white/90 hover:text-primary-1a hover:bg-white/5 transition-colors text-sm"
+              >
+                {i18nData.common.retail}
+              </a>
+              <a
+                href={`/${kebabCase(i18nData.common.media)}`}
+                class="block px-4 py-2 text-white/90 hover:text-primary-1a hover:bg-white/5 transition-colors text-sm"
+              >
+                {i18nData.common.media}
+              </a>
+              <a
+                href={`/${kebabCase(i18nData.common.eCommerce)}`}
+                class="block px-4 py-2 text-white/90 hover:text-primary-1a hover:bg-white/5 transition-colors text-sm"
+              >
+                {i18nData.common.eCommerce}
+              </a>
+              <a
+                href={`/${kebabCase(i18nData.common.automotive)}`}
+                class="block px-4 py-2 text-white/90 hover:text-primary-1a hover:bg-white/5 transition-colors text-sm"
+              >
+                {i18nData.common.automotive}
+              </a>
+              <a
+                href={`/${kebabCase(i18nData.common.transportation)}`}
+                class="block px-4 py-2 text-white/90 hover:text-primary-1a hover:bg-white/5 transition-colors text-sm"
+              >
+                {i18nData.common.transportation}
+              </a>
+            </div>
+          </div>
+        </div>
+        <a
+          href="/success-stories"
+          class="nav-item text-white hover:text-gray-200 relative z-10"
+          >{i18nData.common.aboutUs}</a
+        >
+        <a
+          href="/case-studies"
+          class="nav-item text-white hover:text-gray-200 relative z-10"
+          >{i18nData.common.caseStudies}</a
+        >
+        <a
+          href="/insights"
+          class="nav-item text-white hover:text-gray-200 relative z-10"
+          >{i18nData.common.blog}</a
+        >
       </div>
 
       <!-- Language and Search Container -->
       <div class="hidden md:flex items-center space-x-4">
-        <LanguagePicker currentLang={currentLang} type={type} />
-
         <!-- Search Component -->
         <div class="relative" id="search-container">
           <button
@@ -207,10 +472,95 @@ const { isStatic = true, type = "white" } = Astro.props;
   if (header) {
     const headerHeight = header.offsetHeight;
     header.style.height = `${headerHeight}px`;
-    // document.body.style.marginTop = `${headerHeight}px`;
-    // document.body.style.paddingTop = `${headerHeight}px`;
+    document.documentElement.style.setProperty(
+      "--header-height",
+      `${headerHeight}px`
+    );
   }
-  // Mobile menu toggle
+
+  // Menu functionality
+  const servicesButton = document.getElementById("services-menu-button");
+  const servicesMenu = document.getElementById("services-menu");
+  const industriesButton = document.getElementById("industries-menu-button");
+  const industriesMenu = document.getElementById("industries-menu");
+
+  let activeMenu: HTMLElement | null = null;
+  let activeButton: HTMLElement | null = null;
+
+  const closeActiveMenu = () => {
+    if (activeMenu && activeButton) {
+      activeMenu.classList.add("hidden");
+      activeButton.setAttribute("aria-expanded", "false");
+      activeButton.querySelector("svg")?.classList.remove("rotate-180");
+      activeMenu = null;
+      activeButton = null;
+    }
+  };
+
+  const toggleMenu = (button: HTMLElement, menu: HTMLElement) => {
+    const isOpen = !menu.classList.contains("hidden");
+
+    // Close active menu if it's different from the current one
+    if (activeMenu && activeMenu !== menu) {
+      closeActiveMenu();
+    }
+
+    if (isOpen) {
+      // Close menu
+      menu.classList.add("hidden");
+      button.setAttribute("aria-expanded", "false");
+      button.querySelector("svg")?.classList.remove("rotate-180");
+      activeMenu = null;
+      activeButton = null;
+    } else {
+      // Open menu
+      menu.classList.remove("hidden");
+      button.setAttribute("aria-expanded", "true");
+      button.querySelector("svg")?.classList.add("rotate-180");
+      activeMenu = menu;
+      activeButton = button;
+
+      // Calculate and set current top position for industries menu
+      if (menu.id === "industries-menu") {
+        const buttonRect = button.getBoundingClientRect();
+        document.documentElement.style.setProperty(
+          "--current-top",
+          `${buttonRect.top}px`
+        );
+      }
+    }
+  };
+
+  // Add click handlers
+  servicesButton?.addEventListener("click", (e) => {
+    e.stopPropagation();
+    if (servicesMenu) toggleMenu(servicesButton, servicesMenu);
+  });
+
+  industriesButton?.addEventListener("click", (e) => {
+    e.stopPropagation();
+    if (industriesMenu) toggleMenu(industriesButton, industriesMenu);
+  });
+
+  // Close menus when clicking outside
+  document.addEventListener("click", (e) => {
+    const target = e.target as HTMLElement;
+    if (
+      !target.closest(".mega-menu-group") &&
+      !target.closest(".submenu-group")
+    ) {
+      closeActiveMenu();
+    }
+  });
+
+  // Close menus on escape key
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      closeActiveMenu();
+    }
+  });
+
+  // Mobile menu handlers
   const mobileMenuButton = document.getElementById("mobile-menu-button");
   const mobileMenu = document.getElementById("mobile-menu");
   const mobileResourcesButton = document.getElementById(
@@ -277,6 +627,101 @@ const { isStatic = true, type = "white" } = Astro.props;
   #site-header.scrolled {
     background-color: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(8px);
+  }
+
+  /* Main nav hover effect */
+  .nav-item {
+    position: relative;
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+  }
+
+  .nav-item:hover {
+    color: #3fcf8d;
+    background: rgba(63, 207, 141, 0.1);
+    backdrop-filter: blur(8px);
+  }
+
+  /* Mega menu animation */
+  .mega-menu-group > div {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-12px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none;
+    z-index: 998;
+  }
+
+  .mega-menu-group > div:not(.hidden) {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .mega-menu {
+    transform-origin: top center;
+    box-shadow:
+      0 25px 50px -12px rgba(0, 0, 0, 0.35),
+      0 0 50px -12px rgba(0, 0, 0, 0.25);
+    position: relative;
+  }
+
+  .mega-menu::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(
+      circle at top,
+      rgba(63, 207, 141, 0.05),
+      transparent 70%
+    );
+    pointer-events: none;
+    border-radius: 0.5rem;
+  }
+
+  .mega-menu a {
+    position: relative;
+    transition: all 0.2s ease;
+  }
+
+  .mega-menu a:hover {
+    transform: translateX(4px);
+  }
+
+  .mega-menu a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: -2px;
+    left: 0;
+    background-color: #3fcf8d;
+    transition: width 0.2s ease;
+  }
+
+  .mega-menu a:hover::after {
+    width: 100%;
+  }
+
+  /* Industries submenu animation */
+  .submenu-group > div {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none;
+  }
+
+  .submenu-group > div:not(.hidden) {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
   }
 
   /* Resources submenu animation */

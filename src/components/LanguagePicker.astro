@@ -4,9 +4,9 @@ const { currentLang, type } = Astro.props;
 ---
 
 <!-- Language Picker -->
-<div class="relative" id="language-container">
+<div class="relative mr-0" id="language-container">
   <button
-    class="flex cursor-pointer items-center text-white hover:text-gray-200 space-x-1 px-2 py-1 rounded-md transition-colors"
+    class="flex cursor-pointer hover:*:text-primary-1a items-center text-white hover:text-gray-200 space-x-1 px-2 py-1 rounded-md transition-colors"
     id="language-toggle"
   >
     <span class="text-sm font-medium">{currentLang.toUpperCase()}</span>
@@ -19,7 +19,7 @@ const { currentLang, type } = Astro.props;
     <div
       class:list={[
         "backdrop-blur-xl submenu rounded-lg shadow-lg py-2 border border-white/10",
-        type === "black" ? "bg-black/50" : "bg-black/20",
+        type === "black" ? "bg-black/80" : "bg-black/80",
       ]}
     >
       <a

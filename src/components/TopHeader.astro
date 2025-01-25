@@ -1,0 +1,58 @@
+---
+import { getCurrentLang, getCurrentTranslations, kebabCase } from "../utils";
+import LanguagePicker from "./LanguagePicker.astro";
+const currentLang = getCurrentLang(Astro.url.host);
+const i18nData = await getCurrentTranslations(currentLang);
+const { type = "black" } = Astro.props;
+---
+
+<div
+  id="top-header"
+  class="fixed w-full top-0 z-[9999] bg-black/80 backdrop-blur-md border-b border-white/10 transition-all duration-300"
+>
+  <div class="container mx-auto px-4 md:px-6">
+    <div class="flex items-center justify-end h-8 text-sm">
+      <div class="flex items-center justify-end space-x-6">
+        <a
+          href={`/${kebabCase(i18nData.common.careers)}`}
+          class="text-white hover:text-primary-1a transition-colors"
+          >{i18nData.common.careers}</a
+        >
+        <a
+          href={`/${kebabCase(i18nData.common.contact)}`}
+          class="text-white hover:text-primary-1a transition-colors"
+          >{i18nData.common.contact}</a
+        >
+        <LanguagePicker currentLang={currentLang} type={type} />
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  let lastScrollY = window.scrollY;
+  const topHeader = document.getElementById("top-header");
+  const mainHeader = document.getElementById("site-header");
+
+  if (topHeader && mainHeader) {
+    const topHeaderHeight = topHeader.offsetHeight;
+    document.documentElement.style.setProperty(
+      "--top-header-height",
+      `${topHeaderHeight}px`
+    );
+    mainHeader.style.top = `${topHeaderHeight}px`;
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > lastScrollY && window.scrollY > topHeaderHeight) {
+        // Scrolling down - hide top header
+        topHeader.style.transform = `translateY(-${topHeaderHeight}px)`;
+        mainHeader.style.transform = `translateY(-${topHeaderHeight}px)`;
+      } else {
+        // Scrolling up - show top header
+        topHeader.style.transform = "translateY(0)";
+        mainHeader.style.transform = "translateY(0)";
+      }
+      lastScrollY = window.scrollY;
+    });
+  }
+</script>
