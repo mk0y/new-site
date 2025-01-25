@@ -3,14 +3,16 @@ const {
   class: className = "",
   as: Element = "div",
   type = "white",
+  isContent = false,
 } = Astro.props;
 ---
 
 <Element
   class:list={[
-    "container flex mx-auto px-4 md:px-6 lg:px-8",
+    "container flex flex-col mx-auto px-4 md:px-6 lg:px-8",
     className,
     type === "white" ? "bg-white" : "",
+    isContent ? "content-container" : "",
   ]}
 >
   <slot />

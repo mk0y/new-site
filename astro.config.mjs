@@ -1,13 +1,9 @@
 // @ts-check
-import { defineConfig, envField } from "astro/config";
-
-import tailwind from "@astrojs/tailwind";
-
 import netlify from "@astrojs/netlify";
-
 import react from "@astrojs/react";
-
+import tailwindcss from "@tailwindcss/vite";
 import { imageService } from "@unpic/astro/service";
+import { defineConfig, envField } from "astro/config";
 
 // https://astro.build/config
 export default defineConfig({
@@ -24,6 +20,7 @@ export default defineConfig({
         "nearup-it.de",
       ],
     },
+    plugins: [tailwindcss()],
   },
   env: {
     schema: {
@@ -45,6 +42,6 @@ export default defineConfig({
       placeholder: "blurhash",
     }),
   },
-  integrations: [tailwind(), react()],
+  integrations: [react()],
   adapter: netlify(),
 });

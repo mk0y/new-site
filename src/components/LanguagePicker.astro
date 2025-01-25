@@ -1,12 +1,12 @@
 ---
 import ChevronDown from "../icons/ChevronDown.astro";
-const { currentLang } = Astro.props;
+const { currentLang, type } = Astro.props;
 ---
 
 <!-- Language Picker -->
 <div class="relative" id="language-container">
   <button
-    class="flex items-center text-white hover:text-gray-200 space-x-1 px-2 py-1 rounded-md transition-colors"
+    class="flex cursor-pointer items-center text-white hover:text-gray-200 space-x-1 px-2 py-1 rounded-md transition-colors"
     id="language-toggle"
   >
     <span class="text-sm font-medium">{currentLang.toUpperCase()}</span>
@@ -17,7 +17,10 @@ const { currentLang } = Astro.props;
   <div class="absolute right-0 top-full hidden w-32" id="language-menu">
     <div class="h-2 -mt-2"></div>
     <div
-      class="bg-black/20 backdrop-blur-xl rounded-lg shadow-lg py-2 border border-white/10"
+      class:list={[
+        "backdrop-blur-xl submenu rounded-lg shadow-lg py-2 border border-white/10",
+        type === "black" ? "bg-black/50" : "bg-black/20",
+      ]}
     >
       <a
         href={import.meta.env.PUBLIC_SITE_URL_EN}
@@ -83,3 +86,24 @@ const { currentLang } = Astro.props;
   }
 </style>
 
+<script>
+  // Add backdrop blur to header on scroll
+  const header = document.getElementById("site-header");
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 50) {
+      Array.from(header?.getElementsByClassName("submenu") || []).forEach(
+        (submenu) => {
+          submenu.classList.add("bg-black/60");
+          submenu.classList.remove("bg-black/20");
+        }
+      );
+    } else {
+      Array.from(header?.getElementsByClassName("submenu") || []).forEach(
+        (submenu) => {
+          submenu.classList.remove("bg-black/60");
+          submenu.classList.add("bg-black/20");
+        }
+      );
+    }
+  });
+</script>

@@ -4,6 +4,7 @@ import "@fontsource-variable/quicksand";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import Container from "../components/Container.astro";
+import "../styles/global.css";
 ---
 
 <!doctype html>
@@ -14,12 +15,12 @@ import Container from "../components/Container.astro";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>
-      {import.meta.env.PUBLIC_SITE_NAME} - AI & Web Development Agency
+      {import.meta.env.PUBLIC_SITE_NAME} - {import.meta.env.PUBLIC_SITE_TITLE}
     </title>
   </head>
   <body>
-    <Header isStatic={false} />
-    <Container>
+    <Header type="black" />
+    <Container isContent={true}>
       <slot />
     </Container>
     <!-- spacer -->

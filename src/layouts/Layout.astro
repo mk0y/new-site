@@ -3,6 +3,7 @@
 import "@fontsource-variable/quicksand";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import "../styles/global.css";
 ---
 
 <!doctype html>
@@ -12,7 +13,9 @@ import Footer from "../components/Footer.astro";
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>{import.meta.env.PUBLIC_SITE_NAME} - AI & Web Development Agency</title>
+    <title>
+      {import.meta.env.PUBLIC_SITE_NAME} - AI & Web Development Agency
+    </title>
   </head>
   <body>
     <Header />
