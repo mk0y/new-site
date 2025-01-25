@@ -1,0 +1,35 @@
+---
+interface Props {
+  position: "top" | "bottom";
+  backgroundColor?: string;
+  height?: string;
+  skewAngle?: string;
+  zIndex?: string;
+}
+
+const {
+  position,
+  backgroundColor = "bg-gray-d",
+  height = "h-10",
+  skewAngle = "-skew-y-3",
+  zIndex = "z-10",
+} = Astro.props;
+
+const getSkewClass = () => {
+  if (position === "top") {
+    return `${skewAngle} origin-left`;
+  }
+  // For bottom position, we want to skew in the opposite direction and use origin-right
+  return skewAngle.startsWith("-")
+    ? `${skewAngle.slice(1)} origin-right`
+    : `-${skewAngle} origin-right`;
+};
+
+const positionClass = position === "top" ? "top-0" : "bottom-0";
+---
+
+<!-- gradient background with steps -->
+<div
+  class={`relative inset-shadow-sm bg-gradient-to-r from-primary-1a via-primary-1a via-60% to-primary-1c ${height} ${backgroundColor} ${getSkewClass()} ${positionClass} ${zIndex} transform`}
+>
+</div>

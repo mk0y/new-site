@@ -269,11 +269,11 @@ const { isStatic = true, type = "white" } = Astro.props;
             />
           </button>
           <div
-            class="absolute hidden w-64"
+            class="fixed hidden w-64 left-1/2 -translate-x-1/2"
             id="industries-menu"
             role="menu"
             aria-labelledby="industries-menu-button"
-            style="top: calc(var(--header-height) - var(--current-top)); left: 0;"
+            style="top: var(--header-height);"
           >
             <div class="h-4"></div>
             <div
@@ -519,15 +519,6 @@ const { isStatic = true, type = "white" } = Astro.props;
       button.querySelector("svg")?.classList.add("rotate-180");
       activeMenu = menu;
       activeButton = button;
-
-      // Calculate and set current top position for industries menu
-      if (menu.id === "industries-menu") {
-        const buttonRect = button.getBoundingClientRect();
-        document.documentElement.style.setProperty(
-          "--current-top",
-          `${buttonRect.top}px`
-        );
-      }
     }
   };
 

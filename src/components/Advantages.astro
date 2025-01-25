@@ -1,0 +1,54 @@
+---
+import { getCurrentLang, getCurrentTranslations } from "../utils";
+
+const currentLang = getCurrentLang(Astro.url.host);
+const i18nData = await getCurrentTranslations(currentLang);
+---
+
+<section class="pt-24 relative py-24 bg-white overflow-hidden">
+  <div class="container relative mx-auto px-4 md:px-6">
+    <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-24">
+      <!-- Left content -->
+      <div class="flex-1 lg:max-w-xl">
+        <div class="mb-8">
+          <img
+            src={import.meta.env.PUBLIC_LOGO_URL}
+            alt="NearUp Logo"
+            class="h-12 w-12"
+          />
+        </div>
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-a mb-6">
+          {i18nData.common.advantagesHeadline}
+        </h2>
+        <p class="text-gray-a/80 text-lg mb-8">
+          {i18nData.common.advantagesSubheadline}
+        </p>
+        <div class="flex gap-4">
+          <a
+            href="/contact"
+            class="inline-flex items-center px-6 py-3 rounded-lg bg-primary-1a hover:bg-primary-1b text-white transition-colors"
+          >
+            {i18nData.common.learnMore}
+          </a>
+          <a
+            href="/contact"
+            class="inline-flex items-center px-6 py-3 rounded-lg border-2 border-primary-1a text-primary-1a hover:bg-primary-1a hover:text-white transition-all"
+          >
+            {i18nData.common.contact}
+          </a>
+        </div>
+      </div>
+
+      <!-- Right content - placeholder for image -->
+      <div class="flex-1 w-full lg:max-w-xl">
+        <div class="aspect-video bg-gray-100 rounded-xl overflow-hidden">
+          <img
+            src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=3540&auto=format&fit=crop"
+            alt="Team collaboration"
+            class="w-full h-full object-cover"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

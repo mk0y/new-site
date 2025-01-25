@@ -1,5 +1,8 @@
 ---
+import Advantages from "../components/Advantages.astro";
 import Hero from "../components/Hero.astro";
+import ServicesGrid from "../components/ServicesGrid.astro";
+import SkewLine from "../components/SkewLine.astro";
 import Layout from "../layouts/Layout.astro";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
@@ -8,4 +11,9 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout>
   <Hero />
+  <ServicesGrid />
+  <div class="h-10 bg-white" />
+  <SkewLine position="top" backgroundColor="bg-primary-1a" />
+  <div class="h-10 bg-white" />
+  <Advantages />
 </Layout>

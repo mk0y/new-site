@@ -1,0 +1,39 @@
+---
+interface Props {
+  topSkew?: boolean;
+  bottomSkew?: boolean;
+  backgroundColor?: string;
+  containerClass?: string;
+}
+
+const {
+  topSkew = true,
+  bottomSkew = true,
+  backgroundColor = "bg-gray-d",
+  containerClass = "container mx-auto px-4 md:px-6",
+} = Astro.props;
+---
+
+<section class="pt-24 relative py-24 bg-white overflow-hidden z-20">
+  {/* Skewed border top */}
+  {
+    topSkew && (
+      <div
+        class={`absolute top-4 left-0 right-0 h-32 ${backgroundColor} -skew-y-3 transform origin-left`}
+      />
+    )
+  }
+
+  <div class={`relative z-10 ${containerClass}`}>
+    <slot />
+  </div>
+
+  {/* Skewed border bottom */}
+  {
+    bottomSkew && (
+      <div
+        class={`absolute bottom-0 left-0 right-0 h-32 ${backgroundColor} skew-y-3 transform origin-right`}
+      />
+    )
+  }
+</section>
