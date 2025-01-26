@@ -1,0 +1,91 @@
+---
+import { Image } from "@unpic/astro";
+import { getCurrentLang, getCurrentTranslations } from "../utils";
+
+interface Props {
+  category?: string;
+  title: string;
+  excerpt: string;
+  author: string;
+  date: string;
+  readingTime: string;
+  image: ImageMetadata;
+  slug: string;
+}
+
+const currentLang = getCurrentLang(Astro.url.host);
+const i18nData = await getCurrentTranslations(currentLang);
+
+const {
+  category = i18nData.common.projects,
+  title,
+  excerpt,
+  author,
+  date,
+  readingTime,
+  image,
+  slug
+} = Astro.props;
+---
+
+<article class="relative bg-white">
+  <div class="container mx-auto px-4 md:px-6">
+    <div class="max-w-4xl mx-auto">
+      <!-- Category -->
+      <div class="text-primary-1a mb-6">{category}</div>
+
+      <!-- Title -->
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-a mb-8">
+        {title}
+      </h1>
+
+      <!-- Meta info -->
+      <div class="flex items-center gap-6 text-sm text-gray-a/60 mb-12">
+        <div class="flex items-center gap-2">
+          <img
+            src={import.meta.env.PUBLIC_LOGO_URL}
+            alt={author}
+            class="w-8 h-8 rounded-full"
+          />
+          <span>{author}</span>
+        </div>
+        <div class="flex items-center gap-6">
+          <span>{date}</span>
+          <span>{readingTime}</span>
+        </div>
+      </div>
+
+      <!-- Featured Image -->
+      <div class="aspect-[16/9] mb-12 rounded-xl overflow-hidden">
+        <Image
+          src={image}
+          alt={title}
+          width={1200}
+          height={675}
+          class="w-full h-full object-cover"
+        />
+      </div>
+
+      <!-- Excerpt -->
+      <div class="prose prose-lg max-w-none text-gray-a/80 mb-8">
+        <p>{excerpt}</p>
+      </div>
+
+      <!-- CTA -->
+      <div class="flex gap-4">
+        <a
+          href={`/blog/${slug}`}
+          class="inline-flex items-center px-6 py-3 rounded-lg bg-gray-a hover:bg-gray-900 text-white transition-colors"
+        >
+          {i18nData.common.readMore}
+        </a>
+        <a
+          href="/blog"
+          class="inline-flex items-center px-6 py-3 rounded-lg border-2 border-gray-a text-gray-a hover:bg-gray-a hover:text-white transition-all"
+        >
+          {i18nData.common.allPosts}
+        </a>
+      </div>
+    </div>
+  </div>
+</article> 

@@ -1,0 +1,81 @@
+---
+import Cube from "../icons/Cube.astro";
+import { getCurrentLang, getCurrentTranslations } from "../utils";
+const currentLang = getCurrentLang(Astro.url.host);
+const i18nData = await getCurrentTranslations(currentLang);
+---
+
+<section class="py-24 bg-white">
+  <section class="py-24 bg-white">
+    <div class="container mx-auto px-4 md:px-6">
+      <!-- Header -->
+      <div class="max-w-4xl mb-20">
+        <div class="text-primary-1a mb-6">{i18nData.common.process}</div>
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-a mb-6">
+          {i18nData.common.structuredApproach}
+        </h2>
+        <p class="text-lg text-gray-a/80">
+          {i18nData.common.processDescription}
+        </p>
+      </div>
+
+      <!-- Process Steps -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-12 mt-16">
+        <!-- Step 1 -->
+        <div class="space-y-6">
+          <div class="text-primary-1a">
+            <Cube class="w-12 h-12" />
+          </div>
+          <h3 class="text-2xl font-bold text-gray-a">
+            {i18nData.common.stepByStepProcess}
+          </h3>
+          <p class="text-gray-a/80">
+            {i18nData.common.stepByStepDescription}
+          </p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="space-y-6">
+          <div class="text-primary-1a">
+            <Cube class="w-12 h-12" />
+          </div>
+          <h3 class="text-2xl font-bold text-gray-a">
+            {i18nData.common.agileMethods}
+          </h3>
+          <p class="text-gray-a/80">
+            {i18nData.common.agileMethodsDescription}
+          </p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="space-y-6">
+          <div class="text-primary-1a">
+            <Cube class="w-12 h-12" />
+          </div>
+          <h3 class="text-2xl font-bold text-gray-a">
+            {i18nData.common.dedicatedTeam}
+          </h3>
+          <p class="text-gray-a/80">
+            {i18nData.common.dedicatedTeamDescription}
+          </p>
+        </div>
+      </div>
+
+      <!-- CTA Buttons -->
+      <div class="flex gap-4 mt-16">
+        <a
+          href="/contact"
+          class="inline-flex items-center px-6 py-3 rounded-lg bg-gray-a hover:bg-gray-900 text-white transition-colors"
+        >
+          {i18nData.common.learnMore}
+        </a>
+        <a
+          href="/contact"
+          class="inline-flex items-center px-6 py-3 rounded-lg border-2 border-gray-a text-gray-a hover:bg-gray-a hover:text-white transition-all"
+        >
+          {i18nData.common.contact}
+        </a>
+      </div>
+    </div>
+  </section>
+</section>

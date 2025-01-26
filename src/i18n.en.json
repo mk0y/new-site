@@ -61,7 +61,21 @@
     "advantagesSubheadline": "With NearUp, you receive tailored solutions that are perfectly aligned with your business needs. Our industry expertise and innovative approaches guarantee you a competitive advantage.",
     "efficiency": "Efficiency",
     "optimalNearshoringSolutions": "Optimal Nearshoring Solutions",
-    "nearshoringHeroDesc": "Discover our tailored nearshoring services for seamless collaboration and successful projects."
+    "nearshoringHeroDesc": "Discover our tailored nearshoring services for seamless collaboration and successful projects.",
+    "process": "Process",
+    "structuredApproach": "Our Structured Approach to Project Execution",
+    "processDescription": "At NearUp, we begin with a thorough requirements analysis to understand our clients' specific needs. We then develop tailored solutions based on agile methodologies, ensuring efficient implementation. Our team accompanies you throughout the entire process to ensure your expectations are exceeded.",
+    "stepByStepProcess": "Step-by-Step Process for Your Projects",
+    "stepByStepDescription": "We place great emphasis on transparency and communication.",
+    "agileMethods": "Agile Methods for Maximum Flexibility",
+    "agileMethodsDescription": "Our agile approaches enable quick adaptations during the project.",
+    "dedicatedTeam": "Dedicated Team for Your Project Success",
+    "dedicatedTeamDescription": "Our team consists of highly qualified developers who are ready to bring your vision to life.",
+    "projects": "Projects",
+    "readMore": "Read More",
+    "allPosts": "All Posts",
+    "ourProjectsAndTeamInAction": "Our Projects and Team in Action",
+    "minRead": "min read"
   },
   "footer": {
     "quickLinks": "Quick Links",

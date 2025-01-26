@@ -1,9 +1,14 @@
 ---
 import Advantages from "../components/Advantages.astro";
 import Hero from "../components/Hero.astro";
+import Process from "../components/Process.astro";
 import ServicesGrid from "../components/ServicesGrid.astro";
-// import SkewLine from "../components/SkewLine.astro";
+import BlogExcerpt from "../components/BlogExcerpt.astro";
 import Layout from "../layouts/Layout.astro";
+import teamImage from "../assets/bg-team.jpg";
+import { getCurrentLang, getCurrentTranslations } from "../utils";
+const currentLang = getCurrentLang(Astro.url.host);
+const i18nData = await getCurrentTranslations(currentLang);
 ---
 
 <Layout>
@@ -13,4 +18,15 @@ import Layout from "../layouts/Layout.astro";
   <!-- <SkewLine position="top" backgroundColor="bg-primary-1a" /> -->
   <div class="h-10 bg-white" />
   <Advantages />
+  <Process />
+  <BlogExcerpt
+    title={i18nData.common.ourProjectsAndTeamInAction}
+    excerpt="Bei NearUp beginnen wir mit einer gründlichen Anforderungserhebung, um die spezifischen Bedürfnisse unserer Kunden zu verstehen. Anschließend entwickeln wir maßgeschneiderte Lösungen, die auf agilen Methoden basieren und eine effiziente Umsetzung garantieren."
+    author="NearUp Team"
+    date="11 Jan 2022"
+    readingTime={`5 ${i18nData.common.minRead}`}
+    image={teamImage}
+    slug="team-in-action"
+  />
+  <div class="h-32 bg-white" />
 </Layout>
