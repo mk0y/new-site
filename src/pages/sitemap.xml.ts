@@ -9,12 +9,21 @@ const siteUrl =
 
 const paths =
   lang === "de"
-    ? ["software-entwicklung", "it-beratung", "nearshoring", "ki-entwicklung"]
+    ? [
+        "software-entwicklung",
+        "it-beratung",
+        "nearshoring",
+        "ki-entwicklung",
+        "karriere",
+        "kontakt"
+      ]
     : [
         "software-development",
         "it-consulting",
         "nearshoring",
         "ai-development",
+        "careers",
+        "contact",
       ];
 
 const str = `<?xml version="1.0" encoding="UTF-8"?>

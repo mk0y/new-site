@@ -1,6 +1,11 @@
 Nearup is an agency.
 Nearup's headline: Transforming AI-driven web and mobile development solutions.
 Nearup is multilingual, supporting English and German speaking folks.
+On local German site is http://nearup-local.de:4321 and English is http://nearup-local.io:4321.
+On staging German site is https://nearup-de.netlify.app and English is https://nearup-en.netlify.app.
+It's Nearup, not NearUp (notice the lowercase "u").
+
+Implement proper component composition and reusability.
 
 Primary color 1A: #3FCF8D
 Primary color 1B: #32A571
@@ -29,3 +34,35 @@ const foobar = that("prop");
   <div>Here goes regular HTML</div>
 </section>
 ```
+
+Components are in src/components folder.
+When we build them we always include i18n props, like so:
+
+```
+<Component
+  title={i18nData.common.title}
+  type={i18nData.something.else}
+/>
+```
+
+Additionally we always update src/i18n.de.json and src/i18n.en.json files.
+
+Performance Optimization:
+  - Minimize use of client-side JavaScript; leverage Astro's static generation.
+  - Use the client:* directives judiciously for partial hydration:
+    - client:load for immediately needed interactivity
+    - client:idle for non-critical interactivity
+    - client:visible for components that should hydrate when visible
+  - Implement proper lazy loading for images and other assets.
+  - Utilize Astro's built-in asset optimization features.
+
+SEO and Meta Tags
+  - Use Astro's <head> tag for adding meta information.
+  - Implement canonical URLs for proper SEO.
+  - Use the <SEO> component pattern for reusable SEO setups.
+
+When creating svg icons put them in src/icons folder for reusability.
+
+Never change irrelevant code or code that is wrote by 3rd party. Focus on new code and wait for refactoring instructions instead.
+
+Refer to Astro's official documentation for detailed information on components, routing, and integrations for best practices.

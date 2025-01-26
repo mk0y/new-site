@@ -137,5 +137,52 @@
     "tagline": "NearUp verbindet KMUs mit einem Full-Cycle-Team für KI-Integration, Web- und Mobile-Softwareentwicklung, um Lösungen zu entwickeln, die auf ihre individuellen Anforderungen zugeschnitten sind.",
     "copyright": "ALLE RECHTE VORBEHALTEN FÜR NEARUP.IO UND NEARUP-IT.DE.",
     "privacy": "Datenschutz"
+  },
+  "careers": {
+    "title": "Gestalte deine Zukunft mit NearUp",
+    "description": "Entdecke spannende Karrieremöglichkeiten in einem innovativen Umfeld. Werde Teil eines dynamischen Teams, das an der Spitze der Technologie steht.",
+    "applyButton": "Jetzt Bewerben",
+    "learnMoreButton": "Mehr Erfahren",
+    "splitTitle": "Karriere bei NearUp",
+    "splitDescription": "Bei NearUp setzen wir auf Innovation und Teamarbeit, um herausragende IT-Lösungen zu schaffen. Eine Karriere bei uns bedeutet, Teil eines dynamischen Umfelds zu sein, in dem Ihre Ideen geschätzt und gefördert werden.",
+    "jobListings": {
+      "sectionTitle": "Karriere",
+      "subtitle": "Stellenangebote",
+      "jobs": [
+        {
+          "title": "Software Entwickler",
+          "location": "Berlin",
+          "description": "Wir suchen einen kreativen Software Entwickler, der innovative Lösungen für unsere Kunden entwickelt. Arbeiten Sie in einem dynamischen Team und gestalten Sie die digitale Zukunft mit. Bewerben Sie sich jetzt und werden Sie Teil unserer Erfolgsgeschichte!",
+          "applyButtonText": "Jetzt Bewerben"
+        },
+        {
+          "title": "IT Consultant",
+          "location": "Remote",
+          "description": "Als IT Consultant unterstützen Sie unsere Kunden bei der Implementierung maßgeschneiderter Lösungen. Nutzen Sie Ihre Expertise, um komplexe Herausforderungen zu meistern. Seien Sie Teil eines internationalen Teams und tragen Sie zur digitalen Transformation bei!",
+          "applyButtonText": "Jetzt Bewerben"
+        }
+      ]
+    },
+    "benefitsTitle": "Entdecken Sie die Vorteile einer Karriere bei NearUp Software & Consultation GmbH",
+    "benefits": [
+      {
+        "title": "Gestalten Sie Ihre Zukunft mit flexiblen Arbeitszeiten und spannenden Projekten",
+        "description": "Bei Nearup bieten wir Ihnen die Möglichkeit, Ihre Karriere aktiv zu gestalten.",
+        "ctaText": "Jetzt",
+        "ctaHref": "/karriere/bewerben"
+      },
+      {
+        "title": "Profitieren Sie von umfangreichen Weiterbildungsmöglichkeiten und internationaler Zusammenarbeit",
+        "description": "Wir unterstützen Ihre persönliche und berufliche Entwicklung durch gezielte Schulungen.",
+        "ctaText": "Mehr",
+        "ctaHref": "/karriere/vorteile"
+      },
+      {
+        "title": "Erleben Sie die Vielfalt internationaler Projekte in einem dynamischen Team",
+        "description": "Arbeiten Sie an innovativen Lösungen mit Kollegen aus verschiedenen Kulturen.",
+        "ctaText": "Bewerben",
+        "ctaHref": "/karriere/bewerben"
+      }
+    ]
   }
 }

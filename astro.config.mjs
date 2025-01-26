@@ -7,6 +7,8 @@ import { defineConfig, envField } from "astro/config";
 // import { getSecret } from "astro:env";
 import netlify from "@astrojs/netlify";
 
+import alpinejs from "@astrojs/alpinejs";
+
 // @ts-ignore
 const { PUBLIC_CURRENT_LANG } = loadEnv(process.env.PUBLIC_CURRENT_LANG, process.cwd(), "");
 
@@ -37,7 +39,7 @@ export default defineConfig({
       placeholder: "blurhash",
     }),
   },
-  integrations: [react()],
+  integrations: [react(), alpinejs()],
   // output: "server",
   adapter: netlify(),
   // i18n: {

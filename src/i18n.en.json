@@ -138,5 +138,52 @@
     "tagline": "NearUp connects SMBs and SMEs with a full-cycle AI integration, web, and mobile software development team to build solutions tailored totheir unique requirements.",
     "copyright": "ALL RIGHTS RESERVED FOR NEARUP.IO AND NEARUP-IT.DE.",
     "privacy": "Privacy"
+  },
+  "careers": {
+    "title": "Shape Your Future with NearUp",
+    "description": "Discover exciting career opportunities in an innovative environment. Become part of a dynamic team at the forefront of technology.",
+    "applyButton": "Apply Now",
+    "learnMoreButton": "Learn More",
+    "splitTitle": "Career at NearUp",
+    "splitDescription": "At NearUp, we focus on innovation and teamwork to create outstanding IT solutions. A career with us means being part of a dynamic environment where your ideas are valued and encouraged.",
+    "jobListings": {
+      "sectionTitle": "Career",
+      "subtitle": "Job Opportunities",
+      "jobs": [
+        {
+          "title": "Software Developer",
+          "location": "Berlin",
+          "description": "We are looking for a creative software developer who develops innovative solutions for our customers. Work in a dynamic team and help shape the digital future. Apply now and become part of our success story!",
+          "applyButtonText": "Apply Now"
+        },
+        {
+          "title": "IT Consultant",
+          "location": "Remote",
+          "description": "As an IT Consultant, you will support our clients in implementing customized solutions. Use your expertise to master complex challenges. Be part of an international team and contribute to digital transformation!",
+          "applyButtonText": "Apply Now"
+        }
+      ]
+    },
+    "benefitsTitle": "Discover the Benefits of a Career at NearUp Software & Consultation GmbH",
+    "benefits": [
+      {
+        "title": "Shape Your Future with Flexible Working Hours and Exciting Projects",
+        "description": "At Nearup, we offer you the opportunity to actively shape your career.",
+        "ctaText": "Now",
+        "ctaHref": "/careers/apply"
+      },
+      {
+        "title": "Benefit from Extensive Training Opportunities and International Collaboration",
+        "description": "We support your personal and professional development through targeted training.",
+        "ctaText": "More",
+        "ctaHref": "/careers/benefits"
+      },
+      {
+        "title": "Experience the Diversity of International Projects in a Dynamic Team",
+        "description": "Work on innovative solutions with colleagues from different cultures.",
+        "ctaText": "Apply",
+        "ctaHref": "/careers/apply"
+      }
+    ]
   }
 }

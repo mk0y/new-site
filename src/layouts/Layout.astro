@@ -8,27 +8,32 @@ import "../styles/global.css";
 
 interface Props {
   description?: string;
-  type?: "white" | "black";
+  title?: string;
+  type?: "white" | "black" | "dark";
 }
 
-const { description, type = "white" } = Astro.props;
+const { description, title, type = "white" } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow" />
     <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>
-      {import.meta.env.PUBLIC_SITE_NAME} - {import.meta.env.PUBLIC_SITE_TITLE}
+      {title ? title : import.meta.env.PUBLIC_SITE_NAME} - {
+        import.meta.env.PUBLIC_SITE_TITLE
+      }
     </title>
   </head>
   <body>
     <TopHeader type={type} />
     <Header type={type} />
+    {type === "black" && <div class="h-24" />}
     <slot />
     <Footer />
   </body>

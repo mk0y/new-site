@@ -4,24 +4,31 @@ import LanguagePicker from "./LanguagePicker.astro";
 const currentLang = getCurrentLang(Astro.url.host);
 const i18nData = await getCurrentTranslations(currentLang);
 const { type = "black" } = Astro.props;
+const currentPath = Astro.url.pathname;
 ---
 
 <div
   id="top-header"
-  class="fixed w-full top-0 z-[9999] bg-black/80 backdrop-blur-md border-b border-white/10 transition-all duration-300"
+  class="fixed w-full top-0 z-[9999] bg-black backdrop-blur-md border-b border-white/10 transition-all duration-300"
 >
   <div class="container mx-auto px-4 md:px-6">
     <div class="flex items-center justify-end h-8 text-sm">
       <div class="flex items-center justify-end space-x-6">
         <a
           href={`/${kebabCase(i18nData.common.careers)}`}
-          class="text-white hover:text-primary-1a transition-colors"
-          >{i18nData.common.careers}</a
+          class:list={[
+            "hover:text-primary-1a transition-colors",
+            currentPath === "/careers" || currentPath === "/karriere"
+              ? "text-primary-1a"
+              : "text-white",
+          ]}>{i18nData.common.careers}</a
         >
         <a
           href={`/${kebabCase(i18nData.common.contact)}`}
-          class="text-white hover:text-primary-1a transition-colors"
-          >{i18nData.common.contact}</a
+          class:list={[
+            "hover:text-primary-1a transition-colors",
+            currentPath === "/contact" ? "text-primary-1a" : "text-white",
+          ]}>{i18nData.common.contact}</a
         >
         <LanguagePicker currentLang={currentLang} type={type} />
       </div>

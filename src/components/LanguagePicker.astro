@@ -1,6 +1,7 @@
 ---
 import ChevronDown from "../icons/ChevronDown.astro";
 const { currentLang, type } = Astro.props;
+const path = Astro.url.pathname;
 ---
 
 <!-- Language Picker -->
@@ -23,7 +24,7 @@ const { currentLang, type } = Astro.props;
       ]}
     >
       <a
-        href={import.meta.env.PUBLIC_SITE_URL_EN}
+        href={import.meta.env.PUBLIC_SITE_URL_EN + path}
         class="w-full text-left px-4 py-2 text-white hover:bg-white/10 flex items-center space-x-2 transition-colors"
         data-lang="en"
       >
@@ -31,7 +32,7 @@ const { currentLang, type } = Astro.props;
         <span>English</span>
       </a>
       <a
-        href={import.meta.env.PUBLIC_SITE_URL_DE}
+        href={import.meta.env.PUBLIC_SITE_URL_DE + path}
         class="w-full text-left px-4 py-2 text-white hover:bg-white/10 flex items-center space-x-2 transition-colors"
         data-lang="de"
       >

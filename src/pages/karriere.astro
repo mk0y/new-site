@@ -1,0 +1,36 @@
+---
+import CareersBenefits from "../components/CareersBenefits.astro";
+import CareersHero from "../components/CareersHero.astro";
+import CareersSplit from "../components/CareersSplit.astro";
+import JobAccordion from "../components/JobAccordion.astro";
+import i18n from "../i18n.de.json";
+import Layout from "../layouts/Layout.astro";
+
+const i18nData = i18n;
+---
+
+<Layout
+  title="Karriere - NearUp"
+  description="Werde Teil unseres Teams bei NearUp und gestalte die Zukunft der Technologie"
+  type="black"
+>
+  <CareersHero
+    title={i18nData.careers.title}
+    description={i18nData.careers.description}
+    applyButtonText={i18nData.careers.applyButton}
+    learnMoreButtonText={i18nData.careers.learnMoreButton}
+  />
+  <JobAccordion
+    sectionTitle={i18nData.careers.jobListings.sectionTitle}
+    subtitle={i18nData.careers.jobListings.subtitle}
+    jobs={i18nData.careers.jobListings.jobs}
+  />
+  <CareersBenefits
+    mainTitle={i18nData.careers.benefitsTitle}
+    benefits={i18nData.careers.benefits}
+  />
+  <CareersSplit
+    title={i18nData.careers.splitTitle}
+    description={i18nData.careers.splitDescription}
+  />
+</Layout>

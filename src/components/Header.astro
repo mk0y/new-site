@@ -6,7 +6,7 @@ import Menu from "../icons/Menu.astro";
 import { getCurrentLang, getCurrentTranslations, kebabCase } from "../utils";
 const currentLang = getCurrentLang(Astro.url.host);
 const i18nData = await getCurrentTranslations(currentLang);
-const { isStatic = true, type = "white" } = Astro.props;
+const { type = "white" } = Astro.props;
 ---
 
 <header
