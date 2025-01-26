@@ -38,17 +38,17 @@ export default defineConfig({
     }),
   },
   integrations: [react()],
-  output: "server",
+  // output: "server",
   adapter: netlify(),
-  i18n: {
-    locales: ["en", "de"],
-    defaultLocale: "de",
-    routing: {
-      prefixDefaultLocale: false,
-    },
-    domains: {
-      de: PUBLIC_SITE_URL_DE,
-      en: PUBLIC_SITE_URL_EN,
-    },
-  },
+  // i18n: {
+  //   locales: ["en", "de"],
+  //   defaultLocale: "de",
+  //   routing: {
+  //     prefixDefaultLocale: false,
+  //   },
+  //   domains: {
+  //     de: PUBLIC_SITE_URL_DE,
+  //     en: PUBLIC_SITE_URL_EN,
+  //   },
+  // },
 });
