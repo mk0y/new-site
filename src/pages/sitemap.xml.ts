@@ -1,13 +1,28 @@
 import type { APIRoute } from "astro";
 
+const lang = import.meta.env.PUBLIC_CURRENT_LANG;
+
+const siteUrl =
+  lang === "de"
+    ? import.meta.env.PUBLIC_SITE_URL_DE
+    : import.meta.env.PUBLIC_SITE_URL_EN;
+
+const paths =
+  lang === "de"
+    ? ["software-entwicklung", "it-beratung", "nearshoring", "ki-entwicklung"]
+    : [
+        "software-development",
+        "it-consulting",
+        "nearshoring",
+        "ai-development",
+      ];
+
 const str = `<?xml version="1.0" encoding="UTF-8"?>
-<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<sitemap>
-<loc>https://astro.build/sitemap-0.xml</loc>
-</sitemap>
-</sitemapindex>`;
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+<url><loc>${siteUrl}</loc></url>
+${paths.map((path) => `<url><loc>${siteUrl}/${path}</loc></url>`).join("")}
+</urlset>`;
 
 export const GET: APIRoute = () => {
-  // const sitemapURL = new URL(`${import.meta.env.SITE}/sitemap.xml`);
   return new Response(str);
 };
