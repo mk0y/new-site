@@ -1,9 +1,10 @@
 // @ts-check
-import netlify from "@astrojs/netlify";
 import react from "@astrojs/react";
 import tailwindcss from "@tailwindcss/vite";
 import { imageService } from "@unpic/astro/service";
 import { defineConfig, envField } from "astro/config";
+
+import cloudflare from "@astrojs/cloudflare";
 
 // https://astro.build/config
 export default defineConfig({
@@ -38,10 +39,9 @@ export default defineConfig({
   },
   image: {
     service: imageService({
-      // fallbackService: "netlify",
       placeholder: "blurhash",
     }),
   },
   integrations: [react()],
-  adapter: netlify(),
+  adapter: cloudflare(),
 });
