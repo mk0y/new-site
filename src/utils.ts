@@ -1,6 +1,6 @@
 export const getCurrentLang = (host: string) => {
   const tld = host.split(":")[0].split(".")[1];
-  return tld === "io" ? "en" : "de";
+  return tld === "io" || host.includes("-en") ? "en" : "de";
 };
 
 export const getCurrentTranslations = async (lang: string) => {
