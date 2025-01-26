@@ -1,21 +1,28 @@
 // @ts-check
 import react from "@astrojs/react";
 import tailwindcss from "@tailwindcss/vite";
+import { loadEnv } from "vite";
 import { imageService } from "@unpic/astro/service";
 import { defineConfig, envField } from "astro/config";
-
+// import { getSecret } from "astro:env";
 import netlify from "@astrojs/netlify";
+
+// @ts-ignore
+const { PUBLIC_CURRENT_LANG } = loadEnv(process.env.PUBLIC_CURRENT_LANG, process.cwd(), "");
+
+// @ts-ignore
+const { PUBLIC_SITE_URL_DE } = loadEnv(process.env.PUBLIC_SITE_URL_DE, process.cwd(), "");
+
+// @ts-ignore
+const { PUBLIC_SITE_URL_EN } = loadEnv(process.env.PUBLIC_SITE_URL_EN, process.cwd(), "");
 
 // https://astro.build/config
 export default defineConfig({
-  site:
-    process.env.PUBLIC_CURRENT_LANG === "de"
-      ? process.env.PUBLIC_SITE_URL_DE
-      : process.env.PUBLIC_SITE_URL_EN,
+  site: PUBLIC_CURRENT_LANG === "de" ? PUBLIC_SITE_URL_DE : PUBLIC_SITE_URL_EN,
   vite: {
     server: {
       allowedHosts: [
-        "nearup-local.de",
+        "nearup-local.io",
         "nearup-local.de",
         "nearup.io",
         "nearup-it.de",
@@ -25,26 +32,23 @@ export default defineConfig({
     },
     plugins: [tailwindcss()],
   },
-  env: {
-    schema: {
-      PUBLIC_SITE_URL_EN: envField.string({
-        context: "client",
-        access: "public",
-        optional: false,
-      }),
-      PUBLIC_SITE_URL_DE: envField.string({
-        context: "client",
-        access: "public",
-        optional: false,
-      }),
-    },
-  },
   image: {
     service: imageService({
       placeholder: "blurhash",
     }),
   },
   integrations: [react()],
-  // output: "server",
+  output: "server",
   adapter: netlify(),
+  i18n: {
+    locales: ["en", "de"],
+    defaultLocale: "de",
+    routing: {
+      prefixDefaultLocale: false,
+    },
+    domains: {
+      de: PUBLIC_SITE_URL_DE,
+      en: PUBLIC_SITE_URL_EN,
+    },
+  },
 });
