@@ -1,0 +1,17 @@
+---
+import SubpageHero from "../components/SubpageHero.astro";
+import Layout from "../layouts/Layout.astro";
+import { getCurrentLang, getCurrentTranslations } from "../utils";
+
+const currentLang = getCurrentLang(Astro.url.host);
+const i18nData = await getCurrentTranslations(currentLang);
+---
+
+<Layout>
+  <SubpageHero
+    tag={i18nData.common.efficiency}
+    title={i18nData.common.optimalNearshoringSolutions}
+    description={i18nData.common.nearshoringHeroDesc}
+  />
+  <!-- Rest of the page content -->
+</Layout>
