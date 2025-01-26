@@ -6,6 +6,10 @@ import bgFintech from "../assets/bg-fintech.jpg";
 import bgHome from "../assets/bg-home.jpg";
 import bgMedtech from "../assets/bg-medtech.jpg";
 import HeroItems from "./HeroItems.astro";
+import { getCurrentLang, getCurrentTranslations } from "../utils";
+
+const currentLang = getCurrentLang(Astro.url.host);
+const i18nData = await getCurrentTranslations(currentLang);
 ---
 
 <section class="hero bg-black">

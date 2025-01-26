@@ -75,7 +75,49 @@
     "readMore": "Weiterlesen",
     "allPosts": "Alle Beiträge",
     "ourProjectsAndTeamInAction": "Unsere Projekte und das Team in Aktion",
-    "minRead": "min Lesezeit"
+    "minRead": "min Lesezeit",
+    "insights": "Einblicke",
+    "experienceOurWorkInAction": "Erleben Sie unsere Arbeit in Aktion",
+    "ourProjectsInFocus": "Unsere Projekte im Fokus",
+    "viewAll": "Alle ansehen",
+    "behindTheSolutions": "Das Team hinter den Lösungen",
+    "innovationsThatInspire": "Innovationen, die begeistern",
+    "meetTheTeam": "Lernen Sie die Talente kennen, die unsere Softwarelösungen entwickeln.",
+    "discoverTechnology": "Entdecken Sie, wie wir Technologie neu definieren und Lösungen gestalten.",
+    "heroHeadline": "Willkommen bei NearUp: Ihre Partner für innovative Softwarelösungen und IT-Consulting.",
+    "heroDescription": "NearUp wurde mit der Mission gegründet, Unternehmen durch maßgeschneiderte Softwarelösungen zu transformieren. Unsere Vision ist es, als führender Anbieter in der agilen Softwareentwicklung und IT-Beratung anerkannt zu werden. Wir setzen auf Qualität, Innovation und eine enge Zusammenarbeit mit unseren Kunden, um ihre Ziele zu erreichen.",
+    "testimonials": "Kundenbewertungen",
+    "testimonialsSubheadline": "Unsere Kunden sind mit unseren Dienstleistungen äußerst zufrieden.",
+    "testimonial1": {
+      "text": "Die Zusammenarbeit mit NearUp war ein echter Gewinn für uns.",
+      "author": "Anna Müller",
+      "position": "Leiterin, TechCorp"
+    },
+    "testimonial2": {
+      "text": "NearUp hat uns geholfen, unsere Prozesse zu optimieren. Ihre Unterstützung war entscheidend für unseren Erfolg.",
+      "author": "Laura Becker",
+      "position": "Projektmanagerin, StartUp"
+    },
+    "testimonial3": {
+      "text": "Die Lösungen von NearUp sind maßgeschneidert und äußerst effektiv.",
+      "author": "Sophie Klein",
+      "position": "Marketing, E-Commerce"
+    },
+    "testimonial4": {
+      "text": "Die Expertise von NearUp hat unsere Erwartungen übertroffen. Ihre Lösungen sind innovativ und effektiv.",
+      "author": "Maximilian Schmidt",
+      "position": "CEO, FinTech AG"
+    },
+    "testimonial5": {
+      "text": "Die Zusammenarbeit war reibungslos und produktiv. Wir schätzen die Professionalität des Teams sehr.",
+      "author": "Thomas Wagner",
+      "position": "CTO, Retail GmbH"
+    },
+    "testimonial6": {
+      "text": "Wir sind begeistert von den Ergebnissen, die wir erzielt haben.",
+      "author": "Felix Hoffmann",
+      "position": "Direktor, Pharma AG"
+    }
   },
   "footer": {
     "quickLinks": "Quick Links",

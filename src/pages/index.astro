@@ -1,25 +1,53 @@
 ---
+import teamImage from "../assets/bg-team.jpg";
 import Advantages from "../components/Advantages.astro";
+import BlogGrid from "../components/BlogGrid.astro";
 import Hero from "../components/Hero.astro";
 import Process from "../components/Process.astro";
 import ServicesGrid from "../components/ServicesGrid.astro";
-import BlogExcerpt from "../components/BlogExcerpt.astro";
+import Testimonials from "../components/Testimonials.astro";
 import Layout from "../layouts/Layout.astro";
-import teamImage from "../assets/bg-team.jpg";
 import { getCurrentLang, getCurrentTranslations } from "../utils";
 const currentLang = getCurrentLang(Astro.url.host);
 const i18nData = await getCurrentTranslations(currentLang);
+
+const posts = [
+  {
+    title: i18nData.common.behindTheSolutions,
+    excerpt: i18nData.common.meetTheTeam,
+    category: i18nData.common.projects,
+    readingTime: `5 ${i18nData.common.minRead}`,
+    image: teamImage,
+    slug: "team-solutions",
+  },
+  {
+    title: i18nData.common.ourProjectsAndTeamInAction,
+    excerpt: i18nData.common.processDescription,
+    category: i18nData.common.projects,
+    readingTime: `5 ${i18nData.common.minRead}`,
+    image: teamImage,
+    slug: "team-in-action",
+  },
+  {
+    title: i18nData.common.innovationsThatInspire,
+    excerpt: i18nData.common.discoverTechnology,
+    category: i18nData.common.projects,
+    readingTime: `5 ${i18nData.common.minRead}`,
+    image: teamImage,
+    slug: "innovations",
+  },
+];
 ---
 
 <Layout>
   <Hero />
   <ServicesGrid />
-  <div class="h-10 bg-white" />
+  <div class="h-10 bg-white"></div>
   <!-- <SkewLine position="top" backgroundColor="bg-primary-1a" /> -->
-  <div class="h-10 bg-white" />
+  <div class="h-10 bg-white"></div>
   <Advantages />
   <Process />
-  <BlogExcerpt
+  <!-- <BlogExcerpt
     title={i18nData.common.ourProjectsAndTeamInAction}
     excerpt="Bei NearUp beginnen wir mit einer gründlichen Anforderungserhebung, um die spezifischen Bedürfnisse unserer Kunden zu verstehen. Anschließend entwickeln wir maßgeschneiderte Lösungen, die auf agilen Methoden basieren und eine effiziente Umsetzung garantieren."
     author="NearUp Team"
@@ -27,6 +55,30 @@ const i18nData = await getCurrentTranslations(currentLang);
     readingTime={`5 ${i18nData.common.minRead}`}
     image={teamImage}
     slug="team-in-action"
-  />
-  <div class="h-32 bg-white" />
+  /> -->
+  <!-- <div class="h-32 bg-white" /> -->
+  <BlogGrid posts={posts} />
+  <Testimonials />
+  <section class="bg-white">
+    <div class="container mx-auto px-4 md:px-6 py-24">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-24 items-center">
+        <!-- Left Content -->
+        <div>
+          <h3
+            class="text-2xl lg:text-2xl xl:text-2xl font-bold text-gray-a mb-8 leading-tight"
+          >
+            {i18nData.common.heroHeadline}
+          </h3>
+        </div>
+
+        <!-- Right Content -->
+        <div>
+          <p class="text-lg text-gray-a/80 leading-relaxed">
+            {i18nData.common.heroDescription}
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="h-32 bg-white"></div>
 </Layout>

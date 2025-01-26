@@ -1,0 +1,40 @@
+---
+import teamImage from "../../assets/team-collaboration.jpg";
+import BlogGrid from "../../components/BlogGrid.astro";
+import Layout from "../../layouts/Layout.astro";
+import { getCurrentLang, getCurrentTranslations } from "../../utils";
+
+const currentLang = getCurrentLang(Astro.url.host);
+const i18nData = await getCurrentTranslations(currentLang);
+
+const posts = [
+  {
+    title: i18nData.common.behindTheSolutions,
+    excerpt: i18nData.common.meetTheTeam,
+    category: i18nData.common.projects,
+    readingTime: `5 ${i18nData.common.minRead}`,
+    image: teamImage,
+    slug: "team-solutions",
+  },
+  {
+    title: i18nData.common.ourProjectsAndTeamInAction,
+    excerpt: i18nData.common.processDescription,
+    category: i18nData.common.projects,
+    readingTime: `5 ${i18nData.common.minRead}`,
+    image: teamImage,
+    slug: "team-in-action",
+  },
+  {
+    title: i18nData.common.innovationsThatInspire,
+    excerpt: i18nData.common.discoverTechnology,
+    category: i18nData.common.projects,
+    readingTime: `5 ${i18nData.common.minRead}`,
+    image: teamImage,
+    slug: "innovations",
+  },
+];
+---
+
+<Layout>
+  <BlogGrid posts={posts} />
+</Layout>

@@ -1,0 +1,104 @@
+---
+import { Image } from "@unpic/astro";
+import { getCurrentLang, getCurrentTranslations } from "../utils";
+
+interface BlogPost {
+  title: string;
+  excerpt: string;
+  category: string;
+  readingTime: string;
+  image: ImageMetadata;
+  slug: string;
+}
+
+interface Props {
+  title?: string;
+  subtitle?: string;
+  posts: BlogPost[];
+}
+
+const currentLang = getCurrentLang(Astro.url.host);
+const i18nData = await getCurrentTranslations(currentLang);
+
+const {
+  title = i18nData.common.insights,
+  subtitle = i18nData.common.experienceOurWorkInAction,
+  posts = []
+} = Astro.props;
+---
+
+<section class="py-24 bg-white">
+  <div class="container mx-auto px-4 md:px-6">
+    <!-- Header -->
+    <div class="max-w-4xl mb-20">
+      <div class="text-primary-1a mb-6">{title}</div>
+      <h2 class="text-4xl md:text-5xl font-bold text-gray-a mb-6">
+        {i18nData.common.ourProjectsInFocus}
+      </h2>
+      <p class="text-lg text-gray-a/80">
+        {subtitle}
+      </p>
+    </div>
+
+    <!-- Blog Grid -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {
+        posts.map((post) => (
+          <article class="group relative flex flex-col bg-white border border-gray-200 rounded-xl overflow-hidden hover:border-primary-1a transition-colors">
+            <div class="aspect-[4/3] relative overflow-hidden">
+              <Image
+                src={post.image}
+                alt={post.title}
+                width={600}
+                height={450}
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div class="p-6 flex flex-col flex-1">
+              <div class="flex items-center justify-between mb-4">
+                <div class="text-sm text-primary-1a">{post.category}</div>
+                <div class="text-sm text-gray-a/60">{post.readingTime}</div>
+              </div>
+              <h3 class="text-xl font-bold text-gray-a mb-4 group-hover:text-primary-1a transition-colors">
+                {post.title}
+              </h3>
+              <p class="text-gray-a/80 mb-6 line-clamp-3">{post.excerpt}</p>
+              <div class="mt-auto">
+                <a
+                  href={`/blog/${post.slug}`}
+                  class="inline-flex items-center text-primary-1a hover:text-primary-1b transition-colors"
+                >
+                  {i18nData.common.readMore}
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-4 w-4 ml-1"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+        ))
+      }
+    </div>
+
+    <!-- View All Button -->
+    <div class="flex justify-center mt-12">
+      <a
+        href="/blog"
+        class="inline-flex items-center px-6 py-3 rounded-lg border-2 border-gray-a text-gray-a hover:bg-gray-a hover:text-white transition-all"
+      >
+        {i18nData.common.viewAll}
+      </a>
+    </div>
+  </div>
+</section> 

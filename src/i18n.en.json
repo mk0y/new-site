@@ -75,7 +75,49 @@
     "readMore": "Read More",
     "allPosts": "All Posts",
     "ourProjectsAndTeamInAction": "Our Projects and Team in Action",
-    "minRead": "min read"
+    "minRead": "min read",
+    "insights": "Insights",
+    "experienceOurWorkInAction": "Experience our work in action",
+    "ourProjectsInFocus": "Our Projects in Focus",
+    "viewAll": "View All",
+    "behindTheSolutions": "The Team Behind the Solutions",
+    "innovationsThatInspire": "Innovations that Inspire",
+    "meetTheTeam": "Meet the talented individuals who develop our software solutions.",
+    "discoverTechnology": "Discover how we redefine technology and shape solutions.",
+    "heroHeadline": "Welcome to NearUp: Your Partner for Innovative Software Solutions and IT Consulting.",
+    "heroDescription": "NearUp was founded with the mission to transform businesses through tailored software solutions. Our vision is to be recognized as a leading provider in agile software development and IT consulting. We focus on quality, innovation, and close collaboration with our clients to achieve their goals.",
+    "testimonials": "Customer Reviews",
+    "testimonialsSubheadline": "Our clients are extremely satisfied with our services.",
+    "testimonial1": {
+      "text": "Working with NearUp was a real win for us.",
+      "author": "Anna Müller",
+      "position": "Director, TechCorp"
+    },
+    "testimonial2": {
+      "text": "NearUp helped us optimize our processes. Their support was crucial for our success.",
+      "author": "Laura Becker",
+      "position": "Project Manager, StartUp"
+    },
+    "testimonial3": {
+      "text": "NearUp's solutions are tailored and extremely effective.",
+      "author": "Sophie Klein",
+      "position": "Marketing, E-Commerce"
+    },
+    "testimonial4": {
+      "text": "NearUp's expertise exceeded our expectations. Their solutions are innovative and effective.",
+      "author": "Maximilian Schmidt",
+      "position": "CEO, FinTech AG"
+    },
+    "testimonial5": {
+      "text": "The collaboration was smooth and productive. We highly appreciate the team's professionalism.",
+      "author": "Thomas Wagner",
+      "position": "CTO, Retail GmbH"
+    },
+    "testimonial6": {
+      "text": "We are thrilled with the results we have achieved.",
+      "author": "Felix Hoffmann",
+      "position": "Director, Pharma AG"
+    }
   },
   "footer": {
     "quickLinks": "Quick Links",
