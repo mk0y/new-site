@@ -4,8 +4,6 @@ import tailwindcss from "@tailwindcss/vite";
 import { imageService } from "@unpic/astro/service";
 import { defineConfig, envField } from "astro/config";
 
-import cloudflare from "@astrojs/cloudflare";
-
 import netlify from "@astrojs/netlify";
 
 // https://astro.build/config
@@ -17,10 +15,12 @@ export default defineConfig({
   vite: {
     server: {
       allowedHosts: [
-        "",
+        "nearup-local.de",
         "nearup-local.de",
         "nearup.io",
         "nearup-it.de",
+        "nearup-en.netlify.app",
+        "nearup-de.netlify.app",
       ],
     },
     plugins: [tailwindcss()],

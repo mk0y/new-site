@@ -4,7 +4,6 @@ import Search from "../icons/Search.astro";
 import X from "../icons/X.astro";
 import Menu from "../icons/Menu.astro";
 import { getCurrentLang, getCurrentTranslations, kebabCase } from "../utils";
-import LanguagePicker from "./LanguagePicker.astro";
 const currentLang = getCurrentLang(Astro.url.host);
 const i18nData = await getCurrentTranslations(currentLang);
 const { isStatic = true, type = "white" } = Astro.props;
