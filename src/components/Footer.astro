@@ -15,8 +15,14 @@ const year = new Date().getFullYear();
           href="/"
           class="mb-6 flex items-center gap-2 hover:text-primary-1a transition-colors w-fit"
         >
-          <img src={import.meta.env.PUBLIC_LOGO_URL} alt={import.meta.env.PUBLIC_SITE_NAME} class="h-8" />
-          <span class="text-2xl font-bold">{import.meta.env.PUBLIC_SITE_NAME}</span>
+          <img
+            src={import.meta.env.PUBLIC_LOGO_URL}
+            alt={import.meta.env.PUBLIC_SITE_NAME}
+            class="h-8"
+          />
+          <span class="text-2xl font-bold"
+            >{import.meta.env.PUBLIC_SITE_NAME}</span
+          >
         </a>
         <p class="text-sm leading-relaxed opacity-90">
           {i18nData.footer.tagline}
@@ -83,9 +89,7 @@ const year = new Date().getFullYear();
 
       <!-- Legal Documents -->
       <div class="col-span-1">
-        <h3 class="text-primary-1a font-medium mb-6">
-          {i18nData.footer.legalDocuments}
-        </h3>
+        <h3 class="text-primary-1a font-medium mb-6">...</h3>
         <nav class="space-y-4">
           <a
             href={lang === "en" ? "/privacy" : "/datenschutz"}
@@ -119,7 +123,13 @@ const year = new Date().getFullYear();
 
     <!-- Copyright -->
     <div class="text-sm text-center pt-8 border-t border-white-borders/20">
-      © {year} {i18nData.footer.copyright}
+      © {year}
+      {i18nData.footer.copyright} | <a
+        href={lang === "en" ? "/privacy" : "/datenschutz"}
+        >{i18nData.footer.privacy}</a
+      > | <a href={lang === "en" ? "/imprint" : "/impressum"}
+        >{i18nData.footer.imprint}</a
+      >
     </div>
   </div>
 </footer>
