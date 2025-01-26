@@ -1,4 +1,6 @@
 ---
+import { Image } from "@unpic/astro";
+import heroImage from "../assets/bg-careers.jpg";
 import Container from "./Container.astro";
 
 interface Props {
@@ -8,7 +10,8 @@ interface Props {
   learnMoreButtonText: string;
 }
 
-const { title, description, applyButtonText, learnMoreButtonText } = Astro.props;
+const { title, description, applyButtonText, learnMoreButtonText } =
+  Astro.props;
 ---
 
 <section class="py-20 md:py-28">
@@ -36,4 +39,16 @@ const { title, description, applyButtonText, learnMoreButtonText } = Astro.props
       </div>
     </div>
   </Container>
-</section> 
+</section>
+
+<!-- Responsive image with zoom effect -->
+<Container>
+  <div class="w-full h-[20rem] md:h-[30rem] lg:h-[40rem]">
+    <Image
+      src={heroImage}
+      alt="Careers Hero"
+      class="w-full h-[20rem] md:h-[30rem] lg:h-[40rem] object-cover"
+    />
+  </div>
+</Container>
+
