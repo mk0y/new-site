@@ -185,5 +185,79 @@
         "ctaHref": "/careers/apply"
       }
     ]
+  },
+  "about": {
+    "hero": {
+      "title": "Innovative",
+      "subtitle": "Software Solutions for Your Industry",
+      "description": "At NearUp, we offer customized IT solutions tailored to your company's specific needs. Let's drive your digital transformation together.",
+      "primaryButton": "Now",
+      "secondaryButton": "Learn More"
+    },
+    "intro": {
+      "title": "Learn more about NearUp: Your Partner for Digital Transformation.",
+      "description": "NearUp Software & Consultation GmbH was founded in 2020 in Berlin and offers comprehensive IT solutions. Our core competencies lie in agile software development, IT consulting, and system integration for various industries."
+    },
+    "mission": {
+      "subtitle": "Innovation",
+      "title": "Our Mission and Vision for the Future",
+      "description": "At NearUp, we strive to drive digital transformation through innovative IT solutions. Our goal is to support companies in turning their visions into reality.",
+      "learnMoreText": "Learn More",
+      "contactText": "Contact"
+    },
+    "timeline": {
+      "subtitle": "Our Journey",
+      "title": "Key Milestones in Our Growth Story",
+      "milestones": [
+        {
+          "year": "2020",
+          "title": "Foundation in Berlin",
+          "description": "NearUp Software & Consultation GmbH was established with a vision to drive digital transformation through innovative IT solutions."
+        },
+        {
+          "year": "2021",
+          "title": "First Major Projects",
+          "description": "Successfully delivered enterprise-level software solutions for clients in healthcare and fintech sectors."
+        },
+        {
+          "year": "2022",
+          "title": "International Expansion",
+          "description": "Expanded our operations to serve clients across Europe and established partnerships with leading technology providers."
+        },
+        {
+          "year": "2023",
+          "title": "AI Integration Focus",
+          "description": "Launched specialized AI integration services and strengthened our position in custom software development."
+        }
+      ]
+    },
+    "vision": {
+      "subtitle": "Development",
+      "title": "Our Vision for the Coming Years",
+      "description": "We focus on continuous innovation and adaptation to new technologies. Our goal is to always offer our customers the best solutions.",
+      "contactText": "Contact",
+      "consultingText": "Consulting"
+    },
+    "success": {
+      "subtitle": "Success",
+      "title": "Our Success in Numbers and Facts",
+      "description": "NearUp has achieved remarkable progress in recent years. Our customized software solutions have increased our clients' efficiency by up to 30%. We are proud to deliver innovative technologies that bring real results.",
+      "learnMoreText": "Learn More",
+      "contactText": "Contact",
+      "metrics": [
+        {
+          "value": 50,
+          "label": "Customer Satisfaction"
+        },
+        {
+          "value": 100,
+          "label": "Projects Completed"
+        },
+        {
+          "value": 20,
+          "label": "International Partners"
+        }
+      ]
+    }
   }
 }

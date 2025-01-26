@@ -1,0 +1,56 @@
+---
+import { Image } from "@unpic/astro";
+import heroImage from "../assets/bg-about-hero.jpg";
+interface Props {
+  title: string;
+  subtitle: string;
+  description: string;
+  primaryButtonText: string;
+  secondaryButtonText: string;
+}
+
+const { title, subtitle, description, primaryButtonText, secondaryButtonText } =
+  Astro.props;
+---
+
+<section class="py-20">
+  <div class="container mx-auto px-4">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <div class="space-y-6">
+        <div class="space-y-4">
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold">
+            {title}
+          </h1>
+          <h2 class="text-2xl md:text-3xl font-bold">
+            {subtitle}
+          </h2>
+        </div>
+        <p class="text-lg text-gray-a max-w-xl">
+          {description}
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a
+            href="/contact"
+            class="inline-block px-6 py-3 bg-primary-1a text-white font-medium rounded hover:bg-primary-1b transition-colors"
+          >
+            {primaryButtonText}
+          </a>
+          <a
+            href="/about/learn-more"
+            class="inline-block px-6 py-3 border border-white-borders text-black font-medium rounded hover:bg-gray-50 transition-colors"
+          >
+            {secondaryButtonText}
+          </a>
+        </div>
+      </div>
+      <div class="bg-gray-100 rounded-lg aspect-[4/3] w-full">
+        <!-- Responsive image with zoom effect -->
+        <Image
+          src={heroImage}
+          alt="About Hero"
+          class="object-cover w-full h-full"
+        />
+      </div>
+    </div>
+  </div>
+</section>

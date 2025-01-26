@@ -15,7 +15,8 @@ const paths =
         "nearshoring",
         "ki-entwicklung",
         "karriere",
-        "kontakt"
+        "kontakt",
+        "ueber-uns",
       ]
     : [
         "software-development",
@@ -24,6 +25,7 @@ const paths =
         "ai-development",
         "careers",
         "contact",
+        "about",
       ];
 
 const str = `<?xml version="1.0" encoding="UTF-8"?>

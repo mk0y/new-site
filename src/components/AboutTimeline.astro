@@ -1,0 +1,53 @@
+---
+interface Milestone {
+  year: string;
+  title: string;
+  description: string;
+}
+
+interface Props {
+  title: string;
+  subtitle: string;
+  milestones: Milestone[];
+}
+
+const { title, subtitle, milestones } = Astro.props;
+---
+
+<section class="py-20">
+  <div class="container mx-auto px-4">
+    <div class="max-w-3xl mx-auto mb-16">
+      <p class="text-lg text-primary-1a mb-4">{subtitle}</p>
+      <h2 class="text-4xl md:text-5xl font-bold">{title}</h2>
+    </div>
+
+    <div class="relative max-w-4xl mx-auto">
+      <!-- Timeline line -->
+      <div class="absolute left-0 md:left-1/2 transform md:-translate-x-px h-full w-[2px] bg-white-borders"></div>
+
+      <div class="space-y-16">
+        {
+          milestones.map((milestone, index) => (
+            <div class="relative">
+              <!-- Year marker -->
+              <div class="absolute left-[-9px] md:left-1/2 md:-translate-x-1/2 flex items-center justify-center w-5 h-5 rounded-full bg-primary-1a">
+                <div class="w-2 h-2 rounded-full bg-white"></div>
+              </div>
+
+              <!-- Content -->
+              <div class={`grid md:grid-cols-2 gap-8 ${index % 2 === 0 ? 'md:pr-16' : 'md:pl-16'}`}>
+                <div class={`${index % 2 === 0 ? 'md:text-right pl-8 md:pl-0' : 'md:col-start-2 pl-8 md:pl-0'}`}>
+                  <div class="space-y-4">
+                    <p class="text-3xl font-bold text-primary-1a">{milestone.year}</p>
+                    <h3 class="text-2xl font-bold">{milestone.title}</h3>
+                    <p class="text-lg text-gray-a">{milestone.description}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>

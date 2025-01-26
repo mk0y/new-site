@@ -7,6 +7,7 @@ import { getCurrentLang, getCurrentTranslations, kebabCase } from "../utils";
 const currentLang = getCurrentLang(Astro.url.host);
 const i18nData = await getCurrentTranslations(currentLang);
 const { type = "white" } = Astro.props;
+const currentPath = Astro.url.pathname;
 ---
 
 <header
@@ -333,9 +334,13 @@ const { type = "white" } = Astro.props;
           </div>
         </div>
         <a
-          href="/success-stories"
-          class="nav-item text-white hover:text-gray-200 relative z-10"
-          >{i18nData.common.aboutUs}</a
+          href={currentLang === "de" ? "/ueber-uns" : "/about"}
+          class:list={[
+            "nav-item text-white hover:text-gray-200 relative z-10",
+            currentPath === "/about" || currentPath === "/ueber-uns"
+              ? "active"
+              : "",
+          ]}>{i18nData.common.aboutUs}</a
         >
         <a
           href="/case-studies"
@@ -627,7 +632,8 @@ const { type = "white" } = Astro.props;
     transition: all 0.2s ease;
   }
 
-  .nav-item:hover {
+  .nav-item:hover,
+  .nav-item.active {
     color: #3fcf8d;
     background: rgba(63, 207, 141, 0.1);
     backdrop-filter: blur(8px);

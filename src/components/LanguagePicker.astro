@@ -2,6 +2,14 @@
 import ChevronDown from "../icons/ChevronDown.astro";
 const { currentLang, type } = Astro.props;
 const path = Astro.url.pathname;
+const pathMapperEn: Record<string, string> = {
+  "/about": "/ueber-uns",
+  "/careers": "/karriere",
+};
+const pathMapperDe: Record<string, string> = {
+  "/ueber-uns": "/about",
+  "/karriere": "/careers",
+};
 ---
 
 <!-- Language Picker -->
@@ -24,7 +32,10 @@ const path = Astro.url.pathname;
       ]}
     >
       <a
-        href={import.meta.env.PUBLIC_SITE_URL_EN + path}
+        href={
+          import.meta.env.PUBLIC_SITE_URL_EN +
+          (pathMapperDe[path] || path)
+        }
         class="w-full text-left px-4 py-2 text-white hover:bg-white/10 flex items-center space-x-2 transition-colors"
         data-lang="en"
       >
@@ -32,7 +43,10 @@ const path = Astro.url.pathname;
         <span>English</span>
       </a>
       <a
-        href={import.meta.env.PUBLIC_SITE_URL_DE + path}
+        href={
+          import.meta.env.PUBLIC_SITE_URL_DE +
+          (pathMapperEn[path] || path)
+        }
         class="w-full text-left px-4 py-2 text-white hover:bg-white/10 flex items-center space-x-2 transition-colors"
         data-lang="de"
       >

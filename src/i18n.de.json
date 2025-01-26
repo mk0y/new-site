@@ -184,5 +184,79 @@
         "ctaHref": "/karriere/bewerben"
       }
     ]
+  },
+  "about": {
+    "hero": {
+      "title": "Innovative",
+      "subtitle": "Softwarelösungen für Ihre Branche",
+      "description": "Bei NearUp bieten wir maßgeschneiderte IT-Lösungen, die auf die spezifischen Bedürfnisse Ihres Unternehmens zugeschnitten sind. Lassen Sie uns gemeinsam Ihre digitale Transformation vorantreiben.",
+      "primaryButton": "Jetzt",
+      "secondaryButton": "Mehr erfahren"
+    },
+    "intro": {
+      "title": "Erfahren Sie mehr über NearUp: Ihr Partner für digitale Transformation.",
+      "description": "NearUp Software & Consultation GmbH wurde 2020 in Berlin gegründet und bietet umfassende IT-Lösungen. Unsere Kernkompetenzen liegen in der agilen Softwareentwicklung, IT-Beratung und Systemintegration für verschiedene Branchen."
+    },
+    "mission": {
+      "subtitle": "Innovation",
+      "title": "Unsere Mission und Vision für die Zukunft",
+      "description": "Bei NearUp streben wir danach, durch innovative IT-Lösungen die digitale Transformation voranzutreiben. Unser Ziel ist es, Unternehmen dabei zu unterstützen, ihre Visionen in die Realität umzusetzen.",
+      "learnMoreText": "Erfahren",
+      "contactText": "Kontakt"
+    },
+    "timeline": {
+      "subtitle": "Unsere Reise",
+      "title": "Wichtige Meilensteine in unserer Entwicklung",
+      "milestones": [
+        {
+          "year": "2020",
+          "title": "Gründung in Berlin",
+          "description": "NearUp Software & Consultation GmbH wurde mit der Vision gegründet, die digitale Transformation durch innovative IT-Lösungen voranzutreiben."
+        },
+        {
+          "year": "2021",
+          "title": "Erste Großprojekte",
+          "description": "Erfolgreiche Umsetzung von Enterprise-Level-Softwarelösungen für Kunden aus den Bereichen Healthcare und Fintech."
+        },
+        {
+          "year": "2022",
+          "title": "Internationale Expansion",
+          "description": "Ausweitung unserer Aktivitäten auf Kunden in ganz Europa und Aufbau von Partnerschaften mit führenden Technologieanbietern."
+        },
+        {
+          "year": "2023",
+          "title": "KI-Integrationsfokus",
+          "description": "Einführung spezialisierter KI-Integrationsdienste und Stärkung unserer Position in der individuellen Softwareentwicklung."
+        }
+      ]
+    },
+    "vision": {
+      "subtitle": "Entwicklung",
+      "title": "Unsere Vision für die kommenden Jahre",
+      "description": "Wir setzen auf kontinuierliche Innovation und Anpassung an neue Technologien. Unser Ziel ist es, unseren Kunden stets die besten Lösungen anzubieten.",
+      "contactText": "Kontakt",
+      "consultingText": "Beratung"
+    },
+    "success": {
+      "subtitle": "Erfolg",
+      "title": "Unsere Erfolge in Zahlen und Fakten",
+      "description": "NearUp hat in den letzten Jahren bemerkenswerte Fortschritte erzielt. Unsere maßgeschneiderten Softwarelösungen haben die Effizienz unserer Kunden um bis zu 30% gesteigert. Wir sind stolz darauf, innovative Technologien zu liefern, die echte Ergebnisse bringen.",
+      "learnMoreText": "Mehr erfahren",
+      "contactText": "Kontakt",
+      "metrics": [
+        {
+          "value": 50,
+          "label": "Kundenzufriedenheit"
+        },
+        {
+          "value": 100,
+          "label": "Projekte abgeschlossen"
+        },
+        {
+          "value": 20,
+          "label": "Internationale Partner"
+        }
+      ]
+    }
   }
 }

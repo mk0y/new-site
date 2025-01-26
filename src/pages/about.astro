@@ -1,0 +1,57 @@
+---
+import AboutHero from "../components/AboutHero.astro";
+import AboutIntro from "../components/AboutIntro.astro";
+import AboutMission from "../components/AboutMission.astro";
+import AboutSuccess from "../components/AboutSuccess.astro";
+import AboutTimeline from "../components/AboutTimeline.astro";
+import AboutVision from "../components/AboutVision.astro";
+import i18n from "../i18n.en.json";
+import Layout from "../layouts/Layout.astro";
+
+const i18nData = i18n;
+---
+
+<Layout
+  title="About Us - NearUp"
+  description="Learn more about NearUp and our innovative software solutions"
+  type="black"
+>
+  <AboutHero
+    title={i18nData.about.hero.title}
+    subtitle={i18nData.about.hero.subtitle}
+    description={i18nData.about.hero.description}
+    primaryButtonText={i18nData.about.hero.primaryButton}
+    secondaryButtonText={i18nData.about.hero.secondaryButton}
+  />
+  <AboutIntro
+    title={i18nData.about.intro.title}
+    description={i18nData.about.intro.description}
+  />
+  <AboutMission
+    subtitle={i18nData.about.mission.subtitle}
+    title={i18nData.about.mission.title}
+    description={i18nData.about.mission.description}
+    learnMoreText={i18nData.about.mission.learnMoreText}
+    contactText={i18nData.about.mission.contactText}
+  />
+  <AboutTimeline
+    subtitle={i18nData.about.timeline.subtitle}
+    title={i18nData.about.timeline.title}
+    milestones={i18nData.about.timeline.milestones}
+  />
+  <AboutVision
+    subtitle={i18nData.about.vision.subtitle}
+    title={i18nData.about.vision.title}
+    description={i18nData.about.vision.description}
+    contactText={i18nData.about.vision.contactText}
+    consultingText={i18nData.about.vision.consultingText}
+  />
+  <AboutSuccess
+    subtitle={i18nData.about.success.subtitle}
+    title={i18nData.about.success.title}
+    description={i18nData.about.success.description}
+    learnMoreText={i18nData.about.success.learnMoreText}
+    contactText={i18nData.about.success.contactText}
+    metrics={i18nData.about.success.metrics}
+  />
+</Layout>
