@@ -85,38 +85,46 @@
     "meetTheTeam": "Lernen Sie die Talente kennen, die unsere Softwarelösungen entwickeln.",
     "discoverTechnology": "Entdecken Sie, wie wir Technologie neu definieren und Lösungen gestalten.",
     "heroHeadline": "Willkommen bei NearUp: Ihre Partner für innovative Softwarelösungen und IT-Consulting.",
-    "heroDescription": "NearUp wurde mit der Mission gegründet, Unternehmen durch maßgeschneiderte Softwarelösungen zu transformieren. Unsere Vision ist es, als führender Anbieter in der agilen Softwareentwicklung und IT-Beratung anerkannt zu werden. Wir setzen auf Qualität, Innovation und eine enge Zusammenarbeit mit unseren Kunden, um ihre Ziele zu erreichen.",
-    "testimonials": "Kundenbewertungen",
-    "testimonialsSubheadline": "Unsere Kunden sind mit unseren Dienstleistungen äußerst zufrieden.",
-    "testimonial1": {
-      "text": "Die Zusammenarbeit mit NearUp war ein echter Gewinn für uns.",
-      "author": "Anna Müller",
-      "position": "Leiterin, TechCorp"
+    "heroDescription": "NearUp Software & Consultation GmbH bietet maßgeschneiderte IT-Lösungen, die auf die Bedürfnisse Ihrer Branche zugeschnitten sind. Vertrauen Sie auf unser erfahrenes Team, um Ihre digitalen Projekte erfolgreich umzusetzen.",
+    "getStarted": "Jetzt",
+    "coreCompetencies": {
+      "title": "Unsere Kernkompetenzen: Agile Softwareentwicklung, IT-Beratung und Systemintegration für verschiedene Branchen",
+      "card1": {
+        "title": "Maßgeschneiderte Lösungen für Ihre digitalen Herausforderungen in der heutigen Geschäftswelt",
+        "description": "NearUp bietet umfassende Expertise in der agilen Softwareentwicklung und IT-Beratung.",
+        "cta": "Erfahren"
+      },
+      "card2": {
+        "title": "Innovative Ansätze zur Systemintegration für eine nahtlose digitale Transformation",
+        "description": "Unsere Lösungen sind darauf ausgelegt, Ihre Geschäftsprozesse zu optimieren und zu automatisieren.",
+        "cta": "Kontakt"
+      },
+      "card3": {
+        "title": "Erfolgreiche Projekte in Pharma, Fintech und Immobilien: Ihre Vision, unser Ziel",
+        "description": "Wir haben zahlreiche erfolgreiche Projekte realisiert, die unseren Kunden echten Mehrwert bieten.",
+        "cta": "Mehr"
+      }
     },
-    "testimonial2": {
-      "text": "NearUp hat uns geholfen, unsere Prozesse zu optimieren. Ihre Unterstützung war entscheidend für unseren Erfolg.",
-      "author": "Laura Becker",
-      "position": "Projektmanagerin, StartUp"
-    },
-    "testimonial3": {
-      "text": "Die Lösungen von NearUp sind maßgeschneidert und äußerst effektiv.",
-      "author": "Sophie Klein",
-      "position": "Marketing, E-Commerce"
-    },
-    "testimonial4": {
-      "text": "Die Expertise von NearUp hat unsere Erwartungen übertroffen. Ihre Lösungen sind innovativ und effektiv.",
-      "author": "Maximilian Schmidt",
-      "position": "CEO, FinTech AG"
-    },
-    "testimonial5": {
-      "text": "Die Zusammenarbeit war reibungslos und produktiv. Wir schätzen die Professionalität des Teams sehr.",
-      "author": "Thomas Wagner",
-      "position": "CTO, Retail GmbH"
-    },
-    "testimonial6": {
-      "text": "Wir sind begeistert von den Ergebnissen, die wir erzielt haben.",
-      "author": "Felix Hoffmann",
-      "position": "Direktor, Pharma AG"
+    "testimonials": {
+      "title": "Kundenbewertungen",
+      "subtitle": "Unsere Kunden sind mit unseren Dienstleistungen äußerst zufrieden.",
+      "items": [
+        {
+          "text": "Die Zusammenarbeit mit NearUp war ein echter Gewinn für uns.",
+          "author": "Anna Müller",
+          "position": "Leiterin, TechCorp"
+        },
+        {
+          "text": "NearUp hat uns geholfen, unsere Prozesse zu optimieren. Ihre Unterstützung war entscheidend für unseren Erfolg.",
+          "author": "Laura Becker",
+          "position": "Projektmanagerin, StartUp"
+        },
+        {
+          "text": "Die Lösungen von NearUp sind maßgeschneidert und äußerst effektiv.",
+          "author": "Sophie Klein",
+          "position": "Marketing, E-Commerce"
+        }
+      ]
     }
   },
   "footer": {

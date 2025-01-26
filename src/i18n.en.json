@@ -85,38 +85,47 @@
     "meetTheTeam": "Meet the talented individuals who develop our software solutions.",
     "discoverTechnology": "Discover how we redefine technology and shape solutions.",
     "heroHeadline": "Welcome to NearUp: Your Partner for Innovative Software Solutions and IT Consulting.",
-    "heroDescription": "NearUp was founded with the mission to transform businesses through tailored software solutions. Our vision is to be recognized as a leading provider in agile software development and IT consulting. We focus on quality, innovation, and close collaboration with our clients to achieve their goals.",
-    "testimonials": "Customer Reviews",
-    "testimonialsSubheadline": "Our clients are extremely satisfied with our services.",
-    "testimonial1": {
-      "text": "Working with NearUp was a real win for us.",
-      "author": "Anna Müller",
-      "position": "Director, TechCorp"
+    "heroDescription": "NearUp Software & Consultation GmbH offers tailored IT solutions designed to meet your industry's specific needs. Trust our experienced team to successfully implement your digital projects.",
+    "testimonials": {
+      "title": "Customer Reviews",
+      "subtitle": "Our clients are extremely satisfied with our services.",
+      "items": [
+        {
+          "text": "Working with NearUp was a real win for us.",
+          "author": "Anna Müller",
+          "position": "Director, TechCorp"
+        },
+        {
+          "text": "NearUp helped us optimize our processes. Their support was crucial for our success.",
+          "author": "Laura Becker",
+          "position": "Project Manager, StartUp"
+        },
+        {
+          "text": "NearUp's solutions are tailored and extremely effective.",
+          "author": "Sophie Klein",
+          "position": "Marketing, E-Commerce"
+        }
+      ]
     },
-    "testimonial2": {
-      "text": "NearUp helped us optimize our processes. Their support was crucial for our success.",
-      "author": "Laura Becker",
-      "position": "Project Manager, StartUp"
-    },
-    "testimonial3": {
-      "text": "NearUp's solutions are tailored and extremely effective.",
-      "author": "Sophie Klein",
-      "position": "Marketing, E-Commerce"
-    },
-    "testimonial4": {
-      "text": "NearUp's expertise exceeded our expectations. Their solutions are innovative and effective.",
-      "author": "Maximilian Schmidt",
-      "position": "CEO, FinTech AG"
-    },
-    "testimonial5": {
-      "text": "The collaboration was smooth and productive. We highly appreciate the team's professionalism.",
-      "author": "Thomas Wagner",
-      "position": "CTO, Retail GmbH"
-    },
-    "testimonial6": {
-      "text": "We are thrilled with the results we have achieved.",
-      "author": "Felix Hoffmann",
-      "position": "Director, Pharma AG"
+    "heroTitle": "Your Partner for Digital Transformation and Innovation",
+    "getStarted": "Get Started",
+    "coreCompetencies": {
+      "title": "Our Core Competencies: Agile Software Development, IT Consulting and System Integration for Various Industries",
+      "card1": {
+        "title": "Tailored Solutions for Your Digital Challenges in Today's Business World",
+        "description": "NearUp offers comprehensive expertise in agile software development and IT consulting.",
+        "cta": "Learn More"
+      },
+      "card2": {
+        "title": "Innovative Approaches to System Integration for Seamless Digital Transformation",
+        "description": "Our solutions are designed to optimize and automate your business processes.",
+        "cta": "Contact"
+      },
+      "card3": {
+        "title": "Successful Projects in Pharma, Fintech and Real Estate: Your Vision, Our Goal",
+        "description": "We have implemented numerous successful projects that provide real value to our clients.",
+        "cta": "More"
+      }
     }
   },
   "footer": {

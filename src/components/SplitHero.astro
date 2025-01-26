@@ -1,0 +1,72 @@
+---
+import { Image } from "@unpic/astro";
+import heroImage from "../assets/bg-team.jpg";
+import { getCurrentLang, getCurrentTranslations } from "../utils";
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+const currentLang = getCurrentLang(Astro.url.host);
+const i18nData = await getCurrentTranslations(currentLang);
+---
+
+<section class="py-16 md:py-24 bg-white">
+  <div class="container mx-auto px-4 md:px-6">
+    <!-- Top Content -->
+    <div class="grid lg:grid-cols-2 gap-12 lg:gap-24 items-start mb-16">
+      <!-- Left: Title -->
+      <h1
+        class="text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-a leading-tight"
+      >
+        {title}
+      </h1>
+
+      <!-- Right: Description and Buttons -->
+      <div>
+        <p class="text-lg text-gray-a/80 leading-relaxed mb-8">
+          {description}
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a
+            href="/contact"
+            class="inline-flex px-8 py-3 rounded-lg bg-black text-white hover:bg-gray-900 transition-colors"
+          >
+            {i18nData.common.getStarted}
+          </a>
+          <a
+            href="/about"
+            class="inline-flex px-8 py-3 rounded-lg border-2 border-gray-300 text-gray-a hover:border-gray-400 transition-colors"
+          >
+            {i18nData.common.learnMore}
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom: Image -->
+    <div class="relative aspect-[16/9] rounded-2xl overflow-hidden bg-gray-100">
+      <Image
+        src={heroImage}
+        alt="Team collaboration"
+        width={1920}
+        height={1080}
+        class="w-full h-full object-cover"
+      />
+      <div
+        class="absolute inset-0 bg-gradient-to-b from-transparent to-black/5"
+      >
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  h1 {
+    font-feature-settings:
+      "ss01" on,
+      "ss02" on;
+  }
+</style>
