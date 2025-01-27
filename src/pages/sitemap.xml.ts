@@ -17,6 +17,7 @@ const paths =
         "karriere",
         "kontakt",
         "ueber-uns",
+        "healthcare",
       ]
     : [
         "software-development",
@@ -26,6 +27,7 @@ const paths =
         "careers",
         "contact",
         "about",
+        "healthcare",
       ];
 
 const str = `<?xml version="1.0" encoding="UTF-8"?>

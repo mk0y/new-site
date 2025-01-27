@@ -1,5 +1,5 @@
 ---
-import { getCurrentLang, getCurrentTranslations } from "../utils";
+import { getCurrentLang, getCurrentTranslations, kebabCase } from "../utils";
 
 const lang = getCurrentLang(Astro.url.host);
 const i18nData = await getCurrentTranslations(lang);
@@ -61,46 +61,85 @@ const year = new Date().getFullYear();
       <!-- Our Services -->
       <div class="col-span-1">
         <h3 class="text-primary-1a font-medium mb-6">
-          {i18nData.footer.ourServices}
+          {i18nData.common.services}
         </h3>
         <nav class="space-y-4">
           <a
             href="/about"
             class="block text-sm hover:text-primary-1a transition-colors w-fit"
-            >{i18nData.common.aiIntegrations}</a
+            >{i18nData.common.softwareDevelopment}</a
           >
           <a
             href="/services"
             class="block text-sm hover:text-primary-1a transition-colors w-fit"
-            >{i18nData.common.aiSolutions}</a
+            >{i18nData.common.itConsulting}</a
           >
           <a
             href="/"
             class="block text-sm hover:text-primary-1a transition-colors w-fit"
-            >{i18nData.common.softwareDevelopment}</a
+            >{i18nData.common.nearshoring}</a
           >
           <a
             href="/"
             class="block text-sm hover:text-primary-1a transition-colors w-fit"
-            >{i18nData.common.consulting}</a
+            >{i18nData.common.aiConsulting}</a
           >
         </nav>
       </div>
 
-      <!-- Legal Documents -->
       <div class="col-span-1">
-        <h3 class="text-primary-1a font-medium mb-6">...</h3>
+        <h3 class="text-primary-1a font-medium mb-6">
+          {i18nData.common.industries}
+        </h3>
         <nav class="space-y-4">
           <a
-            href={lang === "en" ? "/privacy" : "/datenschutz"}
             class="block text-sm hover:text-primary-1a transition-colors w-fit"
-            >{i18nData.footer.cookiePrivacyPolicy}</a
+            href={`/${kebabCase(i18nData.common.startups)}`}
           >
+            {i18nData.common.startups}
+          </a>
           <a
-            href={lang === "en" ? "/imprint" : "/impressum"}
             class="block text-sm hover:text-primary-1a transition-colors w-fit"
-            >{i18nData.footer.imprint}</a
+            href={`/${kebabCase(i18nData.common.healthcare)}`}
           >
+            {i18nData.common.healthcare}
+          </a>
+          <a
+            class="block text-sm hover:text-primary-1a transition-colors w-fit"
+            href={`/${kebabCase(i18nData.common.fintech)}`}
+          >
+            {i18nData.common.fintech}
+          </a>
+          <a
+            class="block text-sm hover:text-primary-1a transition-colors w-fit"
+            href={`/${kebabCase(i18nData.common.retail)}`}
+          >
+            {i18nData.common.retail}
+          </a>
+          <a
+            class="block text-sm hover:text-primary-1a transition-colors w-fit"
+            href={`/${kebabCase(i18nData.common.media)}`}
+          >
+            {i18nData.common.media}
+          </a>
+          <a
+            class="block text-sm hover:text-primary-1a transition-colors w-fit"
+            href={`/${kebabCase(i18nData.common.eCommerce)}`}
+          >
+            {i18nData.common.eCommerce}
+          </a>
+          <a
+            class="block text-sm hover:text-primary-1a transition-colors w-fit"
+            href={`/${kebabCase(i18nData.common.automotive)}`}
+          >
+            {i18nData.common.automotive}
+          </a>
+          <a
+            class="block text-sm hover:text-primary-1a transition-colors w-fit"
+            href={`/${kebabCase(i18nData.common.transportation)}`}
+          >
+            {i18nData.common.transportation}
+          </a>
         </nav>
       </div>
 
