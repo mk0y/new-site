@@ -348,5 +348,51 @@
       "label": "Office",
       "value": "Musterstraße 123, Berlin 10115 DE"
     }
+  },
+  "blog": {
+    "pageTitle": "Insights & Blog | Nearup",
+    "heroTitle": "Insights",
+    "heroSubtitle": "Explore our blog for the latest updates, insights, and expert advice on software development and technology. From in-depth articles to thought-provoking discussions, we provide valuable content to keep you ahead of the curve.",
+    "latestPosts": "Latest Posts",
+    "categories": {
+      "ai": "Artificial Intelligence",
+      "development": "Development",
+      "transformation": "Digital Transformation",
+      "innovation": "Innovation"
+    },
+    "blogPosts": [
+      {
+        "title": "Team as a Service Outsourcing Model",
+        "excerpt": "In today's fast-paced digital landscape, companies are racing to meet customer demands for cutting-edge solutions.",
+        "date": "2024-08-15",
+        "readTime": 5,
+        "author": "Marko Jakic",
+        "slug": "team-as-a-service-outsourcing-model"
+      },
+      {
+        "title": "Big Companies That Were Built Using Outsources Developers",
+        "excerpt": "Outsourcing has helped some of the world's most successful brands achieve cost-efficiency, scalability, and faster time to market.",
+        "date": "2024-08-10",
+        "readTime": 4,
+        "author": "Marko Jakic",
+        "slug": "big-companies-that-were-built-using-outsources-developers"
+      },
+      {
+        "title": "How to Sign a Contract with an IT Outsourcing Agency",
+        "excerpt": "Outsourcing offers cost-effective development while maintaining high product standards, but a solid contract is crucial to ensure success.",
+        "date": "2024-07-02",
+        "readTime": 6,
+        "author": "Marko Jakic",
+        "slug": "how-to-sign-a-contract-with-an-it-outsourcing-agency"
+      },
+      {
+        "title": "API Gateway for Postgres for CRUD and vector search",
+        "excerpt": "The Nearup development team is excited to introduce Nodb, an API gateway designed to simplify CRUD operations while leveraging AI for advanced vector search capabilities.",
+        "date": "2024-06-07",
+        "readTime": 6,
+        "author": "Marko Jakic",
+        "slug": "api-gateway-for-postgres-for-crud-and-vector-search"
+      }
+    ]
   }
 }

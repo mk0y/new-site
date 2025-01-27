@@ -1,0 +1,91 @@
+---
+import MiniHero from "../components/MiniHero.astro";
+import { getI18n } from "../i18n";
+import Layout from "../layouts/Layout.astro";
+
+const i18nData = getI18n(Astro.url);
+
+const blogPosts = [
+  {
+    title: "KI-Integrations Best Practices für moderne Unternehmen",
+    excerpt:
+      "Erfahren Sie, wie führende Unternehmen KI-Lösungen erfolgreich implementieren, um ihre Abläufe zu transformieren und Innovation voranzutreiben.",
+    image: "/images/blog/ai-integration.jpg",
+    date: "2024-03-15",
+    readTime: 5,
+    author: "Sarah Johnson",
+    slug: "ki-integration-best-practices",
+  },
+  {
+    title: "Die Zukunft der individuellen Softwareentwicklung",
+    excerpt:
+      "Entdecken Sie aufkommende Trends und Technologien, die die Zukunft der individuellen Softwareentwicklung prägen und wie sie Unternehmen beeinflussen.",
+    image: "/images/blog/software-dev.jpg",
+    date: "2024-03-10",
+    readTime: 4,
+    author: "Michael Chen",
+    slug: "zukunft-individuelle-softwareentwicklung",
+  },
+  {
+    title: "Erfolgsgeschichten der digitalen Transformation",
+    excerpt:
+      "Praxisbeispiele erfolgreicher digitaler Transformationsprojekte und die Erkenntnisse aus ihrer Umsetzung.",
+    image: "/images/blog/digital-transform.jpg",
+    date: "2024-03-05",
+    readTime: 6,
+    author: "Emma Schmidt",
+    slug: "erfolgsgeschichten-digitale-transformation",
+  },
+];
+---
+
+<Layout title={i18nData.blog.pageTitle}>
+  <MiniHero
+    title={i18nData.blog.heroTitle}
+    subtitle={i18nData.blog.heroSubtitle}
+  />
+
+  <main class="container mx-auto px-4 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {
+        blogPosts.map((post) => (
+          <article class="bg-[#161616] rounded-lg overflow-hidden shadow-lg transition-transform hover:scale-[1.02]">
+            <img
+              src={post.image}
+              alt={post.title}
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <div class="flex items-center text-sm text-[#CCCCCC] mb-3">
+                <time datetime={post.date}>
+                  {new Date(post.date).toLocaleDateString(i18nData.locale, {
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric",
+                  })}
+                </time>
+                <span class="mx-2">•</span>
+                <span>
+                  {post.readTime} {i18nData.common.minRead}
+                </span>
+              </div>
+              <h2 class="text-xl font-bold text-[#E6E6E6] mb-3 line-clamp-2">
+                {post.title}
+              </h2>
+              <p class="text-[#CCCCCC] mb-4 line-clamp-3">{post.excerpt}</p>
+              <div class="flex items-center justify-between">
+                <span class="text-sm text-[#CCCCCC]">{post.author}</span>
+                <a
+                  href={`/einblicke/${post.slug}`}
+                  class="text-[#3FCF8D] hover:text-[#32A571] font-medium transition-colors"
+                >
+                  {i18nData.common.readMore}
+                </a>
+              </div>
+            </div>
+          </article>
+        ))
+      }
+    </div>
+  </main>
+</Layout>

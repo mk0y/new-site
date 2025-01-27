@@ -1,0 +1,116 @@
+---
+import { Image } from "@unpic/astro";
+import psqlImg from "../assets/psql.png";
+import signImg from "../assets/sign-contract.jpg";
+import outsourceImg from "../assets/outsource-devs.jpg";
+import teamaasImg from "../assets/teamaas.jpg";
+import { default as imgInsights, default as postImg01, default as postImg02, default as postImg03, default as postImg04 } from "../assets/bg-ai.jpg";
+import MiniHero from "../components/MiniHero.astro";
+import Layout from "../layouts/Layout.astro";
+import { getCurrentLang, getCurrentTranslations } from "../utils";
+
+const currentLang = getCurrentLang(Astro.url.host);
+const i18nData = await getCurrentTranslations(currentLang);
+
+const images = [teamaasImg, outsourceImg, signImg, psqlImg];
+
+const blogPosts = [
+  {
+    title: i18nData.blog.blogPosts[0].title,
+    excerpt: i18nData.blog.blogPosts[0].excerpt,
+    image: postImg01,
+    date: i18nData.blog.blogPosts[0].date,
+    readTime: i18nData.blog.blogPosts[0].readTime,
+    author: i18nData.blog.blogPosts[0].author,
+    slug: i18nData.blog.blogPosts[0].slug,
+  },
+  {
+    title: i18nData.blog.blogPosts[1].title,
+    excerpt: i18nData.blog.blogPosts[1].excerpt,
+    image: postImg02,
+    date: i18nData.blog.blogPosts[1].date,
+    readTime: i18nData.blog.blogPosts[1].readTime,
+    author: i18nData.blog.blogPosts[1].author,
+    slug: i18nData.blog.blogPosts[1].slug,
+  },
+  {
+    title: i18nData.blog.blogPosts[2].title,
+    excerpt: i18nData.blog.blogPosts[2].excerpt,
+    image: postImg03,
+    date: i18nData.blog.blogPosts[2].date,
+    readTime: i18nData.blog.blogPosts[2].readTime,
+    author: i18nData.blog.blogPosts[2].author,
+    slug: i18nData.blog.blogPosts[2].slug,
+  },
+  {
+    title: i18nData.blog.blogPosts[3].title,
+    excerpt: i18nData.blog.blogPosts[3].excerpt,
+    image: postImg04,
+    date: i18nData.blog.blogPosts[3].date,
+    readTime: i18nData.blog.blogPosts[3].readTime,
+    author: i18nData.blog.blogPosts[3].author,
+    slug: i18nData.blog.blogPosts[3].slug,
+  },
+];
+---
+
+<Layout type="black" title={i18nData.blog.pageTitle}>
+  <MiniHero
+    title={i18nData.blog.heroTitle}
+    description={i18nData.blog.heroSubtitle}
+    backgroundImage={imgInsights}
+  />
+
+  <main class="container mx-auto px-4 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {
+        blogPosts.map((post, index) => (
+          <article class="bg-[#161616] rounded-lg overflow-hidden shadow-lg transition-transform hover:scale-[1.02]">
+            <a class="block bg-white" href={`/insights/${post.slug}`}>
+              <Image
+                src={images[index]}
+                alt={post.title}
+                class="w-full h-48 object-cover"
+              />
+            </a>
+            <div class="p-6">
+              <div class="flex items-center text-sm text-white-text mb-3">
+                <time datetime={post.date}>
+                  {new Date(post.date).toLocaleDateString(
+                    import.meta.env.PUBLIC_CURRENT_LANG === "de"
+                      ? "de-DE"
+                      : "en-US",
+                    {
+                      year: "numeric",
+                      month: "long",
+                      day: "numeric",
+                    }
+                  )}
+                </time>
+                <span class="mx-2">•</span>
+                <span>
+                  {post.readTime} {i18nData.common.minRead}
+                </span>
+              </div>
+              <a href={`/insights/${post.slug}`}>
+                <h2 class="text-xl font-bold text-white-text hover:text-primary-1a transition-colors mb-3 line-clamp-2">
+                  {post.title}
+                </h2>
+              </a>
+              <p class="text-white-text mb-4 line-clamp-3">{post.excerpt}</p>
+              <div class="flex items-center justify-between">
+                <span class="text-sm text-white-text">{post.author}</span>
+                <a
+                  href={`/insights/${post.slug}`}
+                  class="text-primary-1a hover:text-primary-1b font-medium transition-colors"
+                >
+                  {i18nData.common.readMore}
+                </a>
+              </div>
+            </div>
+          </article>
+        ))
+      }
+    </div>
+  </main>
+</Layout>

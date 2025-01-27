@@ -361,5 +361,51 @@
       "label": "Büro",
       "value": "Musterstraße 123, Berlin 10115 DE"
     }
+  },
+  "blog": {
+    "pageTitle": "Einblicke & Blog | Nearup",
+    "heroTitle": "Einblicke",
+    "heroSubtitle": "Entdecken Sie unseren Blog für die neuesten Updates, Einblicke und Expertentipps in Softwareentwicklung und Technologie. Von tiefgreifenden Artikeln zu herausfordernden Diskussionen geben wir wertvolle Inhalte, um Sie stets auf dem Laufenden zu halten.",
+    "latestPosts": "Neueste Beiträge",
+    "categories": {
+      "ai": "Künstliche Intelligenz",
+      "development": "Entwicklung",
+      "transformation": "Digitale Transformation",
+      "innovation": "Innovation"
+    },
+    "blogPosts": [
+      {
+        "title": "Team-as-a-Service-Outsourcing-Modell",
+        "excerpt": "Im heutigen schnelllebigen digitalen Umfeld stehen Unternehmen vor der Herausforderung, den Kundenbedarf an innovativen Lösungen zu erfüllen.",
+        "date": "2024-08-15",
+        "readTime": 5,
+        "author": "Marko Jakic",
+        "slug": "team-as-a-service-outsourcing-modell"
+      },
+      {
+        "title": "Große Unternehmen, die mithilfe ausgelagerter Entwickler aufgebaut wurden",
+        "excerpt": "Outsourcing hat einigen der weltweit erfolgreichsten Marken zu Kostenersparnis, Skalierbarkeit und einer schnelleren Markteinführung verholfen.",
+        "date": "2024-08-10",
+        "readTime": 4,
+        "author": "Marko Jakic",
+        "slug": "grosse-unternehmen-die-mithilfe-ausgelagerter-entwickler-aufgebaut-wurden"
+      },
+      {
+        "title": "So schließen Sie einen Vertrag mit einer IT-Outsourcing-Agentur ab",
+        "excerpt": "Outsourcing bietet eine kostengünstige Entwicklung bei gleichbleibend hohen Produktstandards, doch ein solider Vertrag ist entscheidend für den Erfolg.",
+        "date": "2024-07-02",
+        "readTime": 6,
+        "author": "Marko Jakic",
+        "slug": "so-schliessen-sie-einen-vertrag-mit-einer-it-outsourcing-agentur-ab"
+      },
+      {
+        "title": "API-Gateway für Postgres für CRUD und Vektorsuche",
+        "excerpt": "Das Nearup-Entwicklungsteam freut sich, Nodb vorzustellen -- ein API-Gateway, das CRUD-Operationen vereinfacht und KI für fortgeschrittene Vektorsuche nutzt.",
+        "date": "2024-06-07",
+        "readTime": 6,
+        "author": "Marko Jakic",
+        "slug": "api-gateway-fuer-postgres-fuer-crud-und-vektorsuche"
+      }
+    ]
   }
 }
