@@ -258,6 +258,12 @@
           "label": "International Partners"
         }
       ]
+    },
+    "contact": {
+      "title": "Get in Touch Now",
+      "description": "Let's start your digital transformation together and develop customized solutions.",
+      "consultingText": "Consulting",
+      "learnMoreText": "Learn More"
     }
   }
 }

@@ -125,9 +125,12 @@ const year = new Date().getFullYear();
     <div class="text-sm text-center pt-8 border-t border-white-borders/20">
       © {year}
       {i18nData.footer.copyright} | <a
+        class="hover:text-primary-1a transition-colors"
         href={lang === "en" ? "/privacy" : "/datenschutz"}
         >{i18nData.footer.privacy}</a
-      > | <a href={lang === "en" ? "/imprint" : "/impressum"}
+      > | <a
+        class="hover:text-primary-1a transition-colors"
+        href={lang === "en" ? "/imprint" : "/impressum"}
         >{i18nData.footer.imprint}</a
       >
     </div>

@@ -1,4 +1,5 @@
 ---
+import AboutContact from "../components/AboutContact.astro";
 import AboutHero from "../components/AboutHero.astro";
 import AboutIntro from "../components/AboutIntro.astro";
 import AboutMission from "../components/AboutMission.astro";
@@ -53,5 +54,11 @@ const i18nData = i18n;
     learnMoreText={i18nData.about.success.learnMoreText}
     contactText={i18nData.about.success.contactText}
     metrics={i18nData.about.success.metrics}
+  />
+  <AboutContact
+    title={i18nData.about.contact.title}
+    description={i18nData.about.contact.description}
+    consultingText={i18nData.about.contact.consultingText}
+    learnMoreText={i18nData.about.contact.learnMoreText}
   />
 </Layout>

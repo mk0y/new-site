@@ -257,6 +257,12 @@
           "label": "Internationale Partner"
         }
       ]
+    },
+    "contact": {
+      "title": "Jetzt Kontakt aufnehmen",
+      "description": "Lassen Sie uns gemeinsam Ihre digitale Transformation starten und maßgeschneiderte Lösungen entwickeln.",
+      "consultingText": "Beratung",
+      "learnMoreText": "Mehr erfahren"
     }
   }
 }
