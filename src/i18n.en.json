@@ -126,7 +126,8 @@
         "description": "We have implemented numerous successful projects that provide real value to our clients.",
         "cta": "More"
       }
-    }
+    },
+    "precision": "Precision"
   },
   "footer": {
     "quickLinks": "Quick Links",
@@ -264,6 +265,88 @@
       "description": "Let's start your digital transformation together and develop customized solutions.",
       "consultingText": "Consulting",
       "learnMoreText": "Learn More"
+    }
+  },
+  "healthcare": {
+    "main": "Pharma-Solutions by NearUp",
+    "heroDescription": "Discover our tailor-made software solutions for the pharmaceutical industry, driving innovation and efficiency.",
+    "title": "Tailor-made IT solutions for the pharmaceutical industry: innovative, effective and reliable.",
+    "description": "In the pharmaceutical industry, precise software solutions are essential. Our team offers customized software developments that are tailored to the specific requirements of the industry. In addition, we support you with comprehensive IT consulting and system integration.",
+    "services": {
+      "consulting": {
+        "title": "Optimal IT Consulting for Pharmaceutical Companies",
+        "description": "We help you optimize your processes through innovative technologies.",
+        "link": {
+          "text": "Learn More",
+          "href": "/services/healthcare/consulting"
+        }
+      },
+      "integration": {
+        "title": "System Integration for Pharma",
+        "description": "Benefit from seamless integrations that connect your systems.",
+        "link": {
+          "text": "Contact",
+          "href": "/contact"
+        }
+      },
+      "success": {
+        "title": "Success Stories",
+        "description": "Read our case studies to learn more about our successes.",
+        "link": {
+          "text": "Request Now",
+          "href": "/contact"
+        }
+      },
+      "benefits": {
+        "title": "The Benefits of Working with NearUp for Healthcare Companies",
+        "description": "Healthcare companies benefit from our expertise in software development and IT consulting. We offer tailored solutions that maximize efficiency, compliance, and data security.",
+        "efficiency": {
+          "title": "Efficiency",
+          "description": "Optimized processes lead to faster decisions and lower operational costs."
+        },
+        "compliance": {
+          "title": "Compliance",
+          "description": "Our solutions ensure compliance with all relevant regulations and standards."
+        }
+      },
+      "vision": {
+        "title": "Efficient Project Implementation in the Pharmaceutical Industry",
+        "description": "NearUp takes a structured approach to executing projects in the pharmaceutical industry. From requirements analysis to implementation, we offer customized solutions that meet the specific needs of our customers."
+      }
+    },
+    "process": {
+      "title": "Our Healthcare Development Process",
+      "sections": [
+        {
+          "title": "Requirements Analysis and Planning",
+          "description": "We begin with a thorough requirements analysis to understand your project's specific needs. Our team works closely with you to create a detailed plan that covers all aspects."
+        },
+        {
+          "title": "Implementation and Testing",
+          "description": "After planning, we efficiently implement the solutions and conduct comprehensive testing. This ensures that all functions work flawlessly and meet the highest standards."
+        },
+        {
+          "title": "Maintenance and Support",
+          "description": "Our commitment doesn't end with implementation. We provide ongoing maintenance and support to ensure your systems continue to function optimally."
+        }
+      ]
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "mainTitle": "Get in Touch",
+    "description": "We look forward to your inquiry and are happy to answer any questions.",
+    "email": {
+      "label": "E-Mail",
+      "value": "hello@nearup.io"
+    },
+    "phone": {
+      "label": "Phone",
+      "value": "+49 (30) 12345678"
+    },
+    "office": {
+      "label": "Office",
+      "value": "Musterstraße 123, Berlin 10115 DE"
     }
   }
 }

@@ -7,7 +7,7 @@
     "services": "Dienstleistungen",
     "industries": "Branchen",
     "startups": "Startups",
-    "healthcare": "Gesundheitswesen",
+    "healthcare": "Healthcare",
     "fintech": "Fintech",
     "retail": "Einzelhandel",
     "media": "Medien",
@@ -125,7 +125,9 @@
           "position": "Marketing, E-Commerce"
         }
       ]
-    }
+    },
+    "precision": "Präzision",
+    "learnMoreText": "Mehr erfahren"
   },
   "footer": {
     "quickLinks": "Quick Links",
@@ -259,10 +261,105 @@
       ]
     },
     "contact": {
-      "title": "Jetzt Kontakt aufnehmen",
-      "description": "Lassen Sie uns gemeinsam Ihre digitale Transformation starten und maßgeschneiderte Lösungen entwickeln.",
+      "title": "Kontakt",
+      "mainTitle": "Kontaktieren Sie uns",
+      "description": "Wir freuen uns auf Ihre Anfrage und stehen Ihnen gerne für Fragen zur Verfügung.",
+      "email": {
+        "label": "E-Mail",
+        "value": "hello@nearup.io"
+      },
+      "phone": {
+        "label": "Telefon",
+        "value": "+49 (30) 12345678"
+      },
+      "office": {
+        "label": "Büro",
+        "value": "Musterstraße 123, Berlin 10115 DE"
+      },
       "consultingText": "Beratung",
       "learnMoreText": "Mehr erfahren"
+    }
+  },
+  "healthcare": {
+    "main": "Pharma-Lösungen von NearUp",
+    "heroDescription": "Entdecken Sie unsere maßgeschneiderten Softwarelösungen für die Pharmaindustrie, die Innovation und Effizienz fördern.",
+    "title": "Maßgeschneiderte IT-Lösungen für die Pharmaindustrie: Innovativ, effektiv und zuverlässig.",
+    "description": "In der Pharmaindustrie sind präzise Softwarelösungen unerlässlich. Unser Team entwickelt maßgeschneiderte Softwarelösungen, die auf die spezifischen Anforderungen der Branche abgestimmt sind. Darüber hinaus unterstützen wir Sie mit umfassender IT-Beratung und Systemintegration.",
+    "services": {
+      "consulting": {
+        "title": "Optimale IT-Beratung für Pharmaunternehmen",
+        "description": "Wir helfen Ihnen, Ihre Prozesse durch innovative Technologien zu optimieren.",
+        "link": {
+          "text": "Mehr erfahren",
+          "href": "/services/healthcare/consulting"
+        }
+      },
+      "integration": {
+        "title": "Systemintegration für Pharma",
+        "description": "Profitieren Sie von nahtlosen Integrationen, die Ihre Systeme miteinander verbinden.",
+        "link": {
+          "text": "Kontakt",
+          "href": "/contact"
+        }
+      },
+      "success": {
+        "title": "Erfolgsgeschichten",
+        "description": "Lesen Sie unsere Fallstudien, um mehr über unsere Erfolge zu erfahren.",
+        "link": {
+          "text": "Jetzt anfragen",
+          "href": "/contact"
+        }
+      },
+      "benefits": {
+        "title": "Die Vorteile der Zusammenarbeit mit NearUp für Healthcare Unternehmen im Überblick",
+        "description": "Healthcare Unternehmen profitieren von unserer Expertise in der Softwareentwicklung und IT-Beratung. Wir bieten maßgeschneiderte Lösungen, die Effizienz, Compliance und Datensicherheit maximieren.",
+        "efficiency": {
+          "title": "Effizienzsteigerung",
+          "description": "Optimierte Prozesse führen zu schnelleren Entscheidungen und geringeren Betriebskosten."
+        },
+        "compliance": {
+          "title": "Compliance-Sicherheit",
+          "description": "Unsere Lösungen gewährleisten die Einhaltung aller relevanten Vorschriften und Standards."
+        }
+      },
+      "vision": {
+        "title": "Effiziente Projektumsetzung in der Healtcare Branche",
+        "description": "NearUp verfolgt einen strukturierten Ansatz zur Durchführung von Projekten in der Healtcare Branche. Von der Anforderungsanalyse bis zur Implementierung bieten wir maßgeschneiderte Lösungen, die den spezifischen Bedürfnissen unserer Kunden gerecht werden."
+      }
+    },
+    "process": {
+      "title": "Unser Healthcare-Entwicklungsprozess",
+      "sections": [
+        {
+          "title": "Anforderungsanalyse und Planung",
+          "description": "Wir beginnen mit einer gründlichen Anforderungsanalyse, um die spezifischen Bedürfnisse Ihres Projekts zu verstehen. Unser Team arbeitet eng mit Ihnen zusammen, um einen detaillierten Plan zu erstellen, der alle Aspekte abdeckt."
+        },
+        {
+          "title": "Implementierung und Testing",
+          "description": "Nach der Planung setzen wir die Lösungen effizient um und führen umfassende Tests durch. Dies gewährleistet, dass alle Funktionen einwandfrei arbeiten und den höchsten Standards entsprechen."
+        },
+        {
+          "title": "Wartung und Support",
+          "description": "Unser Engagement endet nicht mit der Implementierung. Wir bieten fortlaufende Wartung und Support, um sicherzustellen, dass Ihre Systeme stets optimal funktionieren."
+        }
+      ]
+    }
+  },
+  "contact": {
+    "title": "Kontakt",
+    "mainTitle": "Kontaktieren Sie uns",
+    "description": "Wir freuen uns auf Ihre Anfrage und stehen Ihnen gerne für Fragen zur Verfügung.",
+    "email": {
+      "label": "E-Mail",
+      "value": "hello@nearup.io"
+    },
+    "phone": {
+      "label": "Telefon",
+      "value": "+49 (30) 12345678"
+    },
+    "office": {
+      "label": "Büro",
+      "value": "Musterstraße 123, Berlin 10115 DE"
     }
   }
 }

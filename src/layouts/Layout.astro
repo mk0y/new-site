@@ -33,7 +33,6 @@ const { description, title, type = "white" } = Astro.props;
   <body>
     <TopHeader type={type} />
     <Header type={type} />
-    {type === "black" && <div class="h-24" />}
     <slot />
     <Footer />
   </body>

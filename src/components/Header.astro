@@ -470,6 +470,7 @@ const currentPath = Astro.url.pathname;
     </div>
   </div>
 </header>
+{type === "black" && <div id="header-holder" />}
 
 <script>
   const header = document.getElementById("site-header");
@@ -813,5 +814,33 @@ const currentPath = Astro.url.pathname;
     } else {
       header?.classList.remove("scrolled");
     }
+  });
+</script>
+
+<script>
+  const setHeight = () => {
+    const header = document.getElementById("site-header");
+    const topHeader = document.getElementById("top-header");
+    const headerHolder = document.getElementById("header-holder");
+    console.log(headerHolder, 123);
+    if (header && headerHolder) {
+      console.log("topHeader", topHeader?.offsetHeight);
+      if (topHeader?.offsetHeight) {
+        headerHolder.style.height =
+          header.offsetHeight + topHeader.offsetHeight + "px";
+        console.log(header.offsetHeight);
+      } else {
+        headerHolder.style.height = header.offsetHeight + "px";
+      }
+    }
+  };
+  document.addEventListener("DOMContentLoaded", () => {
+    setHeight();
+  });
+  document.addEventListener("pageshow", () => {
+    setHeight();
+  });
+  document.addEventListener("resize", () => {
+    setHeight();
   });
 </script>

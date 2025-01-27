@@ -6,6 +6,7 @@ On staging German site is https://nearup-de.netlify.app and English is https://n
 It's Nearup, not NearUp (notice the lowercase "u").
 
 Implement proper component composition and reusability.
+Be mindful of all modern browsers, like Chrome and Safari or Edge.
 
 Primary color 1A: #3FCF8D
 Primary color 1B: #32A571

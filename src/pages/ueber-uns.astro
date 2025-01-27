@@ -5,7 +5,7 @@ import AboutIntro from "../components/AboutIntro.astro";
 import AboutMission from "../components/AboutMission.astro";
 import AboutSuccess from "../components/AboutSuccess.astro";
 import AboutTimeline from "../components/AboutTimeline.astro";
-import AboutVision from "../components/AboutVision.astro";
+import SimpleTitleVision from "../components/SimpleTitleVision.astro";
 import i18n from "../i18n.de.json";
 import Layout from "../layouts/Layout.astro";
 
@@ -40,7 +40,7 @@ const i18nData = i18n;
     title={i18nData.about.timeline.title}
     milestones={i18nData.about.timeline.milestones}
   />
-  <AboutVision
+  <SimpleTitleVision
     subtitle={i18nData.about.vision.subtitle}
     title={i18nData.about.vision.title}
     description={i18nData.about.vision.description}

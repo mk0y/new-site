@@ -1,0 +1,44 @@
+---
+import { Image } from "@unpic/astro";
+import type { ImageMetadata } from 'astro';
+
+type Props = {
+  sections: Array<{
+    title: string;
+    description: string;
+  }>;
+  image: ImageMetadata;
+  imageAlt: string;
+}
+---
+
+<section class="py-16 md:py-24">
+  <div class="container mx-auto px-4 md:px-6">
+    <div class="grid md:grid-cols-2 gap-12 items-start">
+      {/* Left column with text sections */}
+      <div class="space-y-12">
+        {Astro.props.sections.map(section => (
+          <div class="group border-l-4 border-transparent hover:border-primary-1a pl-6 transition-all duration-300">
+            <h3 class="text-2xl font-bold text-gray-a mb-4 group-hover:text-primary-1a transition-colors">
+              {section.title}
+            </h3>
+            <p class="text-gray-a/80 leading-relaxed">
+              {section.description}
+            </p>
+          </div>
+        ))}
+      </div>
+
+      {/* Right column with image */}
+      <div class="relative aspect-[4/3] rounded-xl overflow-hidden">
+        <Image
+          src={Astro.props.image}
+          alt={Astro.props.imageAlt}
+          width={800}
+          height={600}
+          class="w-full h-full object-cover"
+        />
+      </div>
+    </div>
+  </div>
+</section> 

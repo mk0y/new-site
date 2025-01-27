@@ -1,0 +1,23 @@
+---
+import QuickContact from "../components/QuickContact.astro";
+import Layout from "../layouts/Layout.astro";
+import { getCurrentLang, getCurrentTranslations } from "../utils";
+
+const currentLang = getCurrentLang(Astro.url.host);
+const i18nData = await getCurrentTranslations(currentLang);
+---
+
+<Layout
+  title="Contact - NearUp"
+  description="Contact us for your digital transformation needs"
+  type="black"
+>
+  <QuickContact
+    title={i18nData.contact.title}
+    mainTitle={i18nData.contact.mainTitle}
+    description={i18nData.contact.description}
+    email={i18nData.contact.email}
+    phone={i18nData.contact.phone}
+    office={i18nData.contact.office}
+  />
+</Layout>

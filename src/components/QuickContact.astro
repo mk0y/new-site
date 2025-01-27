@@ -1,0 +1,84 @@
+---
+interface Props {
+  title: string;
+  mainTitle: string;
+  description: string;
+  email: {
+    label: string;
+    value: string;
+  };
+  phone: {
+    label: string;
+    value: string;
+  };
+  office: {
+    label: string;
+    value: string;
+  };
+}
+
+const { title, mainTitle, description, email, phone, office } = Astro.props;
+---
+
+<section class="py-16 md:py-24 bg-white">
+  <div class="container mx-auto px-4 md:px-6">
+    <div class="grid lg:grid-cols-5 gap-12 items-start">
+      {/* Left column - Takes more space */}
+      <div class="lg:col-span-3 space-y-6">
+        <div class="text-primary-1a mb-2">{title}</div>
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-a mb-6">
+          {mainTitle}
+        </h2>
+        <p class="text-lg text-gray-a/80">
+          {description}
+        </p>
+      </div>
+
+      {/* Right column - Contact details */}
+      <div class="lg:col-span-2 space-y-8">
+        <div class="space-y-6">
+          {/* Email */}
+          <div class="group">
+            <div class="text-lg font-semibold text-gray-a mb-2">
+              {email.label}
+            </div>
+            <a
+              href={`mailto:${email.value}`}
+              class="text-gray-a/80 hover:text-primary-1a transition-colors underline-offset-4 hover:underline"
+            >
+              {email.value}
+            </a>
+          </div>
+
+          {/* Phone */}
+          <div class="group">
+            <div class="text-lg font-semibold text-gray-a mb-2">
+              {phone.label}
+            </div>
+            <a
+              href={`tel:${phone.value.replace(/\s/g, "")}`}
+              class="text-gray-a/80 hover:text-primary-1a transition-colors underline-offset-4 hover:underline"
+            >
+              {phone.value}
+            </a>
+          </div>
+
+          {/* Office */}
+          <div class="group">
+            <div class="text-lg font-semibold text-gray-a mb-2">
+              {office.label}
+            </div>
+            <a
+              href={`https://maps.google.com/?q=${encodeURIComponent(office.value)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-gray-a/80 hover:text-primary-1a transition-colors underline-offset-4 hover:underline"
+            >
+              {office.value}
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
