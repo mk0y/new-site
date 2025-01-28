@@ -1,0 +1,25 @@
+---
+import { Image } from "@unpic/astro";
+import img404 from "../assets/404.jpg";
+// import i18n from "../i18n.en.json";
+import Layout from "../layouts/Layout.astro";
+import Container from "../components/Container.astro";
+// const i18nData = i18n;
+---
+
+<Layout
+  title="Ooops"
+  description="Ooops, this page does not exist"
+  type="black"
+>
+  <Container>
+    <div class="flex flex-col items-center justify-center max-w-[600px] mx-auto py-20">
+      <Image
+        src={img404}
+        alt="404"
+        class="mb-4"
+        class="max-w-[200px] object-fit"
+      />
+    </div>
+  </Container>
+</Layout>

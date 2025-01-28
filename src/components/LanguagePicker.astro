@@ -5,10 +5,14 @@ const path = Astro.url.pathname;
 const pathMapperEn: Record<string, string> = {
   "/about": "/ueber-uns",
   "/careers": "/karriere",
+  "/insights/api-gateway-for-postgres-for-crud-and-vector-search":
+    "/insights/api-gateway-fuer-postgres-fuer-crud-und-vektorsuche",
 };
 const pathMapperDe: Record<string, string> = {
   "/ueber-uns": "/about",
   "/karriere": "/careers",
+  "/insights/api-gateway-fuer-postgres-fuer-crud-und-vektorsuche":
+    "/insights/api-gateway-for-postgres-for-crud-and-vector-search",
 };
 ---
 
@@ -32,10 +36,7 @@ const pathMapperDe: Record<string, string> = {
       ]}
     >
       <a
-        href={
-          import.meta.env.PUBLIC_SITE_URL_EN +
-          (pathMapperDe[path] || path)
-        }
+        href={import.meta.env.PUBLIC_SITE_URL_EN + (pathMapperDe[path] || path)}
         class="w-full text-left px-4 py-2 text-white hover:bg-white/10 flex items-center space-x-2 transition-colors"
         data-lang="en"
       >
@@ -43,10 +44,7 @@ const pathMapperDe: Record<string, string> = {
         <span>English</span>
       </a>
       <a
-        href={
-          import.meta.env.PUBLIC_SITE_URL_DE +
-          (pathMapperEn[path] || path)
-        }
+        href={import.meta.env.PUBLIC_SITE_URL_DE + (pathMapperEn[path] || path)}
         class="w-full text-left px-4 py-2 text-white hover:bg-white/10 flex items-center space-x-2 transition-colors"
         data-lang="de"
       >

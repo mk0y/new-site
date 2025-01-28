@@ -1,0 +1,44 @@
+---
+import { getEntry, render } from "astro:content";
+import PostLayout from "../../layouts/PostLayout.astro";
+import { getCurrentLang, getCurrentTranslations } from "../../utils";
+const currentLang = getCurrentLang(Astro.url.host);
+const i18nData = await getCurrentTranslations(currentLang);
+export const getStaticPaths = () => {
+  return [
+    { params: { slug: "api-gateway-for-postgres-for-crud-and-vector-search" } },
+    { params: { slug: "api-gateway-fuer-postgres-fuer-crud-und-vektorsuche" } },
+    { params: { slug: "foobar-3" } },
+  ];
+};
+const post = await getEntry("insights", Astro.params.slug);
+if (!post) {
+  return Astro.redirect("/404");
+}
+const { Content } = await render(post);
+console.log(post.data);
+---
+
+<PostLayout>
+  <div class="flex justify-between items-center mb-4">
+    <p class="text-sm text-gray-500">{post.data.author}</p>
+    <p class="text-sm text-gray-500">
+      <time datetime={post.data.date}>
+        {
+          new Date(post.data.date).toLocaleDateString(
+            import.meta.env.PUBLIC_CURRENT_LANG === "de" ? "de-DE" : "en-US",
+            {
+              year: "numeric",
+              month: "long",
+              day: "numeric",
+            }
+          )
+        }
+      </time>
+      <span class="mx-2">•</span>
+      {post.data.readTime}
+      {i18nData.common.minRead}
+    </p>
+  </div>
+  <Content />
+</PostLayout>

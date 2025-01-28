@@ -50,4 +50,9 @@
     list-style: disc;
     list-style-position: inside;
   }
+  .content-container ol {
+    list-style: decimal;
+    list-style-position: inside;
+    margin-left: 1rem;
+  }
 }
