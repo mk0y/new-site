@@ -127,7 +127,8 @@
       ]
     },
     "precision": "Präzision",
-    "learnMoreText": "Mehr erfahren"
+    "learnMoreText": "Mehr erfahren",
+    "breadcrumbAriaLabel": "Breadcrumb Navigation"
   },
   "footer": {
     "quickLinks": "Quick Links",

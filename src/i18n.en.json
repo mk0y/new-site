@@ -127,7 +127,8 @@
         "cta": "More"
       }
     },
-    "precision": "Precision"
+    "precision": "Precision",
+    "breadcrumbAriaLabel": "Breadcrumb navigation"
   },
   "footer": {
     "quickLinks": "Quick Links",

@@ -1,0 +1,47 @@
+---
+import { Breadcrumbs } from "astro-breadcrumbs";
+import {
+  getCurrentLang,
+  getCurrentTranslations,
+  toBreadcrumbText,
+} from "../utils";
+const currentLang = getCurrentLang(Astro.url.host);
+const i18nData = await getCurrentTranslations(currentLang);
+const pathSplit = Astro.url.pathname.split("/").slice(1);
+const path = Astro.url.pathname.replace(/\//g, " ");
+const customizeLinks: { text?: string; "aria-label"?: string }[] = [
+  { "aria-label": "Home page" },
+];
+if (pathSplit[0]) {
+  customizeLinks.push({ text: toBreadcrumbText(pathSplit[0]) });
+}
+if (pathSplit[1]) {
+  customizeLinks.push({ text: toBreadcrumbText(pathSplit[1]) });
+}
+---
+
+{
+  path !== "/" && (
+    <Breadcrumbs
+      customizeLinks={customizeLinks}
+      truncated={true}
+      ariaLabel={i18nData.common.breadcrumbAriaLabel}
+    >
+      <svg
+        slot="separator"
+        xmlns="http://www.w3.org/2000/svg"
+        width="16"
+        height="16"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="text-primary-1a"
+      >
+        <path d="m9 18 6-6-6-6" />
+      </svg>
+    </Breadcrumbs>
+  )
+}

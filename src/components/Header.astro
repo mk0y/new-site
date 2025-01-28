@@ -1,8 +1,10 @@
 ---
+import Container from "./Container.astro";
 import ChevronDown from "../icons/ChevronDown.astro";
 import Search from "../icons/Search.astro";
 import X from "../icons/X.astro";
 import Menu from "../icons/Menu.astro";
+import Breadcrumbs from "./Breadcrumbs.astro";
 import { getCurrentLang, getCurrentTranslations, kebabCase } from "../utils";
 const currentLang = getCurrentLang(Astro.url.host);
 const i18nData = await getCurrentTranslations(currentLang);
@@ -359,8 +361,12 @@ const currentPath = Astro.url.pathname;
         >
         <a
           href="/insights"
-          class="nav-item text-white hover:text-gray-200 relative z-10"
-          >{i18nData.common.blog}</a
+          class:list={[
+            "nav-item text-white hover:text-gray-200 relative z-10",
+            currentPath === "/insights" || currentPath.startsWith("/insights/")
+              ? "active"
+              : "",
+          ]}>{i18nData.common.blog}</a
         >
       </div>
 
@@ -481,6 +487,14 @@ const currentPath = Astro.url.pathname;
   </div>
 </header>
 {type === "black" && <div id="header-holder" />}
+
+{
+  currentPath !== "/" && (
+    <Container class="my-8">
+      <Breadcrumbs />
+    </Container>
+  )
+}
 
 <script>
   const header = document.getElementById("site-header");
@@ -832,13 +846,10 @@ const currentPath = Astro.url.pathname;
     const header = document.getElementById("site-header");
     const topHeader = document.getElementById("top-header");
     const headerHolder = document.getElementById("header-holder");
-    console.log(headerHolder, 123);
     if (header && headerHolder) {
-      console.log("topHeader", topHeader?.offsetHeight);
       if (topHeader?.offsetHeight) {
         headerHolder.style.height =
           header.offsetHeight + topHeader.offsetHeight + "px";
-        console.log(header.offsetHeight);
       } else {
         headerHolder.style.height = header.offsetHeight + "px";
       }

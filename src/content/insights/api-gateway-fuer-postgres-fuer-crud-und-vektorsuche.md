@@ -1,5 +1,4 @@
 ---
-# layout: ../layouts/PostLayout.astro
 title: API Gateway for Postgres for CRUD and vector search
 author: Marko Jakic
 readTime: 6

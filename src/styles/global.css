@@ -49,10 +49,30 @@
   .content-container ul {
     list-style: disc;
     list-style-position: inside;
+    margin-left: 0.5rem;
+    padding-left: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
   }
   .content-container ol {
     list-style: decimal;
     list-style-position: inside;
-    margin-left: 1rem;
+    margin-left: 0.5rem;
+    padding-left: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
   }
+  .insights-content p {
+    margin-bottom: 1.2rem;
+    margin-top: 1.2rem;
+  }
+  .insights-content li {
+    margin-bottom: 0.8rem;
+    margin-top: 0.8rem;
+  }
+}
+
+.c-breadcrumbs__link:hover,
+.c-breadcrumbs__link {
+  color: var(--color-primary-1a);
 }

@@ -8,7 +8,34 @@ export const getStaticPaths = () => {
   return [
     { params: { slug: "api-gateway-for-postgres-for-crud-and-vector-search" } },
     { params: { slug: "api-gateway-fuer-postgres-fuer-crud-und-vektorsuche" } },
-    { params: { slug: "foobar-3" } },
+    {
+      params: { slug: "how-to-sign-a-contract-with-an-it-outsourcing-agency" },
+    },
+    {
+      params: {
+        slug: "so-schliessen-sie-einen-vertrag-mit-einer-it-outsourcing-agentur-ab",
+      },
+    },
+    {
+      params: {
+        slug: "big-companies-that-were-built-using-outsources-developers",
+      },
+    },
+    {
+      params: {
+        slug: "grosse-unternehmen-die-mithilfe-ausgelagerter-entwickler-aufgebaut-wurden",
+      },
+    },
+    {
+      params: {
+        slug: "team-as-a-service-outsourcing-model",
+      },
+    },
+    {
+      params: {
+        slug: "team-as-a-service-outsourcing-modell",
+      },
+    },
   ];
 };
 const post = await getEntry("insights", Astro.params.slug);
@@ -16,7 +43,6 @@ if (!post) {
   return Astro.redirect("/404");
 }
 const { Content } = await render(post);
-console.log(post.data);
 ---
 
 <PostLayout>
@@ -40,5 +66,7 @@ console.log(post.data);
       {i18nData.common.minRead}
     </p>
   </div>
-  <Content />
+  <div class="insights-content">
+    <Content />
+  </div>
 </PostLayout>

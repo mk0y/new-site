@@ -22,3 +22,29 @@ export const kebabCase = (str: string) => {
     .replace(/ /g, "-")
     .replace(/--/g, "-");
 };
+
+function capitalizeFirstLetter(str: string) {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
+export const toBreadcrumbText = (str: string) => {
+  const umlautMap = {
+    ue: "ü",
+    Ue: "Ü",
+    ae: "ä",
+    Ae: "Ä",
+    oe: "ö",
+    Oe: "Ö",
+    ss: "ß",
+  };
+
+  // capitalize first letter
+  return capitalizeFirstLetter(
+    str
+      .replace(
+        /ue|Ue|ae|Ae|oe|Oe|ss/g,
+        (match) => umlautMap[match as keyof typeof umlautMap] || match
+      )
+      .replace(/-/g, " ")
+  );
+};
