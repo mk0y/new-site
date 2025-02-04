@@ -281,11 +281,11 @@ const currentPath = Astro.url.pathname;
             />
           </button>
           <div
-            class="fixed hidden w-64 left-1/2 -translate-x-1/2"
+            class="fixed hidden w-64"
             id="industries-menu"
             role="menu"
             aria-labelledby="industries-menu-button"
-            style="top: var(--header-height);"
+            style="top: var(--header-height); left: 0;"
           >
             <div class="h-4"></div>
             <div
@@ -548,6 +548,12 @@ const currentPath = Astro.url.pathname;
       button.querySelector("svg")?.classList.add("rotate-180");
       activeMenu = menu;
       activeButton = button;
+
+      // Calculate and set position for industries menu
+      if (menu.id === "industries-menu") {
+        const buttonRect = button.getBoundingClientRect();
+        menu.style.left = `${buttonRect.left}px`;
+      }
     }
   };
 
@@ -839,6 +845,21 @@ const currentPath = Astro.url.pathname;
       header?.classList.remove("scrolled");
     }
   });
+
+  // Update industries menu position on window resize
+  window.addEventListener("resize", () => {
+    const industriesMenu = document.getElementById("industries-menu");
+    const industriesButton = document.getElementById("industries-menu-button");
+
+    if (
+      industriesMenu &&
+      industriesButton &&
+      !industriesMenu.classList.contains("hidden")
+    ) {
+      const buttonRect = industriesButton.getBoundingClientRect();
+      industriesMenu.style.left = `${buttonRect.left}px`;
+    }
+  });
 </script>
 
 <script>
@@ -857,6 +878,14 @@ const currentPath = Astro.url.pathname;
   };
   document.addEventListener("DOMContentLoaded", () => {
     setHeight();
+
+    // Set initial position for industries menu
+    const industriesMenu = document.getElementById("industries-menu");
+    const industriesButton = document.getElementById("industries-menu-button");
+    if (industriesMenu && industriesButton) {
+      const buttonRect = industriesButton.getBoundingClientRect();
+      industriesMenu.style.left = `${buttonRect.left}px`;
+    }
   });
   document.addEventListener("pageshow", () => {
     setHeight();

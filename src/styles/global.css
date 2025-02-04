@@ -11,6 +11,7 @@
   --color-white: #ffffff;
   --color-white-text: #e6e6e6;
   --color-white-borders: #cccccc;
+  --breakpoint-cs: 900px;
 }
 
 @layer base {
