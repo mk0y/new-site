@@ -1,20 +1,20 @@
 ---
-import heroSoftwareDev from "../assets/hero-software-dev.jpg";
-import BenefitsOverview from "../components/BenefitsOverview.astro";
-import FAQ from "../components/FAQ.astro";
-import MiniHero from "../components/MiniHero.astro";
-import SimpleMission from "../components/SimpleMission.astro";
-import SimpleSplitTextImage from "../components/SimpleSplitTextImage.astro";
-import TitleCards from "../components/TitleCards.astro";
 import Layout from "../layouts/Layout.astro";
+import MiniHero from "../components/MiniHero.astro";
 import { getCurrentLang, getCurrentTranslations } from "../utils";
+import heroSoftwareDev from "../assets/hero-software-dev.jpg";
+import SimpleMission from "../components/SimpleMission.astro";
+import TitleCards from "../components/TitleCards.astro";
+import BenefitsOverview from "../components/BenefitsOverview.astro";
+import SimpleSplitTextImage from "../components/SimpleSplitTextImage.astro";
+import FAQ from "../components/FAQ.astro";
 const currentLang = getCurrentLang(Astro.url.host);
 const i18nData = await getCurrentTranslations(currentLang);
 ---
 
 <Layout
-  title="Nearshoring - NearUp"
-  description="We offer nearshoring services to help you save time and money."
+  title="Project-Based Nearshoring - NearUp"
+  description="We offer project-based nearshoring services to help you save time and money."
   type="black"
 >
   <MiniHero
