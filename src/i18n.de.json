@@ -128,7 +128,9 @@
     },
     "precision": "Präzision",
     "learnMoreText": "Mehr erfahren",
-    "breadcrumbAriaLabel": "Breadcrumb Navigation"
+    "breadcrumbAriaLabel": "Breadcrumb Navigation",
+    "moreQuestions": "Haben Sie weitere Fragen?",
+    "dontHesitate": "Zögern Sie nicht, uns zu kontaktieren!"
   },
   "footer": {
     "quickLinks": "Quick Links",
@@ -408,5 +410,78 @@
         "slug": "api-gateway-fuer-postgres-fuer-crud-und-vektorsuche"
       }
     ]
+  },
+  "softwareDevelopment": {
+    "main": "Software Entwicklung von NearUp",
+    "heroDescription": "Entdecken Sie unsere Software Development Services und wie wir Ihnen bei der vollständigen digitalen Transformation helfen können.",
+    "mission": {
+      "subtitle": "Software Entwicklung",
+      "title": "Unsere Mission und Vision für die Zukunft",
+      "description": "Bei NearUp streben wir danach, durch innovative IT-Lösungen die digitale Transformation voranzutreiben. Unser Ziel ist es, Unternehmen dabei zu unterstützen, ihre Visionen in die Realität umzusetzen.",
+      "learnMoreText": "Erfahren",
+      "contactText": "Kontakt"
+    },
+    "titleCards": {
+      "title": "Unsere umfassenden IT-Beratungsdienste für eine erfolgreiche digitale Transformation",
+      "card1": {
+        "title": "Strategische IT-Beratung für nachhaltige Lösungen und Innovationen",
+        "description": "Wir helfen Ihnen, Ihre IT-Strategie zu entwickeln und Technologien optimal zu bewerten."
+      },
+      "card2": {
+        "title": "Optimierung Ihrer Geschäftsprozesse durch Maßgeschneidertes IT-Lösungen und Beratung",
+        "description": "Unsere Experten analysieren Ihre Prozesse und implementieren effiziente Lösungen."
+      },
+      "card3": {
+        "title": "Technologiebewertung für die Auswahl der besten Lösungen für Ihr Unternehmen",
+        "description": "Wir unterstützen Sie bei der Auswahl und Implementierung der richtigen Technologien."
+      }
+    },
+    "benefits": {
+      "title": "Massgeschneiderte IT-Strategien für Ihren Geschäftserfolg mit NearUp",
+      "description": "Bei NearUp entwicklen wir individuelle IT-Strategien, die auf die spezifischen Geschäftsziele Unserer Kunden abgestimmt sind. Unser Ansatz gewährleistet, dass Technologie effektiv zur Erreichung Ihrer Unternehmensziele eingesetzt wird.",
+      "benefits": [
+        {
+          "title": "Strategische Plannung",
+          "description": "Wir analysieren Ihre Anforderungen und entwerfen eine zielgerichtete IT-Strategie."
+        },
+        {
+          "title": "Umsetzung und Support",
+          "description": "Unser Team begleitet Sie bei der Implementierung und bietet kontinuierlichen Support."
+        }
+      ]
+    },
+    "benefitsOverview": {
+      "title": "Technologiebewertung: Optimierungspotenziale durch umfassende Analyse bestehender Systeme erkennen",
+      "description": "At NearUp analysieren wir bestehende Technologien gründlich, um Verbesserungspotenziale zu identifizieren. Unser Ansatz sorgt dafür, dass Ihre Systeme effizienter und zukunftssicherer werden."
+    },
+    "benefitsOverview2": {
+      "title": "Optimierung Ihrer Geschäftsprozesse für maximale Effizienz und Produktivität bei NearUp",
+      "description": "Bei NearUp analysieren wir Ihre bestehenden Geschäftsprozesse gründlich, um Schwachstellen zu identifizieren. Durch maßgeschneidertes Lösungen steigern wir Ihre Effizienz und Produktivität nachhaltig."
+    },
+    "faq": {
+      "title": "Hier finden Sie Antworten auf häufige gestellte Fragen zu unseren IT-Beratungsdiensten.",
+      "questions": [
+        {
+          "question": "Was ist IT-Beratung?",
+          "answer": "IT-Beratung ist die professionelle Beratung von Unternehmen in Fragen der Informationstechnologie. Wir unterstützen Sie bei der Planung, Umsetzung und Optimierung Ihrer IT-Strategie."
+        },
+        {
+          "question": "Wie lange dauert es?",
+          "answer": "Die Dauer der Beratung hängt von der Komplexität Ihres Unternehmens und der Anzahl der Fragen ab. Wir können Ihnen in der Regel innerhalb von 2-4 Wochen einen Bericht mit unseren Ergebnissen und Empfehlungen vorstellen."
+        },
+        {
+          "question": "Welche Branchen bedienen Sie?",
+          "answer": "Wir bedienen alle Branchen, die eine individuelle IT-Strategie benötigen, um ihre Geschäftsziele zu erreichen. Wir unterstützen Sie bei der Entwicklung und Umsetzung von IT-Lösungen, die auf Ihre Bedürfnisse zugeschnitten sind."
+        },
+        {
+          "question": "Wie erfolgt die Zusammenarbeit? ",
+          "answer": "Wir arbeiten in einem Team und beraten Sie gemeinsam. Wir beraten Sie in allen Fragen der Informationstechnologie und unterstützen Sie bei der Umsetzung Ihrer IT-Strategie."
+        },
+        {
+          "question": "Welche Technologien nutzen Sie?",
+          "answer": "Wir nutzen die neuesten Technologien und Methoden, um Ihre IT-Strategie zu optimieren. Wir beraten Sie in allen Fragen der Informationstechnologie und unterstützen Sie bei der Umsetzung Ihrer IT-Strategie."
+        }
+      ]
+    }
   }
 }

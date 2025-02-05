@@ -1,0 +1,30 @@
+---
+interface Props {
+  subtitle: string;
+  title: string;
+  description: string;
+  learnMoreText: string;
+  contactText: string;
+}
+
+const { subtitle, title, description, learnMoreText, contactText } =
+  Astro.props;
+---
+
+<section class="py-20">
+  <div class="container flex mx-auto px-4">
+    <div class="grid md:grid-cols-2 gap-12 items-start">
+      <div class="flex flex-col space-y-4">
+        <p class="text-lg text-primary-1a">{subtitle}</p>
+        <h2 class="text-4xl md:text-5xl font-bold">
+          {title}
+        </h2>
+      </div>
+      <div class="flex flex-1 h-full justify-center items-center">
+        <p class="text-lg text-gray-a">
+          {description}
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

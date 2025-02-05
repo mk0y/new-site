@@ -493,14 +493,6 @@ const currentPath = Astro.url.pathname;
 </header>
 {type === "black" && <div id="header-holder" />}
 
-{
-  currentPath !== "/" && (
-    <Container class="my-8">
-      <Breadcrumbs />
-    </Container>
-  )
-}
-
 <script>
   const header = document.getElementById("site-header");
   if (header) {

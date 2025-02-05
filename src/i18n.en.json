@@ -128,7 +128,9 @@
       }
     },
     "precision": "Precision",
-    "breadcrumbAriaLabel": "Breadcrumb navigation"
+    "breadcrumbAriaLabel": "Breadcrumb navigation",
+    "moreQuestions": "Have more questions?",
+    "dontHesitate": "Don't hesitate to contact us!"
   },
   "footer": {
     "quickLinks": "Quick Links",
@@ -395,5 +397,78 @@
         "slug": "api-gateway-for-postgres-for-crud-and-vector-search"
       }
     ]
+  },
+  "softwareDevelopment": {
+    "main": "Software Development by NearUp",
+    "heroDescription": "Discover our Software Development Services and how we can help you achieve your complete digital transformation.",
+    "mission": {
+      "subtitle": "Software Development",
+      "title": "Our Mission and Vision for the Future",
+      "description": "At NearUp, we strive to drive digital transformation through innovative IT solutions. Our goal is to support companies in turning their visions into reality.",
+      "learnMoreText": "Learn More",
+      "contactText": "Contact"
+    },
+    "titleCards": {
+      "title": "Comprehensive IT Consulting Services for Successful Digital Transformation",
+      "card1": {
+        "title": "Strategic IT Consulting for Sustainable Solutions and Innovations",
+        "description": "We help you develop your IT strategy and evaluate technologies optimally."
+      },
+      "card2": {
+        "title": "Optimize Your Business Processes through Customized IT Solutions and Consulting",
+        "description": "Our experts analyze your processes and implement efficient solutions."
+      },
+      "card3": {
+        "title": "Technology Evaluation for Selecting the Best Solutions for Your Company",
+        "description": "We support you in selecting and implementing the right technologies for your company."
+      }
+    },
+    "benefits": {
+      "title": "Customized IT Strategies for Your Business Success with NearUp",
+      "description": "At NearUp, we develop customized IT strategies that are tailored to the specific business goals of our clients. Our approach ensures that technology is effectively used to achieve your business objectives.",
+      "benefits": [
+        {
+          "title": "Strategic Planning",
+          "description": "We analyze your requirements and design a targeted IT strategy."
+        },
+        {
+          "title": "Implementation and Support",
+          "description": "Our team accompanies you during implementation and provides ongoing support."
+        }
+      ]
+    },
+    "benefitsOverview": {
+      "title": "Technology Evaluation: Identify Optimization Opportunities through Thorough Analysis of Existing Systems",
+      "description": "At NearUp, we analyze existing technologies thoroughly to identify optimization opportunities. Our approach ensures that your systems become more efficient and future-proof."
+    },
+    "benefitsOverview2": {
+      "title": "Optimization of Your Business Processes for Maximum Efficiency and Productivity at NearUp",
+      "description": "At NearUp, we analyze your existing business processes thoroughly to identify opportunities for improvement. Our approach ensures that your systems become more efficient and future-proof."
+    },
+    "faq": {
+      "title": "Here you will find answers to frequently asked questions about our IT consulting services.",
+      "questions": [
+        {
+          "question": "What is IT consulting?",
+          "answer": "IT consulting is the professional consulting of companies in questions of information technology. We support you in planning, implementing and optimizing your IT strategy."
+        },
+        {
+          "question": "How long does it take?",
+          "answer": "The duration of the consulting depends on the complexity of your company and the number of questions. We can usually present you with a report with our results and recommendations within 2-4 weeks."
+        },
+        {
+          "question": "What industries do you serve?",
+          "answer": "We serve all industries that need an individual IT strategy to achieve their business goals. We support you in developing and implementing IT solutions tailored to your needs."
+        },
+        {
+          "question": "How does the cooperation work?",
+          "answer": "We work in a team and advise you together. We advise you in all questions of information technology and support you in implementing your IT strategy."
+        },
+        {
+          "question": "What technologies do you use?",
+          "answer": "We use the latest technologies and methods to optimize your IT strategy. We advise you in all questions of information technology and support you in implementing your IT strategy."
+        }
+      ]
+    }
   }
 }
