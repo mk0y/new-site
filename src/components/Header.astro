@@ -5,7 +5,13 @@ import Search from "../icons/Search.astro";
 import X from "../icons/X.astro";
 import Menu from "../icons/Menu.astro";
 import Breadcrumbs from "./Breadcrumbs.astro";
-import { getCurrentLang, getCurrentTranslations, kebabCase } from "../utils";
+import {
+  getCurrentLang,
+  getCurrentTranslations,
+  kebabCase,
+  pathMapperEn,
+  pathMapperDe,
+} from "../utils";
 const currentLang = getCurrentLang(Astro.url.host);
 const i18nData = await getCurrentTranslations(currentLang);
 const { type = "white" } = Astro.props;
@@ -81,35 +87,45 @@ const currentPath = Astro.url.pathname;
                 <ul class="space-y-2">
                   <li>
                     <a
-                      href="/services/custom-software-development"
+                      href={currentLang === "de"
+                        ? pathMapperEn["/custom-software-development"]
+                        : pathMapperDe["/individuelle-softwareentwicklung"]}
                       class="text-white/90 hover:text-primary-1a transition-colors text-sm block"
                       >{i18nData.common.customSoftwareDevelopment}</a
                     >
                   </li>
                   <li>
                     <a
-                      href="/services/web-development"
+                      href={currentLang === "de"
+                        ? pathMapperEn["/web-development"]
+                        : pathMapperDe["/webentwicklung"]}
                       class="text-white/90 hover:text-primary-1a transition-colors text-sm block"
                       >{i18nData.common.webDevelopment}</a
                     >
                   </li>
                   <li>
                     <a
-                      href="/services/mobile-app-development"
+                      href={currentLang === "de"
+                        ? pathMapperEn["/mobile-app-development"]
+                        : pathMapperDe["/mobile-app-entwicklung"]}
                       class="text-white/90 hover:text-primary-1a transition-colors text-sm block"
                       >{i18nData.common.mobileAppDevelopment}</a
                     >
                   </li>
                   <li>
                     <a
-                      href="/services/cloud-development"
+                      href={currentLang === "de"
+                        ? pathMapperEn["/cloud-development"]
+                        : pathMapperDe["/cloud-entwicklung"]}
                       class="text-white/90 hover:text-primary-1a transition-colors text-sm block"
                       >{i18nData.common.cloudDevelopment}</a
                     >
                   </li>
                   <li>
                     <a
-                      href="/services/api-development"
+                      href={currentLang === "de"
+                        ? pathMapperEn["/api-development"]
+                        : pathMapperDe["/api-entwicklung"]}
                       class="text-white/90 hover:text-primary-1a transition-colors text-sm block"
                       >{i18nData.common.apiDevelopment}</a
                     >
@@ -127,42 +143,54 @@ const currentPath = Astro.url.pathname;
                 <ul class="space-y-2">
                   <li>
                     <a
-                      href="/services/it-strategy"
+                      href={currentLang === "en"
+                        ? pathMapperDe["/it-strategie-planung"]
+                        : pathMapperEn["/it-strategy-planning"]}
                       class="text-white/90 hover:text-primary-1a transition-colors text-sm block"
                       >{i18nData.common.itStrategyAndPlanning}</a
                     >
                   </li>
                   <li>
                     <a
-                      href="/services/technology-assessment"
+                      href={currentLang === "de"
+                        ? pathMapperEn["/technology-assessment"]
+                        : pathMapperDe["/technologiebewertung"]}
                       class="text-white/90 hover:text-primary-1a transition-colors text-sm block"
                       >{i18nData.common.technologyAssessmentAndSelection}</a
                     >
                   </li>
                   <li>
                     <a
-                      href="/services/infrastructure-consulting"
+                      href={currentLang === "de"
+                        ? pathMapperEn["/infrastructure-consulting"]
+                        : pathMapperDe["/infrastrukturberatung"]}
                       class="text-white/90 hover:text-primary-1a transition-colors text-sm block"
                       >{i18nData.common.infrastructureConsulting}</a
                     >
                   </li>
                   <li>
                     <a
-                      href="/services/cybersecurity-consulting"
+                      href={currentLang === "de"
+                        ? pathMapperEn["/cybersecurity-consulting"]
+                        : pathMapperDe["/cybersecurity-beratung"]}
                       class="text-white/90 hover:text-primary-1a transition-colors text-sm block"
                       >{i18nData.common.cybersecurityConsulting}</a
                     >
                   </li>
                   <li>
                     <a
-                      href="/services/digital-transformation"
+                      href={currentLang === "de"
+                        ? pathMapperEn["/digital-transformation-consulting"]
+                        : pathMapperDe["/digitale-transformationsberatung"]}
                       class="text-white/90 hover:text-primary-1a transition-colors text-sm block"
                       >{i18nData.common.digitalTransformationConsulting}</a
                     >
                   </li>
                   <li>
                     <a
-                      href="/services/compliance-risk-management"
+                      href={currentLang === "de"
+                        ? pathMapperEn["/compliance-risk-management"]
+                        : pathMapperDe["/compliance-risikomanagement"]}
                       class="text-white/90 hover:text-primary-1a transition-colors text-sm block"
                       >{i18nData.common.complianceAndRiskManagement}</a
                     >
@@ -173,42 +201,56 @@ const currentPath = Astro.url.pathname;
               <!-- Nearshoring Column -->
               <div class="space-y-4">
                 <h3 class="text-primary-1a font-semibold text-lg">
-                  <a href={`/${kebabCase(i18nData.common.nearshoring)}`}>
+                  <a
+                    href={currentLang === "de"
+                      ? pathMapperEn["/nearshoring"]
+                      : pathMapperDe["/nearshoring-de"]}
+                  >
                     {i18nData.common.nearshoring}
                   </a>
                 </h3>
                 <ul class="space-y-2">
                   <li>
                     <a
-                      href="/services/dedicated-development-teams"
+                      href={currentLang === "de"
+                        ? pathMapperEn["/dedicated-development-teams"]
+                        : pathMapperDe["/dedizierte-entwicklungsteams"]}
                       class="text-white/90 hover:text-primary-1a transition-colors text-sm block"
                       >{i18nData.common.dedicatedDevelopmentTeams}</a
                     >
                   </li>
                   <li>
                     <a
-                      href="/services/project-based-nearshoring"
+                      href={currentLang === "de"
+                        ? pathMapperEn["/project-based-nearshoring"]
+                        : pathMapperDe["/projektbasiertes-nearshoring"]}
                       class="text-white/90 hover:text-primary-1a transition-colors text-sm block"
                       >{i18nData.common.projectBasedNearshoring}</a
                     >
                   </li>
                   <li>
                     <a
-                      href="/services/staff-augmentation"
+                      href={currentLang === "de"
+                        ? pathMapperEn["/staff-augmentation"]
+                        : pathMapperDe["/personal-augmentation"]}
                       class="text-white/90 hover:text-primary-1a transition-colors text-sm block"
                       >{i18nData.common.staffAugmentation}</a
                     >
                   </li>
                   <li>
                     <a
-                      href="/services/quality-assurance"
+                      href={currentLang === "de"
+                        ? pathMapperEn["/quality-assurance"]
+                        : pathMapperDe["/qualitaetsmanagement"]}
                       class="text-white/90 hover:text-primary-1a transition-colors text-sm block"
                       >{i18nData.common.qualityAssuranceAndTesting}</a
                     >
                   </li>
                   <li>
                     <a
-                      href="/services/maintenance-support"
+                      href={currentLang === "de"
+                        ? pathMapperEn["/maintenance-support"]
+                        : pathMapperDe["/wartung-support"]}
                       class="text-white/90 hover:text-primary-1a transition-colors text-sm block"
                       >{i18nData.common.maintenanceAndSupport}</a
                     >
@@ -226,42 +268,54 @@ const currentPath = Astro.url.pathname;
                 <ul class="space-y-2">
                   <li>
                     <a
-                      href="/services/machine-learning"
+                      href={currentLang === "de"
+                        ? pathMapperEn["/machine-learning-solutions"]
+                        : pathMapperDe["/machine-learning-loesungen"]}
                       class="text-white/90 hover:text-primary-1a transition-colors text-sm block"
                       >{i18nData.common.machineLearningSolutions}</a
                     >
                   </li>
                   <li>
                     <a
-                      href="/services/nlp"
+                      href={currentLang === "de"
+                        ? pathMapperEn["/natural-language-processing-nlp"]
+                        : pathMapperDe["/natuerliche-sprachverarbeitung-nlp"]}
                       class="text-white/90 hover:text-primary-1a transition-colors text-sm block"
                       >{i18nData.common.naturalLanguageProcessing}</a
                     >
                   </li>
                   <li>
                     <a
-                      href="/services/computer-vision"
+                      href={currentLang === "de"
+                        ? pathMapperEn["/computer-vision-applications"]
+                        : pathMapperDe["/computer-vision-anwendungen"]}
                       class="text-white/90 hover:text-primary-1a transition-colors text-sm block"
                       >{i18nData.common.computerVisionApplications}</a
                     >
                   </li>
                   <li>
                     <a
-                      href="/services/predictive-analytics"
+                      href={currentLang === "de"
+                        ? pathMapperEn["/predictive-analytics"]
+                        : pathMapperDe["/vorhersagbares-analytics"]}
                       class="text-white/90 hover:text-primary-1a transition-colors text-sm block"
                       >{i18nData.common.predictiveAnalytics}</a
                     >
                   </li>
                   <li>
                     <a
-                      href="/services/ai-chatbots"
+                      href={currentLang === "de"
+                        ? pathMapperEn["/ai-powered-chatbots"]
+                        : pathMapperDe["/ai-powered-chatbots"]}
                       class="text-white/90 hover:text-primary-1a transition-colors text-sm block"
                       >{i18nData.common.aiPoweredChatbots}</a
                     >
                   </li>
                   <li>
                     <a
-                      href="/services/rag"
+                      href={currentLang === "de"
+                        ? pathMapperEn["/retrieval-augmented-generation-rag"]
+                        : pathMapperDe["/retrieval-augmented-generation-rag-de"]}
                       class="text-white/90 hover:text-primary-1a transition-colors text-sm block"
                       >{i18nData.common.ragRetrievalAugmentedGeneration}</a
                     >
@@ -418,12 +472,11 @@ const currentPath = Astro.url.pathname;
     <!-- Mobile Navigation -->
     <div class="cs:hidden hidden" id="mobile-menu">
       <div class="pt-4 pb-3 space-y-3">
-        <a href="/" class="block text-white hover:text-gray-200">Home Page</a>
+        <a href="/" class="block text-white hover:text-gray-200">
+          {i18nData.common.home}
+        </a>
         <a href="/services" class="block text-white hover:text-gray-200"
-          >Our Services</a
-        >
-        <a href="/success-stories" class="block text-white hover:text-gray-200"
-          >Success Stories</a
+          >{i18nData.common.ourServices}</a
         >
         <button
           class="flex items-center gap-1 text-white hover:text-gray-200 w-full justify-between"

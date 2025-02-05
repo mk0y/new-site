@@ -5,6 +5,7 @@ import FAQ from "../components/FAQ.astro";
 import MiniHero from "../components/MiniHero.astro";
 import SimpleMission from "../components/SimpleMission.astro";
 import SimpleSplitTextImage from "../components/SimpleSplitTextImage.astro";
+import SimpleSplitTextImageReverse from "../components/SimpleSplitTextImageReverse.astro";
 import TitleCards from "../components/TitleCards.astro";
 import Layout from "../layouts/Layout.astro";
 import { getCurrentLang, getCurrentTranslations } from "../utils";
@@ -41,7 +42,7 @@ const i18nData = await getCurrentTranslations(currentLang);
     benefits={i18nData.softwareDevelopment.benefits.benefits}
     image={heroSoftwareDev}
   />
-  <SimpleSplitTextImage
+  <SimpleSplitTextImageReverse
     title={i18nData.softwareDevelopment.benefitsOverview.title}
     description={i18nData.softwareDevelopment.benefitsOverview.description}
     image={heroSoftwareDev}
