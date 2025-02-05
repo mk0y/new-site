@@ -13,6 +13,10 @@ export const getCurrentTranslations = async (lang: string) => {
   return i18nData;
 };
 
+export const trimSlashEnd = (str: string) => {
+  return str.replace(/\/$/, "");
+};
+
 export const kebabCase = (str: string) => {
   // Transportation & Logistics -> transportation-logistics
   return str

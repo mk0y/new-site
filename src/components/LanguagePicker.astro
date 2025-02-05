@@ -1,7 +1,8 @@
 ---
 import ChevronDown from "../icons/ChevronDown.astro";
+import { trimSlashEnd } from "../utils";
 const { currentLang, type } = Astro.props;
-const path = Astro.url.pathname;
+const path = trimSlashEnd(Astro.url.pathname);
 const pathMapperEn: Record<string, string> = {
   "/about": "/ueber-uns",
   "/careers": "/karriere",
