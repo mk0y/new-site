@@ -37,7 +37,6 @@ const paths =
         "cybersecurity-beratung",
         "digitale-transformationsberatung",
         "compliance-risikomanagement",
-        "dedicated-development-teams",
         "dedizierte-entwicklungsteams",
         "projektbasiertes-nearshoring",
         "teamerweiterung",
