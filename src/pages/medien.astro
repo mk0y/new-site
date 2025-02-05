@@ -1,0 +1,85 @@
+---
+import imgHealthcare from "../assets/bg-healthcare.jpg";
+import healthImg from "../assets/health-digital.jpg";
+import pharmaImg from "../assets/pharma-service.jpg";
+import successImg from "../assets/success-health.jpg";
+import BenefitsOverview from "../components/BenefitsOverview.astro";
+import MiniHero from "../components/MiniHero.astro";
+import QuickContact from "../components/QuickContact.astro";
+import ServiceCards from "../components/ServiceCards.astro";
+import SimpleTitleVision from "../components/SimpleTitleVision.astro";
+import TextImageSplit from "../components/TextImageSplit.astro";
+import Layout from "../layouts/Layout.astro";
+import { getCurrentLang, getCurrentTranslations } from "../utils";
+const currentLang = getCurrentLang(Astro.url.host);
+const i18nData = await getCurrentTranslations(currentLang);
+
+const serviceCards = [
+  {
+    title: i18nData.healthcare.services.consulting.title,
+    description: i18nData.healthcare.services.consulting.description,
+    link: i18nData.healthcare.services.consulting.link,
+    image: pharmaImg,
+  },
+  {
+    title: i18nData.healthcare.services.integration.title,
+    description: i18nData.healthcare.services.integration.description,
+    link: i18nData.healthcare.services.integration.link,
+    image: healthImg,
+  },
+  {
+    title: i18nData.healthcare.services.success.title,
+    description: i18nData.healthcare.services.success.description,
+    link: i18nData.healthcare.services.success.link,
+    image: successImg,
+  },
+];
+
+const benefits = [
+  {
+    title: i18nData.healthcare.services.benefits.efficiency.title,
+    description: i18nData.healthcare.services.benefits.efficiency.description,
+  },
+  {
+    title: i18nData.healthcare.services.benefits.compliance.title,
+    description: i18nData.healthcare.services.benefits.compliance.description,
+  },
+];
+
+const processSections = i18nData.healthcare.process.sections;
+---
+
+<Layout title="Medien - NearUp" description="..." type="black">
+  <MiniHero
+    title={i18nData.healthcare.main}
+    description={i18nData.healthcare.heroDescription}
+    backgroundImage={imgHealthcare}
+  />
+  <ServiceCards cards={serviceCards} />
+  <TextImageSplit
+    sections={processSections}
+    image={healthImg}
+    imageAlt={i18nData.healthcare.process.title}
+  />
+  <BenefitsOverview
+    mainTitle={i18nData.healthcare.services.benefits.title}
+    description={i18nData.healthcare.services.benefits.description}
+    benefits={benefits}
+    image={pharmaImg}
+  />
+  <SimpleTitleVision
+    subtitle={i18nData.common.precision}
+    title={i18nData.healthcare.services.vision.title}
+    description={i18nData.healthcare.services.vision.description}
+    contactText={i18nData.common.learnMore}
+    consultingText={i18nData.common.contact}
+  />
+  <QuickContact
+    title={i18nData.contact.title}
+    mainTitle={i18nData.contact.mainTitle}
+    description={i18nData.contact.description}
+    email={i18nData.contact.email}
+    phone={i18nData.contact.phone}
+    office={i18nData.contact.office}
+  />
+</Layout>

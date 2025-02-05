@@ -1,10 +1,7 @@
 ---
-import Container from "./Container.astro";
 import ChevronDown from "../icons/ChevronDown.astro";
 import Search from "../icons/Search.astro";
-import X from "../icons/X.astro";
 import Menu from "../icons/Menu.astro";
-import Breadcrumbs from "./Breadcrumbs.astro";
 import {
   getCurrentLang,
   getCurrentTranslations,
@@ -79,7 +76,9 @@ const currentPath = Astro.url.pathname;
               <div class="space-y-4">
                 <h3 class="text-primary-1a font-semibold text-lg">
                   <a
-                    href={`/${kebabCase(i18nData.common.softwareDevelopment)}`}
+                    href={currentLang === "de"
+                      ? pathMapperEn["/software-development"]
+                      : pathMapperDe["/softwareentwicklung"]}
                   >
                     {i18nData.common.softwareDevelopment}
                   </a>
@@ -297,7 +296,7 @@ const currentPath = Astro.url.pathname;
                     <a
                       href={currentLang === "de"
                         ? pathMapperEn["/predictive-analytics"]
-                        : pathMapperDe["/vorhersagbares-analytics"]}
+                        : pathMapperDe["/praediktive-analytik"]}
                       class="text-white/90 hover:text-primary-1a transition-colors text-sm block"
                       >{i18nData.common.predictiveAnalytics}</a
                     >
@@ -306,7 +305,7 @@ const currentPath = Astro.url.pathname;
                     <a
                       href={currentLang === "de"
                         ? pathMapperEn["/ai-powered-chatbots"]
-                        : pathMapperDe["/ai-powered-chatbots"]}
+                        : pathMapperDe["/ki-gestuetzte-chatbots"]}
                       class="text-white/90 hover:text-primary-1a transition-colors text-sm block"
                       >{i18nData.common.aiPoweredChatbots}</a
                     >
@@ -315,7 +314,9 @@ const currentPath = Astro.url.pathname;
                     <a
                       href={currentLang === "de"
                         ? pathMapperEn["/retrieval-augmented-generation-rag"]
-                        : pathMapperDe["/retrieval-augmented-generation-rag-de"]}
+                        : pathMapperDe[
+                            "/retrieval-augmented-generation-rag-de"
+                          ]}
                       class="text-white/90 hover:text-primary-1a transition-colors text-sm block"
                       >{i18nData.common.ragRetrievalAugmentedGeneration}</a
                     >
@@ -351,49 +352,55 @@ const currentPath = Astro.url.pathname;
               ]}
             >
               <a
-                href={`/${kebabCase(i18nData.common.startups)}`}
+                href="/startups"
                 class="block px-4 py-2 text-white/90 hover:text-primary-1a hover:bg-white/5 transition-colors text-sm"
               >
                 {i18nData.common.startups}
               </a>
               <a
-                href={`/${kebabCase(i18nData.common.healthcare)}`}
+                href="/healthcare"
                 class="block px-4 py-2 text-white/90 hover:text-primary-1a hover:bg-white/5 transition-colors text-sm"
               >
                 {i18nData.common.healthcare}
               </a>
               <a
-                href={`/${kebabCase(i18nData.common.fintech)}`}
+                href="/fintech"
                 class="block px-4 py-2 text-white/90 hover:text-primary-1a hover:bg-white/5 transition-colors text-sm"
               >
                 {i18nData.common.fintech}
               </a>
               <a
-                href={`/${kebabCase(i18nData.common.retail)}`}
+                href="/retail"
                 class="block px-4 py-2 text-white/90 hover:text-primary-1a hover:bg-white/5 transition-colors text-sm"
               >
                 {i18nData.common.retail}
               </a>
               <a
-                href={`/${kebabCase(i18nData.common.media)}`}
+                href={currentLang === "de"
+                  ? pathMapperEn["/media"]
+                  : pathMapperDe["/medien"]}
                 class="block px-4 py-2 text-white/90 hover:text-primary-1a hover:bg-white/5 transition-colors text-sm"
               >
                 {i18nData.common.media}
               </a>
               <a
-                href={`/${kebabCase(i18nData.common.eCommerce)}`}
+                href="/e-commerce"
                 class="block px-4 py-2 text-white/90 hover:text-primary-1a hover:bg-white/5 transition-colors text-sm"
               >
                 {i18nData.common.eCommerce}
               </a>
               <a
-                href={`/${kebabCase(i18nData.common.automotive)}`}
+                href={currentLang === "de"
+                  ? pathMapperEn["/automotive"]
+                  : pathMapperDe["/automotiv"]}
                 class="block px-4 py-2 text-white/90 hover:text-primary-1a hover:bg-white/5 transition-colors text-sm"
               >
                 {i18nData.common.automotive}
               </a>
               <a
-                href={`/${kebabCase(i18nData.common.transportation)}`}
+                href={currentLang === "de"
+                  ? pathMapperEn["/transportation-logistics"]
+                  : pathMapperDe["/transport-logistik"]}
                 class="block px-4 py-2 text-white/90 hover:text-primary-1a hover:bg-white/5 transition-colors text-sm"
               >
                 {i18nData.common.transportation}
