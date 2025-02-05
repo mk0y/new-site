@@ -73,8 +73,8 @@ const pathMapperDe: Record<string, string> = {
 
 <div class="absolute right-0 top-full hidden w-64 h-32">
   {import.meta.env.PUBLIC_SITE_URL_EN + (pathMapperDe[path] || path)}
-  {pathMapperDe[path]}
-  {path}
+  mapper: {pathMapperDe[path]}
+  path: {path}
 </div>
 
 <script>
