@@ -16,61 +16,61 @@ const i18nData = await getCurrentTranslations(currentLang);
 
 const serviceCards = [
   {
-    title: i18nData.healthcare.services.consulting.title,
-    description: i18nData.healthcare.services.consulting.description,
-    link: i18nData.healthcare.services.consulting.link,
+    title: i18nData.transportationLogistics.services.consulting.title,
+    description: i18nData.transportationLogistics.services.consulting.description,
+    link: i18nData.transportationLogistics.services.consulting.link,
     image: pharmaImg,
   },
   {
-    title: i18nData.healthcare.services.integration.title,
-    description: i18nData.healthcare.services.integration.description,
-    link: i18nData.healthcare.services.integration.link,
+    title: i18nData.transportationLogistics.services.integration.title,
+    description: i18nData.transportationLogistics.services.integration.description,
+    link: i18nData.transportationLogistics.services.integration.link,
     image: healthImg,
   },
   {
-    title: i18nData.healthcare.services.success.title,
-    description: i18nData.healthcare.services.success.description,
-    link: i18nData.healthcare.services.success.link,
+    title: i18nData.transportationLogistics.services.success.title,
+    description: i18nData.transportationLogistics.services.success.description,
+    link: i18nData.transportationLogistics.services.success.link,
     image: successImg,
   },
 ];
 
 const benefits = [
   {
-    title: i18nData.healthcare.services.benefits.efficiency.title,
-    description: i18nData.healthcare.services.benefits.efficiency.description,
+    title: i18nData.transportationLogistics.services.benefits.efficiency.title,
+    description: i18nData.transportationLogistics.services.benefits.efficiency.description,
   },
   {
-    title: i18nData.healthcare.services.benefits.compliance.title,
-    description: i18nData.healthcare.services.benefits.compliance.description,
+    title: i18nData.transportationLogistics.services.benefits.compliance.title,
+    description: i18nData.transportationLogistics.services.benefits.compliance.description,
   },
 ];
 
-const processSections = i18nData.healthcare.process.sections;
+const processSections = i18nData.transportationLogistics.process.sections;
 ---
 
 <Layout title="Transportation & Logistics - NearUp" description="..." type="black">
   <MiniHero
-    title={i18nData.healthcare.main}
-    description={i18nData.healthcare.heroDescription}
+    title={i18nData.transportationLogistics.main}
+    description={i18nData.transportationLogistics.heroDescription}
     backgroundImage={imgHealthcare}
   />
   <ServiceCards cards={serviceCards} />
   <TextImageSplit
     sections={processSections}
     image={healthImg}
-    imageAlt={i18nData.healthcare.process.title}
+    imageAlt={i18nData.transportationLogistics.process.title}
   />
   <BenefitsOverview
-    mainTitle={i18nData.healthcare.services.benefits.title}
-    description={i18nData.healthcare.services.benefits.description}
+    mainTitle={i18nData.transportationLogistics.services.benefits.title}
+    description={i18nData.transportationLogistics.services.benefits.description}
     benefits={benefits}
     image={pharmaImg}
   />
   <SimpleTitleVision
     subtitle={i18nData.common.precision}
-    title={i18nData.healthcare.services.vision.title}
-    description={i18nData.healthcare.services.vision.description}
+    title={i18nData.transportationLogistics.services.vision.title}
+    description={i18nData.transportationLogistics.services.vision.description}
     contactText={i18nData.common.learnMore}
     consultingText={i18nData.common.contact}
   />
