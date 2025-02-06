@@ -350,6 +350,15 @@
     "office": {
       "label": "Office",
       "value": "Musterstraße 123, Berlin 10115 DE"
+    },
+    "form": {
+      "title": "Send us a message",
+      "fullName": "Full Name",
+      "email": "Email Address",
+      "company": "Company Name",
+      "phone": "Phone Number (Optional)",
+      "message": "Your Message",
+      "submit": "Send Message"
     }
   },
   "blog": {
