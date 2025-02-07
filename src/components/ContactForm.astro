@@ -7,6 +7,8 @@ interface Props {
   companyLabel: string;
   phoneLabel: string;
   messageLabel: string;
+  thankYou: string;
+  error: string;
 }
 
 const {
@@ -17,7 +19,19 @@ const {
   companyLabel,
   phoneLabel,
   messageLabel,
+  thankYou,
+  error,
 } = Astro.props;
+
+if (Astro.request.method === "POST") {
+  const formData = await Astro.request.formData();
+  const fullName = formData.get("fullName");
+  const email = formData.get("email");
+  const company = formData.get("company");
+  const phone = formData.get("phone");
+  const message = formData.get("message");
+  console.log(fullName, email, company, phone, message);
+}
 ---
 
 <div
@@ -25,108 +39,186 @@ const {
 >
   <h2 class="text-[var(--white)] text-center mb-8 text-4xl">{title}</h2>
 
-  <form
-    name="contact"
-    method="POST"
-    data-netlify="true"
-    class="flex flex-col gap-6"
-  >
-    <div class="flex flex-col gap-2">
-      <label for="fullName" class="text-gray-a text-sm font-medium">
-        {fullNameLabel}
-      </label>
-      <input
-        type="text"
-        id="fullName"
-        name="fullName"
-        required
-        class="p-3 border border-gray-b rounded bg-white text-gray-a text-base transition-all duration-300 ease-in-out hover:border-white-borders focus:outline-none focus:border-primary-1a focus:ring-2 focus:ring-primary-1a focus:ring-opacity-20"
-      />
-    </div>
+  <contact-form data-thankyou={thankYou} data-error={error}>
+    <form id="contact-form" class="flex flex-col gap-6">
+      <div id="form-status" class="hidden">
+        <p class="text-center p-4 rounded"></p>
+      </div>
 
-    <div class="flex flex-col gap-2">
-      <label for="email" class="text-gray-a text-sm font-medium"
-        >{emailLabel}</label
+      <div class="flex flex-col gap-2">
+        <label for="fullName" class="text-gray-a text-sm font-medium">
+          {fullNameLabel}
+        </label>
+        <input
+          type="text"
+          id="fullName"
+          name="from_name"
+          required
+          class="p-3 border border-gray-b rounded bg-white text-gray-a text-base transition-all duration-300 ease-in-out hover:border-white-borders focus:outline-none focus:border-primary-1a focus:ring-2 focus:ring-primary-1a focus:ring-opacity-20"
+        />
+      </div>
+
+      <div class="flex flex-col gap-2">
+        <label for="email" class="text-gray-a text-sm font-medium"
+          >{emailLabel}</label
+        >
+        <input
+          type="email"
+          id="email"
+          name="from_email"
+          required
+          class="p-3 border border-gray-b rounded bg-white text-gray-a text-base transition-all duration-300 ease-in-out hover:border-white-borders focus:outline-none focus:border-primary-1a focus:ring-2 focus:ring-primary-1a focus:ring-opacity-20"
+        />
+      </div>
+
+      <div class="flex flex-col gap-2">
+        <label for="company" class="text-gray-a text-sm font-medium"
+          >{companyLabel}</label
+        >
+        <input
+          type="text"
+          id="company"
+          name="company"
+          required
+          class="p-3 border border-gray-b rounded bg-white text-gray-a text-base transition-all duration-300 ease-in-out hover:border-white-borders focus:outline-none focus:border-primary-1a focus:ring-2 focus:ring-primary-1a focus:ring-opacity-20"
+        />
+      </div>
+
+      <div class="flex flex-col gap-2">
+        <label for="phone" class="text-gray-a text-sm font-medium"
+          >{phoneLabel}</label
+        >
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          class="p-3 border border-gray-b rounded bg-white text-gray-a text-base transition-all duration-300 ease-in-out hover:border-white-borders focus:outline-none focus:border-primary-1a focus:ring-2 focus:ring-primary-1a focus:ring-opacity-20"
+        />
+      </div>
+
+      <div class="flex flex-col gap-2">
+        <label for="message" class="text-gray-a text-sm font-medium"
+          >{messageLabel}</label
+        >
+        <textarea
+          id="message"
+          name="message"
+          rows="5"
+          required
+          class="p-3 border border-gray-b rounded bg-white text-gray-a text-base transition-all duration-300 ease-in-out hover:border-white-borders focus:outline-none focus:border-primary-1a focus:ring-2 focus:ring-primary-1a focus:ring-opacity-20 resize-y min-h-[120px]"
+        ></textarea>
+      </div>
+
+      <button
+        type="submit"
+        class="w-full mt-4 px-8 py-4 bg-primary-1a text-gray-c rounded font-semibold text-base cursor-pointer transition-all duration-300 ease-in-out shadow-sm hover:bg-primary-1b hover:-translate-y-0.5 hover:shadow-md active:translate-y-0 active:shadow-sm disabled:opacity-50 disabled:cursor-not-allowed"
+        id="submit-button"
       >
-      <input
-        type="email"
-        id="email"
-        name="email"
-        required
-        class="p-3 border border-gray-b rounded bg-white text-gray-a text-base transition-all duration-300 ease-in-out hover:border-white-borders focus:outline-none focus:border-primary-1a focus:ring-2 focus:ring-primary-1a focus:ring-opacity-20"
-      />
-    </div>
-
-    <div class="flex flex-col gap-2">
-      <label for="company" class="text-gray-a text-sm font-medium"
-        >{companyLabel}</label
-      >
-      <input
-        type="text"
-        id="company"
-        name="company"
-        required
-        class="p-3 border border-gray-b rounded bg-white text-gray-a text-base transition-all duration-300 ease-in-out hover:border-white-borders focus:outline-none focus:border-primary-1a focus:ring-2 focus:ring-primary-1a focus:ring-opacity-20"
-      />
-    </div>
-
-    <div class="flex flex-col gap-2">
-      <label for="phone" class="text-gray-a text-sm font-medium"
-        >{phoneLabel}</label
-      >
-      <input
-        type="tel"
-        id="phone"
-        name="phone"
-        class="p-3 border border-gray-b rounded bg-white text-gray-a text-base transition-all duration-300 ease-in-out hover:border-white-borders focus:outline-none focus:border-primary-1a focus:ring-2 focus:ring-primary-1a focus:ring-opacity-20"
-      />
-    </div>
-
-    <div class="flex flex-col gap-2">
-      <label for="message" class="text-gray-a text-sm font-medium"
-        >{messageLabel}</label
-      >
-      <textarea
-        id="message"
-        name="message"
-        rows="5"
-        required
-        class="p-3 border border-gray-b rounded bg-white text-gray-a text-base transition-all duration-300 ease-in-out hover:border-white-borders focus:outline-none focus:border-primary-1a focus:ring-2 focus:ring-primary-1a focus:ring-opacity-20 resize-y min-h-[120px]"
-      ></textarea>
-    </div>
-
-    <button
-      type="submit"
-      class="w-full mt-4 px-8 py-4 bg-primary-1a text-gray-c rounded font-semibold text-base cursor-pointer transition-all duration-300 ease-in-out shadow-sm hover:bg-primary-1b hover:-translate-y-0.5 hover:shadow-md active:translate-y-0 active:shadow-sm"
-    >
-      {submitText}
-    </button>
-  </form>
+        {submitText}
+      </button>
+    </form>
+  </contact-form>
 </div>
 
+<script
+  type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+></script>
+
 <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const handleSubmit = (event: Event) => {
-      event.preventDefault();
+  declare global {
+    interface Window {
+      emailjs: any;
+    }
+  }
 
-      const myForm = event.target;
-      if (myForm instanceof HTMLFormElement) {
-        const formData = new FormData(myForm);
-        const searchParams = new URLSearchParams();
-        for (const [key, value] of formData) {
-          searchParams.append(key, value.toString());
-        }
+  class ContactForm extends HTMLElement {
+    form: HTMLFormElement;
+    submitButton: HTMLButtonElement;
+    statusDiv: HTMLElement;
+    statusMessage: HTMLElement;
+    thankYouMessage: string;
+    errorMessage: string;
 
-        fetch("/", {
-          method: "POST",
-          headers: { "Content-Type": "application/x-www-form-urlencoded" },
-          body: searchParams.toString(),
-        })
-          .then(() => console.log("Form successfully submitted"))
-          .catch((error) => alert(error));
+    constructor() {
+      super();
+      this.form = this.querySelector("#contact-form") as HTMLFormElement;
+      this.submitButton = this.querySelector(
+        "#submit-button"
+      ) as HTMLButtonElement;
+      this.statusDiv = this.querySelector("#form-status") as HTMLElement;
+      this.statusMessage = this.statusDiv.querySelector("p") as HTMLElement;
+      this.thankYouMessage =
+        this.dataset.thankyou || "Thank you for your message!";
+      this.errorMessage =
+        this.dataset.error || "An error occurred. Please try again.";
+
+      if (
+        !this.form ||
+        !this.submitButton ||
+        !this.statusDiv ||
+        !this.statusMessage
+      ) {
+        throw new Error("Required form elements not found");
       }
 
-      document.querySelector("form")?.addEventListener("submit", handleSubmit);
-    };
-  });
+      this.initEmailJS();
+      this.setupFormHandler();
+    }
+
+    initEmailJS() {
+      window.emailjs.init({
+        publicKey: `${import.meta.env.PUBLIC_EMAILJS_PUBLIC_KEY}`,
+        blockHeadless: true,
+        limitRate: {
+          throttle: 10000,
+        },
+      });
+    }
+
+    showStatus(message: string, isError = false) {
+      this.statusDiv.classList.remove("hidden");
+      this.statusMessage.textContent = message;
+      this.statusMessage.className = `text-center p-4 rounded ${
+        isError ? "bg-red-100 text-red-700" : "bg-green-100 text-green-700"
+      }`;
+    }
+
+    scrollToForm() {
+      window.scrollTo({
+        top: this.form.offsetTop - 200,
+        behavior: "smooth",
+      });
+    }
+
+    setupFormHandler() {
+      this.form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        this.submitButton.disabled = true;
+        const originalText = this.submitButton.textContent || "";
+        this.submitButton.textContent = "Sending...";
+
+        try {
+          await window.emailjs.sendForm(
+            `${import.meta.env.PUBLIC_EMAILJS_SERVICE_ID}`,
+            `${import.meta.env.PUBLIC_EMAILJS_TEMPLATE_ID}`,
+            this.form
+          );
+          this.showStatus(this.thankYouMessage);
+          this.scrollToForm();
+          this.form.reset();
+        } catch (error) {
+          console.error("Failed to send email:", error);
+          this.showStatus(this.errorMessage, true);
+          this.scrollToForm();
+        } finally {
+          this.submitButton.disabled = false;
+          this.submitButton.textContent = originalText;
+        }
+      });
+    }
+  }
+
+  customElements.define("contact-form", ContactForm);
 </script>
