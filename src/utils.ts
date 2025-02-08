@@ -47,9 +47,9 @@ export const toBreadcrumbText = (str: string) => {
     str
       .replace(
         /ue|Ue|ae|Ae|oe|Oe|ss/g,
-        (match) => umlautMap[match as keyof typeof umlautMap] || match
+        (match) => umlautMap[match as keyof typeof umlautMap] || match,
       )
-      .replace(/-/g, " ")
+      .replace(/-/g, " "),
   );
 };
 
@@ -67,7 +67,7 @@ export const pathMapperEn: Record<string, string> = {
   "/retail": "/retail",
   "/media": "/medien",
   "/e-commerce": "/e-commerce",
-  "/automotive": "/automotiv",
+  "/automotive": "/automotive",
   "/transportation-logistics": "/transport-logistik",
   "/it-strategy-planning": "/it-strategie-planung",
   "/custom-software-development": "/individuelle-softwareentwicklung",
@@ -116,7 +116,7 @@ export const pathMapperDe: Record<string, string> = {
   "/retail": "/retail",
   "/medien": "/media",
   "/e-commerce": "/e-commerce",
-  "/automotiv": "/automotive",
+  "/automotive": "/automotive",
   "/transport-logistik": "/transportation-logistics",
   "/it-strategie-planung": "/it-strategy-planning",
   "/individuelle-softwareentwicklung": "/custom-software-development",

@@ -13,43 +13,43 @@ const currentLang = getCurrentLang(Astro.url.host);
 const i18nData = await getCurrentTranslations(currentLang);
 ---
 
-<Layout title="Software Development - NearUp" description="..." type="black">
+<Layout title="Web Development - NearUp" description="..." type="black">
   <MiniHero
-    title={i18nData.softwareDevelopment.main}
-    description={i18nData.softwareDevelopment.heroDescription}
+    title={i18nData.webDevelopment.main}
+    description={i18nData.webDevelopment.heroDescription}
     backgroundImage={heroSoftwareDev}
   />
   <SimpleMission
-    subtitle={i18nData.softwareDevelopment.mission.subtitle}
-    title={i18nData.softwareDevelopment.mission.title}
-    description={i18nData.softwareDevelopment.mission.description}
-    learnMoreText={i18nData.softwareDevelopment.mission.learnMoreText}
-    contactText={i18nData.softwareDevelopment.mission.contactText}
+    subtitle={i18nData.webDevelopment.mission.subtitle}
+    title={i18nData.webDevelopment.mission.title}
+    description={i18nData.webDevelopment.mission.description}
+    learnMoreText={i18nData.webDevelopment.mission.learnMoreText}
+    contactText={i18nData.webDevelopment.mission.contactText}
   />
   <TitleCards
-    title={i18nData.softwareDevelopment.titleCards.title}
-    card1={i18nData.softwareDevelopment.titleCards.card1}
-    card2={i18nData.softwareDevelopment.titleCards.card2}
-    card3={i18nData.softwareDevelopment.titleCards.card3}
+    title={i18nData.webDevelopment.titleCards.title}
+    card1={i18nData.webDevelopment.titleCards.card1}
+    card2={i18nData.webDevelopment.titleCards.card2}
+    card3={i18nData.webDevelopment.titleCards.card3}
   />
   <BenefitsOverview
-    mainTitle={i18nData.softwareDevelopment.benefits.title}
-    description={i18nData.softwareDevelopment.benefits.description}
-    benefits={i18nData.softwareDevelopment.benefits.benefits}
+    mainTitle={i18nData.webDevelopment.benefits.title}
+    description={i18nData.webDevelopment.benefits.description}
+    benefits={i18nData.webDevelopment.benefits.benefits}
     image={heroSoftwareDev}
   />
   <SimpleSplitTextImageReverse
-    title={i18nData.softwareDevelopment.benefitsOverview.title}
-    description={i18nData.softwareDevelopment.benefitsOverview.description}
+    title={i18nData.webDevelopment.benefitsOverview.title}
+    description={i18nData.webDevelopment.benefitsOverview.description}
     image={heroSoftwareDev}
   />
   <SimpleSplitTextImage
-    title={i18nData.softwareDevelopment.benefitsOverview2.title}
-    description={i18nData.softwareDevelopment.benefitsOverview2.description}
+    title={i18nData.webDevelopment.benefitsOverview2.title}
+    description={i18nData.webDevelopment.benefitsOverview2.description}
     image={heroSoftwareDev}
   />
   <FAQ
-    title={i18nData.softwareDevelopment.faq.title}
-    items={i18nData.softwareDevelopment.faq.questions}
+    title={i18nData.webDevelopment.faq.title}
+    items={i18nData.webDevelopment.faq.questions}
   />
 </Layout>

@@ -740,17 +740,13 @@
       "benefits": {
         "title": "Why Choose NearUp for Media Technology Solutions?",
         "description": "NearUp provides customized media solutions that enhance content delivery, improve user experience, and maximize revenue.",
-        "efficiency": {
-          "title": "Scalable & Cloud-Based",
-          "description": "Our cloud solutions ensure seamless scaling for high-traffic media platforms."
-        },
-        "compliance": {
-          "title": "Advanced Audience Analytics",
-          "description": "Leverage AI-powered insights to understand viewer behavior and content performance."
+        "scalability": {
+          "title": "Scalable Platforms",
+          "description": "Our solutions enable seamless scaling for growing content and user numbers."
         },
         "monetization": {
-          "title": "Monetization Strategies",
-          "description": "Implement subscription models, ad integrations, and paywalls to boost revenue."
+          "title": "New Monetization Models",
+          "description": "We offer digital subscription, paywall, and advertising integrations for maximum revenue."
         }
       },
       "vision": {
@@ -804,7 +800,7 @@
         "description": "Enable real-time data collection, predictive analytics, and enhanced vehicle connectivity.",
         "link": {
           "text": "Learn More",
-          "href": "/services/automotive/connected-vehicles"
+          "href": "/automotive"
         }
       },
       "integration": {
@@ -829,6 +825,10 @@
         "efficiency": {
           "title": "Smart Manufacturing & Industry 4.0",
           "description": "Leverage IoT and AI-driven analytics to optimize production and supply chain processes."
+        },
+        "connectivity": {
+          "title": "Connected Mobility Solutions",
+          "description": "We develop intelligent vehicle networking solutions and IoT platforms for a new era of mobility."
         },
         "compliance": {
           "title": "Predictive Maintenance & AI Diagnostics",
@@ -915,6 +915,10 @@
         "efficiency": {
           "title": "Real-Time Tracking & Visibility",
           "description": "Gain full transparency over your logistics operations with GPS, IoT, and AI-powered tracking systems."
+        },
+        "tracking": {
+          "title": "Real-Time Tracking & Transparency",
+          "description": "Our IoT and GPS-based solutions enable real-time monitoring of supply chains for maximum control."
         },
         "compliance": {
           "title": "Cost Reduction & Route Optimization",
@@ -1372,6 +1376,79 @@
         {
           "question": "Does NearUp offer cloud-native software development?",
           "answer": "Yes, we develop fully cloud-native applications based on microservices, Kubernetes, and serverless architectures."
+        }
+      ]
+    }
+  },
+  "webDevelopment": {
+    "main": "Web Development with NearUp",
+    "heroDescription": "Experience modern, powerful, and scalable web solutions with NearUp – from custom websites to complex web apps.",
+    "mission": {
+      "subtitle": "Web Development",
+      "title": "Our Mission and Vision for the Future of the Web",
+      "description": "NearUp develops innovative and tailored web solutions that focus on usability, performance, and scalability. Our goal is to elevate businesses to the next level with high-quality web technologies.",
+      "learnMoreText": "Learn More",
+      "contactText": "Contact"
+    },
+    "titleCards": {
+      "title": "Our Comprehensive Web Development Services for Your Digital Success",
+      "card1": {
+        "title": "Custom Web Development for Tailored Digital Experiences",
+        "description": "We create custom websites, web apps, and platforms that are precisely tailored to your business requirements."
+      },
+      "card2": {
+        "title": "Optimizing Your Website for Maximum Performance and SEO",
+        "description": "Our experts improve loading times, user experience, and search engine rankings through targeted optimization measures."
+      },
+      "card3": {
+        "title": "Secure and Scalable Web Architectures for Businesses",
+        "description": "We rely on modern technologies and frameworks to make your web applications future-proof and powerful."
+      }
+    },
+    "benefits": {
+      "title": "Why NearUp is the Ideal Partner for Your Web Development",
+      "description": "With NearUp, you benefit from top-notch web development that perfectly combines design, functionality, and technology to create outstanding digital experiences.",
+      "benefits": [
+        {
+          "title": "Responsive & User-Friendly Design",
+          "description": "Our web solutions are optimized for all devices and provide a first-class user experience."
+        },
+        {
+          "title": "Scalable & Performance-Driven Solutions",
+          "description": "We develop high-performance web applications that grow with your business and meet the highest demands."
+        }
+      ]
+    },
+    "benefitsOverview": {
+      "title": "Web Technology Consulting: Analysis and Optimization of Existing Websites and Web Applications",
+      "description": "We analyze your existing web presence, identify optimization potentials, and implement improvements to maximize your digital performance."
+    },
+    "benefitsOverview2": {
+      "title": "Efficient Web Development for Businesses of All Sizes",
+      "description": "Our experts develop powerful web solutions – from startups to large enterprises – and provide tailored strategies for sustainable success."
+    },
+    "faq": {
+      "title": "Frequently Asked Questions About Web Development with NearUp",
+      "questions": [
+        {
+          "question": "What technologies does NearUp use for web development?",
+          "answer": "We use modern technologies like React, Next.js, Vue.js, Node.js, and Headless CMS for high-performance web applications."
+        },
+        {
+          "question": "Does NearUp also offer e-commerce solutions?",
+          "answer": "Yes, we develop powerful e-commerce platforms with Shopify, Medusa.js, and custom solutions."
+        },
+        {
+          "question": "How long does it take to develop a website?",
+          "answer": "Depending on complexity, development takes between 4-12 weeks – from conception to go-live."
+        },
+        {
+          "question": "What type of web projects does NearUp realize?",
+          "answer": "We develop corporate websites, portals, SaaS platforms, web apps, and high-performance online shops."
+        },
+        {
+          "question": "Can NearUp optimize existing websites?",
+          "answer": "Yes, we offer performance, security, and UX optimizations for existing websites and web applications."
         }
       ]
     }

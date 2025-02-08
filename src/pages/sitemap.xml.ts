@@ -24,7 +24,7 @@ const paths =
         "retail",
         "medien",
         "e-commerce",
-        "automotiv",
+        "automotive",
         "transport-logistik",
         "individuelle-softwareentwicklung",
         "webentwicklung",
