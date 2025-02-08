@@ -250,7 +250,7 @@
       "contactText": "Kontakt",
       "metrics": [
         {
-          "value": 50,
+          "value": 99,
           "label": "Kundenzufriedenheit"
         },
         {
@@ -377,71 +377,71 @@
     }
   },
   "startups": {
-      "main": "Startups-Lösungen von NearUp",
-      "heroDescription": "Entdecken Sie unsere maßgeschneiderten Softwarelösungen für Startups, die Wachstum, Skalierbarkeit und Innovation ermöglichen.",
-      "title": "Individuelle IT-Lösungen für Startups: Skalierbar, effizient und zukunftssicher.",
-      "description": "Startups benötigen agile, kosteneffiziente und skalierbare IT-Lösungen, um in einem dynamischen Markt erfolgreich zu sein. NearUp unterstützt Startups mit flexiblen Softwarelösungen, IT-Beratung und Technologieintegration, um nachhaltiges Wachstum zu ermöglichen.",
-      "services": {
-        "consulting": {
-          "title": "IT-Beratung für Startups",
-          "description": "Wir helfen Startups, die richtige IT-Strategie zu entwickeln und die besten Technologien zu implementieren.",
-          "link": {
-            "text": "Mehr erfahren",
-            "href": "/services/startups/consulting"
-          }
-        },
-        "integration": {
-          "title": "Technologieintegration für Startups",
-          "description": "Unsere Experten sorgen für eine nahtlose Integration von IT-Systemen, die Wachstum und Skalierbarkeit unterstützen.",
-          "link": {
-            "text": "Kontakt",
-            "href": "/contact"
-          }
-        },
-        "success": {
-          "title": "Erfolgsgeschichten",
-          "description": "Lesen Sie unsere Startup-Fallstudien, um mehr über erfolgreiche Projekte zu erfahren.",
-          "link": {
-            "text": "Jetzt anfragen",
-            "href": "/contact"
-          }
-        },
-        "benefits": {
-          "title": "Die Vorteile der Zusammenarbeit mit NearUp für Startups",
-          "description": "Startups profitieren von unserer IT-Expertise und flexiblen Entwicklungsansätzen. Wir bieten individuelle Lösungen, die Wachstum, Effizienz und Wettbewerbsfähigkeit maximieren.",
-          "scalability": {
-            "title": "Skalierbare Technologien",
-            "description": "Unsere Lösungen wachsen mit Ihrem Startup und passen sich neuen Anforderungen an."
-          },
-          "costEfficiency": {
-            "title": "Kosteneffizienz",
-            "description": "Unsere agilen Entwicklungsmodelle ermöglichen schnelle Iterationen und budgetfreundliche Lösungen."
-          }
-        },
-        "vision": {
-          "title": "Effiziente Produktentwicklung für Startups",
-          "description": "NearUp verfolgt einen agilen Ansatz zur Entwicklung und Skalierung von Startup-Produkten. Von der Ideenvalidierung bis zur Markteinführung unterstützen wir Sie in jeder Phase."
+    "main": "Startups-Lösungen von NearUp",
+    "heroDescription": "Entdecken Sie unsere maßgeschneiderten Softwarelösungen für Startups, die Wachstum, Skalierbarkeit und Innovation ermöglichen.",
+    "title": "Individuelle IT-Lösungen für Startups: Skalierbar, effizient und zukunftssicher.",
+    "description": "Startups benötigen agile, kosteneffiziente und skalierbare IT-Lösungen, um in einem dynamischen Markt erfolgreich zu sein. NearUp unterstützt Startups mit flexiblen Softwarelösungen, IT-Beratung und Technologieintegration, um nachhaltiges Wachstum zu ermöglichen.",
+    "services": {
+      "consulting": {
+        "title": "IT-Beratung für Startups",
+        "description": "Wir helfen Startups, die richtige IT-Strategie zu entwickeln und die besten Technologien zu implementieren.",
+        "link": {
+          "text": "Mehr erfahren",
+          "href": "/services/startups/consulting"
         }
       },
-      "process": {
-        "title": "Unser Entwicklungsprozess für Startups",
-        "sections": [
-          {
-            "title": "Ideenvalidierung & Strategie",
-            "description": "Wir helfen Ihnen, Ihre Idee zu validieren und eine technische Strategie zu entwickeln, die Investoren überzeugt und nachhaltiges Wachstum ermöglicht."
-          },
-          {
-            "title": "MVP-Entwicklung & Markteintritt",
-            "description": "Unsere Experten entwickeln einen Minimum Viable Product (MVP), um schnell auf den Markt zu gehen und erstes Kundenfeedback zu sammeln."
-          },
-          {
-            "title": "Skalierung & Optimierung",
-            "description": "Wir unterstützen Sie dabei, Ihre Plattform zu skalieren, neue Funktionen hinzuzufügen und eine leistungsfähige Infrastruktur aufzubauen."
-          }
-        ]
+      "integration": {
+        "title": "Technologieintegration für Startups",
+        "description": "Unsere Experten sorgen für eine nahtlose Integration von IT-Systemen, die Wachstum und Skalierbarkeit unterstützen.",
+        "link": {
+          "text": "Kontakt",
+          "href": "/contact"
+        }
+      },
+      "success": {
+        "title": "Erfolgsgeschichten",
+        "description": "Lesen Sie unsere Startup-Fallstudien, um mehr über erfolgreiche Projekte zu erfahren.",
+        "link": {
+          "text": "Jetzt anfragen",
+          "href": "/contact"
+        }
+      },
+      "benefits": {
+        "title": "Die Vorteile der Zusammenarbeit mit NearUp für Startups",
+        "description": "Startups profitieren von unserer IT-Expertise und flexiblen Entwicklungsansätzen. Wir bieten individuelle Lösungen, die Wachstum, Effizienz und Wettbewerbsfähigkeit maximieren.",
+        "scalability": {
+          "title": "Skalierbare Technologien",
+          "description": "Unsere Lösungen wachsen mit Ihrem Startup und passen sich neuen Anforderungen an."
+        },
+        "costEfficiency": {
+          "title": "Kosteneffizienz",
+          "description": "Unsere agilen Entwicklungsmodelle ermöglichen schnelle Iterationen und budgetfreundliche Lösungen."
+        }
+      },
+      "vision": {
+        "title": "Effiziente Produktentwicklung für Startups",
+        "description": "NearUp verfolgt einen agilen Ansatz zur Entwicklung und Skalierung von Startup-Produkten. Von der Ideenvalidierung bis zur Markteinführung unterstützen wir Sie in jeder Phase."
       }
     },
-    "ecommerce": {
+    "process": {
+      "title": "Unser Entwicklungsprozess für Startups",
+      "sections": [
+        {
+          "title": "Ideenvalidierung & Strategie",
+          "description": "Wir helfen Ihnen, Ihre Idee zu validieren und eine technische Strategie zu entwickeln, die Investoren überzeugt und nachhaltiges Wachstum ermöglicht."
+        },
+        {
+          "title": "MVP-Entwicklung & Markteintritt",
+          "description": "Unsere Experten entwickeln einen Minimum Viable Product (MVP), um schnell auf den Markt zu gehen und erstes Kundenfeedback zu sammeln."
+        },
+        {
+          "title": "Skalierung & Optimierung",
+          "description": "Wir unterstützen Sie dabei, Ihre Plattform zu skalieren, neue Funktionen hinzuzufügen und eine leistungsfähige Infrastruktur aufzubauen."
+        }
+      ]
+    }
+  },
+  "ecommerce": {
     "main": "E-Commerce-Lösungen von NearUp",
     "heroDescription": "Optimieren Sie Ihr Online-Geschäft mit innovativen, skalierbaren und leistungsstarken E-Commerce-Lösungen von NearUp.",
     "title": "Individuelle IT-Lösungen für den E-Commerce: Skalierbar, sicher und zukunftssicher.",
@@ -523,24 +523,24 @@
       "value": "Musterstraße 123, Berlin 10115 DE"
     }
   },
-    "contact": {
-      "title": "Kontakt",
-      "mainTitle": "Kontaktieren Sie uns",
-      "description": "Wir freuen uns auf Ihre Anfrage und stehen Ihnen gerne für Fragen zur Verfügung.",
-      "email": {
-        "label": "E-Mail",
-        "value": "hello@nearup.io"
-      },
-      "phone": {
-        "label": "Telefon",
-        "value": "+49 (30) 12345678"
-      },
-      "office": {
-        "label": "Büro",
-        "value": "Musterstraße 123, Berlin 10115 DE"
-      }
+  "contact": {
+    "title": "Kontakt",
+    "mainTitle": "Kontaktieren Sie uns",
+    "description": "Wir freuen uns auf Ihre Anfrage und stehen Ihnen gerne für Fragen zur Verfügung.",
+    "email": {
+      "label": "E-Mail",
+      "value": "hello@nearup.io"
     },
-    "transportationLogistics": {
+    "phone": {
+      "label": "Telefon",
+      "value": "+49 (30) 12345678"
+    },
+    "office": {
+      "label": "Büro",
+      "value": "Musterstraße 123, Berlin 10115 DE"
+    }
+  },
+  "transportationLogistics": {
     "main": "Transport- & Logistik-Lösungen von NearUp",
     "heroDescription": "Optimieren Sie Ihre Logistikprozesse mit intelligenten, digitalen Lösungen für effiziente Lieferketten und Transportmanagement.",
     "title": "Maßgeschneiderte IT-Lösungen für die Transport- und Logistikbranche: Effizient, sicher und skalierbar.",
@@ -703,7 +703,7 @@
       "label": "Büro",
       "value": "Musterstraße 123, Berlin 10115 DE"
     }
-  },  
+  },
   "media": {
     "main": "Medienlösungen von NearUp",
     "heroDescription": "Entdecken Sie innovative Softwarelösungen für die Medienbranche, die digitale Inhalte optimieren, Distribution vereinfachen und neue Monetarisierungsmöglichkeiten schaffen.",
@@ -1070,78 +1070,78 @@
     }
   },
   "customSoftwareDevelopment": {
-      "main": "Individuelle Softwareentwicklung mit NearUp",
-      "heroDescription": "Entwickeln Sie maßgeschneiderte Softwarelösungen mit NearUp – passgenau, skalierbar und zukunftssicher.",
-      "mission": {
-        "subtitle": "Individuelle Softwareentwicklung",
-        "title": "Unsere Mission und Vision für maßgeschneiderte Softwarelösungen",
-        "description": "NearUp entwickelt individuelle Softwarelösungen, die exakt auf die Bedürfnisse Ihres Unternehmens abgestimmt sind. Unser Ziel ist es, innovative, performante und skalierbare Anwendungen zu liefern, die Ihre Geschäftsprozesse optimieren und Ihre Wettbewerbsfähigkeit steigern.",
-        "learnMoreText": "Erfahren",
-        "contactText": "Kontakt"
+    "main": "Individuelle Softwareentwicklung mit NearUp",
+    "heroDescription": "Entwickeln Sie maßgeschneiderte Softwarelösungen mit NearUp – passgenau, skalierbar und zukunftssicher.",
+    "mission": {
+      "subtitle": "Individuelle Softwareentwicklung",
+      "title": "Unsere Mission und Vision für maßgeschneiderte Softwarelösungen",
+      "description": "NearUp entwickelt individuelle Softwarelösungen, die exakt auf die Bedürfnisse Ihres Unternehmens abgestimmt sind. Unser Ziel ist es, innovative, performante und skalierbare Anwendungen zu liefern, die Ihre Geschäftsprozesse optimieren und Ihre Wettbewerbsfähigkeit steigern.",
+      "learnMoreText": "Erfahren",
+      "contactText": "Kontakt"
+    },
+    "titleCards": {
+      "title": "Unsere Dienstleistungen für maßgeschneiderte Softwarelösungen",
+      "card1": {
+        "title": "Full-Stack Softwareentwicklung",
+        "description": "Von der Konzeption bis zur Umsetzung – wir entwickeln individuelle Softwarelösungen mit modernen Technologien."
       },
-      "titleCards": {
-        "title": "Unsere Dienstleistungen für maßgeschneiderte Softwarelösungen",
-        "card1": {
-          "title": "Full-Stack Softwareentwicklung",
-          "description": "Von der Konzeption bis zur Umsetzung – wir entwickeln individuelle Softwarelösungen mit modernen Technologien."
-        },
-        "card2": {
-          "title": "API- & Systemintegration",
-          "description": "Wir integrieren Ihre Software mit bestehenden Systemen und schaffen nahtlose digitale Workflows."
-        },
-        "card3": {
-          "title": "Cloud- & Web-Anwendungen",
-          "description": "Skalierbare, cloudbasierte Anwendungen für maximale Flexibilität und Performance."
-        }
+      "card2": {
+        "title": "API- & Systemintegration",
+        "description": "Wir integrieren Ihre Software mit bestehenden Systemen und schaffen nahtlose digitale Workflows."
       },
-      "benefits": {
-        "title": "Warum NearUp Ihr idealer Partner für individuelle Softwareentwicklung ist",
-        "description": "Mit NearUp erhalten Sie maßgeschneiderte Softwarelösungen, die perfekt auf Ihre Unternehmensanforderungen zugeschnitten sind.",
-        "benefits": [
-          {
-            "title": "100% individuell & passgenau",
-            "description": "Wir entwickeln Software, die genau auf Ihre Bedürfnisse zugeschnitten ist – ohne unnötige Features oder Einschränkungen."
-          },
-          {
-            "title": "Skalierbare & zukunftssichere Lösungen",
-            "description": "Unsere Softwarelösungen wachsen mit Ihrem Unternehmen und sind für langfristige Nutzung ausgelegt."
-          }
-        ]
-      },
-      "benefitsOverview": {
-        "title": "Maßgeschneiderte Software für maximale Effizienz",
-        "description": "Unsere Experten analysieren Ihre Anforderungen und entwickeln Lösungen, die Geschäftsprozesse automatisieren und optimieren."
-      },
-      "benefitsOverview2": {
-        "title": "Technologie-Stack nach Ihren Anforderungen",
-        "description": "Wir setzen moderne Technologien wie Node.js, React, Python, Java und Cloud-native Architekturen ein, um die beste Lösung für Ihr Unternehmen zu schaffen."
-      },
-      "faq": {
-        "title": "Häufige Fragen zur individuellen Softwareentwicklung mit NearUp",
-        "questions": [
-          {
-            "question": "Warum sollte ich individuelle Software anstelle von Standardlösungen wählen?",
-            "answer": "Individuelle Software ist exakt auf Ihre Anforderungen zugeschnitten, bietet höhere Flexibilität und passt sich Ihrem Unternehmen an."
-          },
-          {
-            "question": "Welche Technologien nutzt NearUp für die Softwareentwicklung?",
-            "answer": "Wir arbeiten mit modernen Technologien wie Node.js, React, Vue.js, Python, Java, .NET und Cloud-Technologien."
-          },
-          {
-            "question": "Wie lange dauert die Entwicklung einer individuellen Software?",
-            "answer": "Je nach Komplexität dauert die Entwicklung zwischen 8-20 Wochen – von der Konzeption bis zum finalen Produkt."
-          },
-          {
-            "question": "Kann NearUp bestehende Software erweitern oder optimieren?",
-            "answer": "Ja, wir modernisieren bestehende Softwarelösungen und erweitern sie mit neuen Features oder Systemintegrationen."
-          },
-          {
-            "question": "Bietet NearUp auch langfristigen Support und Wartung?",
-            "answer": "Ja, wir bieten kontinuierliche Wartung, Updates und technischen Support für unsere Softwarelösungen."
-          }
-        ]
+      "card3": {
+        "title": "Cloud- & Web-Anwendungen",
+        "description": "Skalierbare, cloudbasierte Anwendungen für maximale Flexibilität und Performance."
       }
-    },  
+    },
+    "benefits": {
+      "title": "Warum NearUp Ihr idealer Partner für individuelle Softwareentwicklung ist",
+      "description": "Mit NearUp erhalten Sie maßgeschneiderte Softwarelösungen, die perfekt auf Ihre Unternehmensanforderungen zugeschnitten sind.",
+      "benefits": [
+        {
+          "title": "100% individuell & passgenau",
+          "description": "Wir entwickeln Software, die genau auf Ihre Bedürfnisse zugeschnitten ist – ohne unnötige Features oder Einschränkungen."
+        },
+        {
+          "title": "Skalierbare & zukunftssichere Lösungen",
+          "description": "Unsere Softwarelösungen wachsen mit Ihrem Unternehmen und sind für langfristige Nutzung ausgelegt."
+        }
+      ]
+    },
+    "benefitsOverview": {
+      "title": "Maßgeschneiderte Software für maximale Effizienz",
+      "description": "Unsere Experten analysieren Ihre Anforderungen und entwickeln Lösungen, die Geschäftsprozesse automatisieren und optimieren."
+    },
+    "benefitsOverview2": {
+      "title": "Technologie-Stack nach Ihren Anforderungen",
+      "description": "Wir setzen moderne Technologien wie Node.js, React, Python, Java und Cloud-native Architekturen ein, um die beste Lösung für Ihr Unternehmen zu schaffen."
+    },
+    "faq": {
+      "title": "Häufige Fragen zur individuellen Softwareentwicklung mit NearUp",
+      "questions": [
+        {
+          "question": "Warum sollte ich individuelle Software anstelle von Standardlösungen wählen?",
+          "answer": "Individuelle Software ist exakt auf Ihre Anforderungen zugeschnitten, bietet höhere Flexibilität und passt sich Ihrem Unternehmen an."
+        },
+        {
+          "question": "Welche Technologien nutzt NearUp für die Softwareentwicklung?",
+          "answer": "Wir arbeiten mit modernen Technologien wie Node.js, React, Vue.js, Python, Java, .NET und Cloud-Technologien."
+        },
+        {
+          "question": "Wie lange dauert die Entwicklung einer individuellen Software?",
+          "answer": "Je nach Komplexität dauert die Entwicklung zwischen 8-20 Wochen – von der Konzeption bis zum finalen Produkt."
+        },
+        {
+          "question": "Kann NearUp bestehende Software erweitern oder optimieren?",
+          "answer": "Ja, wir modernisieren bestehende Softwarelösungen und erweitern sie mit neuen Features oder Systemintegrationen."
+        },
+        {
+          "question": "Bietet NearUp auch langfristigen Support und Wartung?",
+          "answer": "Ja, wir bieten kontinuierliche Wartung, Updates und technischen Support für unsere Softwarelösungen."
+        }
+      ]
+    }
+  },
   "cloudDevelopment": {
     "main": "Cloud Entwicklung von NearUp",
     "heroDescription": "Entdecken Sie unsere Cloud Development Services und wie wir Ihnen bei der vollständigen digitalen Transformation helfen können.",
@@ -1217,153 +1217,153 @@
       ]
     }
   },
-    "webDevelopment": {
-      "main": "Webentwicklung mit NearUp",
-      "heroDescription": "Erleben Sie moderne, leistungsstarke und skalierbare Weblösungen mit NearUp – von individuellen Websites bis hin zu komplexen Web-Apps.",
-      "mission": {
-        "subtitle": "Webentwicklung",
-        "title": "Unsere Mission und Vision für die Zukunft des Webs",
-        "description": "NearUp entwickelt innovative und maßgeschneiderte Weblösungen, die Benutzerfreundlichkeit, Performance und Skalierbarkeit in den Mittelpunkt stellen. Unser Ziel ist es, Unternehmen mit hochwertigen Webtechnologien auf die nächste Stufe zu heben.",
-        "learnMoreText": "Erfahren",
-        "contactText": "Kontakt"
+  "webDevelopment": {
+    "main": "Webentwicklung mit NearUp",
+    "heroDescription": "Erleben Sie moderne, leistungsstarke und skalierbare Weblösungen mit NearUp – von individuellen Websites bis hin zu komplexen Web-Apps.",
+    "mission": {
+      "subtitle": "Webentwicklung",
+      "title": "Unsere Mission und Vision für die Zukunft des Webs",
+      "description": "NearUp entwickelt innovative und maßgeschneiderte Weblösungen, die Benutzerfreundlichkeit, Performance und Skalierbarkeit in den Mittelpunkt stellen. Unser Ziel ist es, Unternehmen mit hochwertigen Webtechnologien auf die nächste Stufe zu heben.",
+      "learnMoreText": "Erfahren",
+      "contactText": "Kontakt"
+    },
+    "titleCards": {
+      "title": "Unsere umfassenden Webentwicklungsdienste für Ihren digitalen Erfolg",
+      "card1": {
+        "title": "Individuelle Webentwicklung für maßgeschneiderte digitale Erlebnisse",
+        "description": "Wir erstellen individuelle Websites, Web-Apps und Plattformen, die exakt auf Ihre Geschäftsanforderungen zugeschnitten sind."
       },
-      "titleCards": {
-        "title": "Unsere umfassenden Webentwicklungsdienste für Ihren digitalen Erfolg",
-        "card1": {
-          "title": "Individuelle Webentwicklung für maßgeschneiderte digitale Erlebnisse",
-          "description": "Wir erstellen individuelle Websites, Web-Apps und Plattformen, die exakt auf Ihre Geschäftsanforderungen zugeschnitten sind."
-        },
-        "card2": {
-          "title": "Optimierung Ihrer Website für maximale Performance und SEO",
-          "description": "Unsere Experten verbessern Ladezeiten, Nutzererfahrung und Suchmaschinen-Rankings durch gezielte Optimierungsmaßnahmen."
-        },
-        "card3": {
-          "title": "Sichere und skalierbare Webarchitekturen für Unternehmen",
-          "description": "Wir setzen auf moderne Technologien und Frameworks, um Ihre Webanwendungen zukunftssicher und leistungsstark zu gestalten."
-        }
+      "card2": {
+        "title": "Optimierung Ihrer Website für maximale Performance und SEO",
+        "description": "Unsere Experten verbessern Ladezeiten, Nutzererfahrung und Suchmaschinen-Rankings durch gezielte Optimierungsmaßnahmen."
       },
-      "benefits": {
-        "title": "Warum NearUp der ideale Partner für Ihre Webentwicklung ist",
-        "description": "Mit NearUp profitieren Sie von erstklassiger Webentwicklung, die Design, Funktionalität und Technologie perfekt kombiniert, um herausragende digitale Erlebnisse zu schaffen.",
-        "benefits": [
-          {
-            "title": "Responsives & Benutzerfreundliches Design",
-            "description": "Unsere Weblösungen sind für alle Geräte optimiert und bieten eine erstklassige User Experience."
-          },
-          {
-            "title": "Skalierbare & Performance-starke Lösungen",
-            "description": "Wir entwickeln performante Webanwendungen, die mit Ihrem Unternehmen wachsen und höchsten Anforderungen gerecht werden."
-          }
-        ]
-      },
-      "benefitsOverview": {
-        "title": "Webtechnologie-Beratung: Analyse und Optimierung bestehender Websites und Webanwendungen",
-        "description": "Wir analysieren Ihre bestehende Webpräsenz, identifizieren Optimierungspotenziale und implementieren Verbesserungen, um Ihre digitale Performance zu maximieren."
-      },
-      "benefitsOverview2": {
-        "title": "Effiziente Webentwicklung für Unternehmen jeder Größe",
-        "description": "Unsere Experten entwickeln leistungsstarke Weblösungen – von Startups bis zu Großunternehmen – und bieten maßgeschneiderte Strategien für nachhaltigen Erfolg."
-      },
-      "faq": {
-        "title": "Häufige Fragen zur Webentwicklung mit NearUp",
-        "questions": [
-          {
-            "question": "Welche Technologien nutzt NearUp für Webentwicklung?",
-            "answer": "Wir setzen auf moderne Technologien wie React, Next.js, Vue.js, Node.js und Headless CMS für leistungsstarke Webanwendungen."
-          },
-          {
-            "question": "Bietet NearUp auch E-Commerce-Lösungen an?",
-            "answer": "Ja, wir entwickeln leistungsfähige E-Commerce-Plattformen mit Shopify, Medusa.js und individuellen Lösungen."
-          },
-          {
-            "question": "Wie lange dauert die Entwicklung einer Website?",
-            "answer": "Je nach Komplexität dauert die Entwicklung zwischen 4-12 Wochen – von der Konzeption bis zum Go-Live."
-          },
-          {
-            "question": "Welche Art von Webprojekten realisiert NearUp?",
-            "answer": "Wir entwickeln Unternehmenswebsites, Portale, SaaS-Plattformen, Web-Apps und hochperformante Online-Shops."
-          },
-          {
-            "question": "Kann NearUp bestehende Websites optimieren?",
-            "answer": "Ja, wir bieten Performance-, Sicherheits- und UX-Optimierungen für bestehende Websites und Webanwendungen an."
-          }
-        ]
-    }
-  },
-    "mobileAppDevelopment": {
-      "main": "Mobile App Entwicklung mit NearUp",
-      "heroDescription": "Entwickeln Sie leistungsstarke und benutzerfreundliche mobile Apps mit NearUp – für iOS, Android und Cross-Platform-Lösungen.",
-      "mission": {
-        "subtitle": "Mobile App Entwicklung",
-        "title": "Unsere Mission und Vision für die Zukunft der mobilen Anwendungen",
-        "description": "NearUp entwickelt innovative, sichere und skalierbare mobile Apps, die Unternehmen dabei helfen, ihre digitale Präsenz zu stärken und ihre Nutzer zu begeistern. Unser Ziel ist es, maßgeschneiderte mobile Lösungen bereitzustellen, die Performance, Design und Funktionalität vereinen.",
-        "learnMoreText": "Erfahren",
-        "contactText": "Kontakt"
-      },
-      "titleCards": {
-        "title": "Unsere umfassenden Mobile-App-Entwicklungsdienste für Ihren digitalen Erfolg",
-        "card1": {
-          "title": "Native App Entwicklung für iOS & Android",
-          "description": "Wir entwickeln leistungsstarke native Apps für iOS und Android mit Swift, Kotlin und Java."
-        },
-        "card2": {
-          "title": "Cross-Platform Entwicklung mit React Native & Flutter",
-          "description": "Unsere Experten entwickeln plattformübergreifende Apps mit React Native und Flutter für maximale Effizienz."
-        },
-        "card3": {
-          "title": "Mobile UX/UI-Design für intuitive Benutzererlebnisse",
-          "description": "Wir gestalten moderne und intuitive App-Oberflächen, die Benutzer begeistern und die Conversion steigern."
-        }
-      },
-      "benefits": {
-        "title": "Warum NearUp der ideale Partner für Ihre Mobile-App-Entwicklung ist",
-        "description": "Mit NearUp profitieren Sie von hochmodernen, sicheren und flexiblen Mobile-App-Lösungen, die Benutzerfreundlichkeit, Performance und Skalierbarkeit in den Mittelpunkt stellen.",
-        "benefits": [
-          {
-            "title": "Hohe Performance & Stabilität",
-            "description": "Unsere mobilen Apps sind optimiert für Geschwindigkeit, Stabilität und eine nahtlose Nutzererfahrung."
-          },
-          {
-            "title": "Maximale Skalierbarkeit",
-            "description": "Unsere Apps wachsen mit Ihrem Unternehmen und lassen sich flexibel an neue Anforderungen anpassen."
-          }
-        ]
-      },
-      "benefitsOverview": {
-        "title": "Technologiebewertung: Optimierungspotenziale für mobile Anwendungen identifizieren",
-        "description": "Wir analysieren bestehende mobile Lösungen, identifizieren Optimierungsmöglichkeiten und implementieren Technologien für eine reibungslose App-Performance."
-      },
-      "benefitsOverview2": {
-        "title": "Effiziente Mobile-App-Entwicklung für Unternehmen jeder Größe",
-        "description": "Unsere Experten realisieren leistungsstarke Mobile-Apps für Startups und Großunternehmen und sorgen für nachhaltigen digitalen Erfolg."
-      },
-      "faq": {
-        "title": "Häufige Fragen zur Mobile-App-Entwicklung mit NearUp",
-        "questions": [
-          {
-            "question": "Welche Plattformen unterstützt NearUp?",
-            "answer": "Wir entwickeln Apps für iOS, Android und Cross-Platform-Lösungen mit React Native und Flutter."
-          },
-          {
-            "question": "Wie lange dauert die Entwicklung einer mobilen App?",
-            "answer": "Die Dauer hängt von der Komplexität der App ab. In der Regel dauert die Entwicklung zwischen 6-16 Wochen."
-          },
-          {
-            "question": "Kann NearUp bestehende mobile Apps optimieren?",
-            "answer": "Ja, wir bieten App-Optimierung, Performance-Verbesserungen und UX-Redesigns für bestehende Anwendungen."
-          },
-          {
-            "question": "Welche Branchen profitieren von Mobile-Apps?",
-            "answer": "Wir entwickeln maßgeschneiderte Apps für Fintech, E-Commerce, Healthcare, Transport, Automotive und viele weitere Branchen."
-          },
-          {
-            "question": "Bietet NearUp auch Backend- und API-Entwicklung für Apps an?",
-            "answer": "Ja, wir entwickeln leistungsstarke Backends und APIs für mobile Anwendungen, die nahtlos mit Ihren Systemen integriert werden können."
-          }
-        ]
+      "card3": {
+        "title": "Sichere und skalierbare Webarchitekturen für Unternehmen",
+        "description": "Wir setzen auf moderne Technologien und Frameworks, um Ihre Webanwendungen zukunftssicher und leistungsstark zu gestalten."
       }
     },
-    "apiDevelopment": {
+    "benefits": {
+      "title": "Warum NearUp der ideale Partner für Ihre Webentwicklung ist",
+      "description": "Mit NearUp profitieren Sie von erstklassiger Webentwicklung, die Design, Funktionalität und Technologie perfekt kombiniert, um herausragende digitale Erlebnisse zu schaffen.",
+      "benefits": [
+        {
+          "title": "Responsives & Benutzerfreundliches Design",
+          "description": "Unsere Weblösungen sind für alle Geräte optimiert und bieten eine erstklassige User Experience."
+        },
+        {
+          "title": "Skalierbare & Performance-starke Lösungen",
+          "description": "Wir entwickeln performante Webanwendungen, die mit Ihrem Unternehmen wachsen und höchsten Anforderungen gerecht werden."
+        }
+      ]
+    },
+    "benefitsOverview": {
+      "title": "Webtechnologie-Beratung: Analyse und Optimierung bestehender Websites und Webanwendungen",
+      "description": "Wir analysieren Ihre bestehende Webpräsenz, identifizieren Optimierungspotenziale und implementieren Verbesserungen, um Ihre digitale Performance zu maximieren."
+    },
+    "benefitsOverview2": {
+      "title": "Effiziente Webentwicklung für Unternehmen jeder Größe",
+      "description": "Unsere Experten entwickeln leistungsstarke Weblösungen – von Startups bis zu Großunternehmen – und bieten maßgeschneiderte Strategien für nachhaltigen Erfolg."
+    },
+    "faq": {
+      "title": "Häufige Fragen zur Webentwicklung mit NearUp",
+      "questions": [
+        {
+          "question": "Welche Technologien nutzt NearUp für Webentwicklung?",
+          "answer": "Wir setzen auf moderne Technologien wie React, Next.js, Vue.js, Node.js und Headless CMS für leistungsstarke Webanwendungen."
+        },
+        {
+          "question": "Bietet NearUp auch E-Commerce-Lösungen an?",
+          "answer": "Ja, wir entwickeln leistungsfähige E-Commerce-Plattformen mit Shopify, Medusa.js und individuellen Lösungen."
+        },
+        {
+          "question": "Wie lange dauert die Entwicklung einer Website?",
+          "answer": "Je nach Komplexität dauert die Entwicklung zwischen 4-12 Wochen – von der Konzeption bis zum Go-Live."
+        },
+        {
+          "question": "Welche Art von Webprojekten realisiert NearUp?",
+          "answer": "Wir entwickeln Unternehmenswebsites, Portale, SaaS-Plattformen, Web-Apps und hochperformante Online-Shops."
+        },
+        {
+          "question": "Kann NearUp bestehende Websites optimieren?",
+          "answer": "Ja, wir bieten Performance-, Sicherheits- und UX-Optimierungen für bestehende Websites und Webanwendungen an."
+        }
+      ]
+    }
+  },
+  "mobileAppDevelopment": {
+    "main": "Mobile App Entwicklung mit NearUp",
+    "heroDescription": "Entwickeln Sie leistungsstarke und benutzerfreundliche mobile Apps mit NearUp – für iOS, Android und Cross-Platform-Lösungen.",
+    "mission": {
+      "subtitle": "Mobile App Entwicklung",
+      "title": "Unsere Mission und Vision für die Zukunft der mobilen Anwendungen",
+      "description": "NearUp entwickelt innovative, sichere und skalierbare mobile Apps, die Unternehmen dabei helfen, ihre digitale Präsenz zu stärken und ihre Nutzer zu begeistern. Unser Ziel ist es, maßgeschneiderte mobile Lösungen bereitzustellen, die Performance, Design und Funktionalität vereinen.",
+      "learnMoreText": "Erfahren",
+      "contactText": "Kontakt"
+    },
+    "titleCards": {
+      "title": "Unsere umfassenden Mobile-App-Entwicklungsdienste für Ihren digitalen Erfolg",
+      "card1": {
+        "title": "Native App Entwicklung für iOS & Android",
+        "description": "Wir entwickeln leistungsstarke native Apps für iOS und Android mit Swift, Kotlin und Java."
+      },
+      "card2": {
+        "title": "Cross-Platform Entwicklung mit React Native & Flutter",
+        "description": "Unsere Experten entwickeln plattformübergreifende Apps mit React Native und Flutter für maximale Effizienz."
+      },
+      "card3": {
+        "title": "Mobile UX/UI-Design für intuitive Benutzererlebnisse",
+        "description": "Wir gestalten moderne und intuitive App-Oberflächen, die Benutzer begeistern und die Conversion steigern."
+      }
+    },
+    "benefits": {
+      "title": "Warum NearUp der ideale Partner für Ihre Mobile-App-Entwicklung ist",
+      "description": "Mit NearUp profitieren Sie von hochmodernen, sicheren und flexiblen Mobile-App-Lösungen, die Benutzerfreundlichkeit, Performance und Skalierbarkeit in den Mittelpunkt stellen.",
+      "benefits": [
+        {
+          "title": "Hohe Performance & Stabilität",
+          "description": "Unsere mobilen Apps sind optimiert für Geschwindigkeit, Stabilität und eine nahtlose Nutzererfahrung."
+        },
+        {
+          "title": "Maximale Skalierbarkeit",
+          "description": "Unsere Apps wachsen mit Ihrem Unternehmen und lassen sich flexibel an neue Anforderungen anpassen."
+        }
+      ]
+    },
+    "benefitsOverview": {
+      "title": "Technologiebewertung: Optimierungspotenziale für mobile Anwendungen identifizieren",
+      "description": "Wir analysieren bestehende mobile Lösungen, identifizieren Optimierungsmöglichkeiten und implementieren Technologien für eine reibungslose App-Performance."
+    },
+    "benefitsOverview2": {
+      "title": "Effiziente Mobile-App-Entwicklung für Unternehmen jeder Größe",
+      "description": "Unsere Experten realisieren leistungsstarke Mobile-Apps für Startups und Großunternehmen und sorgen für nachhaltigen digitalen Erfolg."
+    },
+    "faq": {
+      "title": "Häufige Fragen zur Mobile-App-Entwicklung mit NearUp",
+      "questions": [
+        {
+          "question": "Welche Plattformen unterstützt NearUp?",
+          "answer": "Wir entwickeln Apps für iOS, Android und Cross-Platform-Lösungen mit React Native und Flutter."
+        },
+        {
+          "question": "Wie lange dauert die Entwicklung einer mobilen App?",
+          "answer": "Die Dauer hängt von der Komplexität der App ab. In der Regel dauert die Entwicklung zwischen 6-16 Wochen."
+        },
+        {
+          "question": "Kann NearUp bestehende mobile Apps optimieren?",
+          "answer": "Ja, wir bieten App-Optimierung, Performance-Verbesserungen und UX-Redesigns für bestehende Anwendungen."
+        },
+        {
+          "question": "Welche Branchen profitieren von Mobile-Apps?",
+          "answer": "Wir entwickeln maßgeschneiderte Apps für Fintech, E-Commerce, Healthcare, Transport, Automotive und viele weitere Branchen."
+        },
+        {
+          "question": "Bietet NearUp auch Backend- und API-Entwicklung für Apps an?",
+          "answer": "Ja, wir entwickeln leistungsstarke Backends und APIs für mobile Anwendungen, die nahtlos mit Ihren Systemen integriert werden können."
+        }
+      ]
+    }
+  },
+  "apiDevelopment": {
     "main": "API Entwicklung mit NearUp",
     "heroDescription": "Skalierbare, sichere und leistungsstarke APIs für nahtlose Integrationen und maximale Effizienz.",
     "mission": {
@@ -1437,79 +1437,79 @@
     }
   },
   "itConsulting": {
-      "main": "IT-Beratung mit NearUp",
-      "heroDescription": "Optimieren Sie Ihre IT-Strategie mit maßgeschneiderter Beratung und innovativen Lösungen von NearUp.",
-      "mission": {
-        "subtitle": "IT-Beratung",
-        "title": "Unsere Mission und Vision für zukunftssichere IT-Lösungen",
-        "description": "NearUp bietet strategische IT-Beratung, um Unternehmen bei der Optimierung ihrer IT-Infrastruktur, der Digitalisierung und der Implementierung moderner Technologien zu unterstützen. Unser Ziel ist es, nachhaltige, sichere und leistungsfähige IT-Lösungen bereitzustellen.",
-        "learnMoreText": "Erfahren",
-        "contactText": "Kontakt"
+    "main": "IT-Beratung mit NearUp",
+    "heroDescription": "Optimieren Sie Ihre IT-Strategie mit maßgeschneiderter Beratung und innovativen Lösungen von NearUp.",
+    "mission": {
+      "subtitle": "IT-Beratung",
+      "title": "Unsere Mission und Vision für zukunftssichere IT-Lösungen",
+      "description": "NearUp bietet strategische IT-Beratung, um Unternehmen bei der Optimierung ihrer IT-Infrastruktur, der Digitalisierung und der Implementierung moderner Technologien zu unterstützen. Unser Ziel ist es, nachhaltige, sichere und leistungsfähige IT-Lösungen bereitzustellen.",
+      "learnMoreText": "Erfahren",
+      "contactText": "Kontakt"
+    },
+    "titleCards": {
+      "title": "Unsere IT-Beratungsdienste für nachhaltigen Geschäftserfolg",
+      "card1": {
+        "title": "Strategische IT-Planung & Digitalisierung",
+        "description": "Wir analysieren Ihre bestehenden IT-Prozesse und entwickeln eine langfristige Strategie für digitale Innovation."
       },
-      "titleCards": {
-        "title": "Unsere IT-Beratungsdienste für nachhaltigen Geschäftserfolg",
-        "card1": {
-          "title": "Strategische IT-Planung & Digitalisierung",
-          "description": "Wir analysieren Ihre bestehenden IT-Prozesse und entwickeln eine langfristige Strategie für digitale Innovation."
-        },
-        "card2": {
-          "title": "Cloud- und IT-Infrastrukturberatung",
-          "description": "Unsere Experten helfen Ihnen bei der Auswahl und Implementierung von Cloud-, Hybrid- oder On-Premise-Lösungen."
-        },
-        "card3": {
-          "title": "IT-Sicherheit & Compliance",
-          "description": "Wir entwickeln Sicherheitsstrategien, um Ihre IT-Umgebung gegen Cyber-Bedrohungen abzusichern und regulatorische Anforderungen zu erfüllen."
-        }
+      "card2": {
+        "title": "Cloud- und IT-Infrastrukturberatung",
+        "description": "Unsere Experten helfen Ihnen bei der Auswahl und Implementierung von Cloud-, Hybrid- oder On-Premise-Lösungen."
       },
-      "benefits": {
-        "title": "Warum NearUp Ihr idealer Partner für IT-Beratung ist",
-        "description": "Mit NearUp erhalten Sie eine ganzheitliche IT-Beratung, die Ihre IT-Umgebung modernisiert, Kosten optimiert und die Wettbewerbsfähigkeit Ihres Unternehmens steigert.",
-        "benefits": [
-          {
-            "title": "Individuelle IT-Strategien",
-            "description": "Wir passen unsere IT-Lösungen individuell an Ihre Geschäftsanforderungen an und sorgen für nachhaltiges Wachstum."
-          },
-          {
-            "title": "Maximale Effizienz & Sicherheit",
-            "description": "Durch gezielte Optimierung und modernste Technologien verbessern wir die IT-Sicherheit und Effizienz Ihres Unternehmens."
-          }
-        ]
-      },
-      "benefitsOverview": {
-        "title": "Effiziente IT-Beratung für Unternehmen jeder Größe",
-        "description": "Unsere Experten unterstützen Unternehmen jeder Größe bei der Modernisierung und Optimierung ihrer IT-Prozesse, um langfristige Effizienz und Wettbewerbsfähigkeit zu gewährleisten."
-      },
-      "benefitsOverview2": {
-        "title": "Integration moderner Technologien für digitale Transformation",
-        "description": "Wir helfen Ihnen, moderne Technologien wie Cloud-Computing, Automatisierung und künstliche Intelligenz in Ihre IT-Strategie zu integrieren."
-      },
-      "faq": {
-        "title": "Häufige Fragen zur IT-Beratung mit NearUp",
-        "questions": [
-          {
-            "question": "Warum ist eine IT-Beratung wichtig?",
-            "answer": "Eine fundierte IT-Beratung hilft Unternehmen, ihre IT-Strategie zu optimieren, Kosten zu senken und innovative Technologien effizient zu nutzen."
-          },
-          {
-            "question": "Welche Unternehmen profitieren von IT-Beratung?",
-            "answer": "Startups, KMUs und große Unternehmen profitieren von einer maßgeschneiderten IT-Strategie, die ihre spezifischen Geschäftsziele unterstützt."
-          },
-          {
-            "question": "Welche Technologien nutzt NearUp in der IT-Beratung?",
-            "answer": "Wir arbeiten mit Cloud-Plattformen wie AWS, Azure und Google Cloud sowie mit Automatisierungstools, KI und IT-Sicherheitslösungen."
-          },
-          {
-            "question": "Wie lange dauert eine IT-Strategieberatung?",
-            "answer": "Je nach Komplexität dauert die Beratung zwischen 4-12 Wochen – von der Analyse bis zur Umsetzung."
-          },
-          {
-            "question": "Bietet NearUp auch IT-Implementierung an?",
-            "answer": "Ja, wir begleiten nicht nur die Strategieentwicklung, sondern auch die Implementierung und Optimierung Ihrer IT-Systeme."
-          }
-        ]
+      "card3": {
+        "title": "IT-Sicherheit & Compliance",
+        "description": "Wir entwickeln Sicherheitsstrategien, um Ihre IT-Umgebung gegen Cyber-Bedrohungen abzusichern und regulatorische Anforderungen zu erfüllen."
       }
     },
-    "itNearshoring": {
+    "benefits": {
+      "title": "Warum NearUp Ihr idealer Partner für IT-Beratung ist",
+      "description": "Mit NearUp erhalten Sie eine ganzheitliche IT-Beratung, die Ihre IT-Umgebung modernisiert, Kosten optimiert und die Wettbewerbsfähigkeit Ihres Unternehmens steigert.",
+      "benefits": [
+        {
+          "title": "Individuelle IT-Strategien",
+          "description": "Wir passen unsere IT-Lösungen individuell an Ihre Geschäftsanforderungen an und sorgen für nachhaltiges Wachstum."
+        },
+        {
+          "title": "Maximale Effizienz & Sicherheit",
+          "description": "Durch gezielte Optimierung und modernste Technologien verbessern wir die IT-Sicherheit und Effizienz Ihres Unternehmens."
+        }
+      ]
+    },
+    "benefitsOverview": {
+      "title": "Effiziente IT-Beratung für Unternehmen jeder Größe",
+      "description": "Unsere Experten unterstützen Unternehmen jeder Größe bei der Modernisierung und Optimierung ihrer IT-Prozesse, um langfristige Effizienz und Wettbewerbsfähigkeit zu gewährleisten."
+    },
+    "benefitsOverview2": {
+      "title": "Integration moderner Technologien für digitale Transformation",
+      "description": "Wir helfen Ihnen, moderne Technologien wie Cloud-Computing, Automatisierung und künstliche Intelligenz in Ihre IT-Strategie zu integrieren."
+    },
+    "faq": {
+      "title": "Häufige Fragen zur IT-Beratung mit NearUp",
+      "questions": [
+        {
+          "question": "Warum ist eine IT-Beratung wichtig?",
+          "answer": "Eine fundierte IT-Beratung hilft Unternehmen, ihre IT-Strategie zu optimieren, Kosten zu senken und innovative Technologien effizient zu nutzen."
+        },
+        {
+          "question": "Welche Unternehmen profitieren von IT-Beratung?",
+          "answer": "Startups, KMUs und große Unternehmen profitieren von einer maßgeschneiderten IT-Strategie, die ihre spezifischen Geschäftsziele unterstützt."
+        },
+        {
+          "question": "Welche Technologien nutzt NearUp in der IT-Beratung?",
+          "answer": "Wir arbeiten mit Cloud-Plattformen wie AWS, Azure und Google Cloud sowie mit Automatisierungstools, KI und IT-Sicherheitslösungen."
+        },
+        {
+          "question": "Wie lange dauert eine IT-Strategieberatung?",
+          "answer": "Je nach Komplexität dauert die Beratung zwischen 4-12 Wochen – von der Analyse bis zur Umsetzung."
+        },
+        {
+          "question": "Bietet NearUp auch IT-Implementierung an?",
+          "answer": "Ja, wir begleiten nicht nur die Strategieentwicklung, sondern auch die Implementierung und Optimierung Ihrer IT-Systeme."
+        }
+      ]
+    }
+  },
+  "itNearshoring": {
     "main": "IT Nearshoring mit NearUp",
     "heroDescription": "Optimieren Sie Ihre Softwareentwicklung mit Nearshoring – kosteneffizient, flexibel und mit direktem Zugang zu hochqualifizierten Entwicklern.",
     "mission": {
@@ -2167,79 +2167,79 @@
     }
   },
   "computerVisionApplications": {
-      "main": "Computer-Vision-Anwendungen mit NearUp",
-      "heroDescription": "Nutzen Sie modernste Computer-Vision-Technologien für Bild- und Videoanalyse, Automatisierung und Objekterkennung.",
-      "mission": {
-        "subtitle": "Computer Vision",
-        "title": "Unsere Mission und Vision für intelligente Bildverarbeitung",
-        "description": "NearUp entwickelt leistungsstarke Computer-Vision-Lösungen, die Unternehmen helfen, visuelle Daten zu analysieren, automatisierte Prozesse zu optimieren und innovative KI-basierte Anwendungen zu erstellen. Unser Ziel ist es, Computer Vision als strategischen Vorteil für Unternehmen nutzbar zu machen.",
-        "learnMoreText": "Erfahren",
-        "contactText": "Kontakt"
+    "main": "Computer-Vision-Anwendungen mit NearUp",
+    "heroDescription": "Nutzen Sie modernste Computer-Vision-Technologien für Bild- und Videoanalyse, Automatisierung und Objekterkennung.",
+    "mission": {
+      "subtitle": "Computer Vision",
+      "title": "Unsere Mission und Vision für intelligente Bildverarbeitung",
+      "description": "NearUp entwickelt leistungsstarke Computer-Vision-Lösungen, die Unternehmen helfen, visuelle Daten zu analysieren, automatisierte Prozesse zu optimieren und innovative KI-basierte Anwendungen zu erstellen. Unser Ziel ist es, Computer Vision als strategischen Vorteil für Unternehmen nutzbar zu machen.",
+      "learnMoreText": "Erfahren",
+      "contactText": "Kontakt"
+    },
+    "titleCards": {
+      "title": "Unsere Computer-Vision-Dienstleistungen für intelligente Bildverarbeitung",
+      "card1": {
+        "title": "Objekterkennung & Klassifizierung",
+        "description": "Wir entwickeln KI-Modelle zur Identifikation und Klassifizierung von Objekten in Bildern und Videos."
       },
-      "titleCards": {
-        "title": "Unsere Computer-Vision-Dienstleistungen für intelligente Bildverarbeitung",
-        "card1": {
-          "title": "Objekterkennung & Klassifizierung",
-          "description": "Wir entwickeln KI-Modelle zur Identifikation und Klassifizierung von Objekten in Bildern und Videos."
-        },
-        "card2": {
-          "title": "Gesichts- & Mustererkennung",
-          "description": "Unsere Computer-Vision-Technologien ermöglichen Gesichtserkennung, biometrische Identifikation und Musteranalyse."
-        },
-        "card3": {
-          "title": "Automatisierte Bild- & Videoanalyse",
-          "description": "Mit Deep-Learning-Algorithmen analysieren wir große Mengen visueller Daten für Industrie, Gesundheitswesen und Sicherheitssysteme."
-        }
+      "card2": {
+        "title": "Gesichts- & Mustererkennung",
+        "description": "Unsere Computer-Vision-Technologien ermöglichen Gesichtserkennung, biometrische Identifikation und Musteranalyse."
       },
-      "benefits": {
-        "title": "Warum NearUp Ihr idealer Partner für Computer-Vision-Anwendungen ist",
-        "description": "Mit NearUp profitieren Sie von hochmodernen KI-gestützten Bildverarbeitungslösungen, die Prozesse automatisieren und wertvolle visuelle Erkenntnisse liefern.",
-        "benefits": [
-          {
-            "title": "Automatisierung von visuellen Prozessen",
-            "description": "KI-gestützte Bilderkennung verbessert Effizienz und Präzision in der Produktion, Überwachung und Diagnostik."
-          },
-          {
-            "title": "Datengetriebene Entscheidungsfindung",
-            "description": "Erhalten Sie wertvolle Erkenntnisse aus visuellen Daten für Marketing, Sicherheitsüberwachung und Qualitätskontrolle."
-          }
-        ]
-      },
-      "benefitsOverview": {
-        "title": "Individuelle Computer-Vision-Lösungen für Unternehmen",
-        "description": "Unsere KI-Modelle sind in verschiedensten Branchen einsetzbar, darunter Gesundheitswesen, Fertigung, Sicherheit und Einzelhandel."
-      },
-      "benefitsOverview2": {
-        "title": "Skalierbare Computer-Vision-Modelle für vielfältige Anwendungen",
-        "description": "Unsere Lösungen lassen sich in bestehende IT-Infrastrukturen integrieren und ermöglichen Automatisierung durch visuelle KI-Technologien."
-      },
-      "faq": {
-        "title": "Häufige Fragen zu Computer-Vision-Anwendungen mit NearUp",
-        "questions": [
-          {
-            "question": "Welche Technologien nutzt NearUp für Computer Vision?",
-            "answer": "Wir arbeiten mit TensorFlow, OpenCV, PyTorch und Deep-Learning-Frameworks für Bilderkennung und Videoanalyse."
-          },
-          {
-            "question": "Kann Computer Vision in bestehende Software integriert werden?",
-            "answer": "Ja, unsere Computer-Vision-Modelle lassen sich in bestehende Systeme für Überwachung, Diagnostik und Automatisierung einbinden."
-          },
-          {
-            "question": "Welche Branchen profitieren von Computer Vision?",
-            "answer": "Computer-Vision-Anwendungen sind nützlich in Bereichen wie Sicherheit, Gesundheitswesen, Einzelhandel, Fertigung und Logistik."
-          },
-          {
-            "question": "Wie lange dauert die Entwicklung einer Computer-Vision-Lösung?",
-            "answer": "Die Dauer hängt von der Komplexität ab, in der Regel zwischen 6-12 Wochen."
-          },
-          {
-            "question": "Bietet NearUp auch Computer-Vision-Schulungen an?",
-            "answer": "Ja, wir bieten Workshops und Schulungen zur Implementierung und Nutzung von Computer-Vision-Technologien."
-          }
-        ]
+      "card3": {
+        "title": "Automatisierte Bild- & Videoanalyse",
+        "description": "Mit Deep-Learning-Algorithmen analysieren wir große Mengen visueller Daten für Industrie, Gesundheitswesen und Sicherheitssysteme."
       }
     },
-    "predictiveAnalytics": {
+    "benefits": {
+      "title": "Warum NearUp Ihr idealer Partner für Computer-Vision-Anwendungen ist",
+      "description": "Mit NearUp profitieren Sie von hochmodernen KI-gestützten Bildverarbeitungslösungen, die Prozesse automatisieren und wertvolle visuelle Erkenntnisse liefern.",
+      "benefits": [
+        {
+          "title": "Automatisierung von visuellen Prozessen",
+          "description": "KI-gestützte Bilderkennung verbessert Effizienz und Präzision in der Produktion, Überwachung und Diagnostik."
+        },
+        {
+          "title": "Datengetriebene Entscheidungsfindung",
+          "description": "Erhalten Sie wertvolle Erkenntnisse aus visuellen Daten für Marketing, Sicherheitsüberwachung und Qualitätskontrolle."
+        }
+      ]
+    },
+    "benefitsOverview": {
+      "title": "Individuelle Computer-Vision-Lösungen für Unternehmen",
+      "description": "Unsere KI-Modelle sind in verschiedensten Branchen einsetzbar, darunter Gesundheitswesen, Fertigung, Sicherheit und Einzelhandel."
+    },
+    "benefitsOverview2": {
+      "title": "Skalierbare Computer-Vision-Modelle für vielfältige Anwendungen",
+      "description": "Unsere Lösungen lassen sich in bestehende IT-Infrastrukturen integrieren und ermöglichen Automatisierung durch visuelle KI-Technologien."
+    },
+    "faq": {
+      "title": "Häufige Fragen zu Computer-Vision-Anwendungen mit NearUp",
+      "questions": [
+        {
+          "question": "Welche Technologien nutzt NearUp für Computer Vision?",
+          "answer": "Wir arbeiten mit TensorFlow, OpenCV, PyTorch und Deep-Learning-Frameworks für Bilderkennung und Videoanalyse."
+        },
+        {
+          "question": "Kann Computer Vision in bestehende Software integriert werden?",
+          "answer": "Ja, unsere Computer-Vision-Modelle lassen sich in bestehende Systeme für Überwachung, Diagnostik und Automatisierung einbinden."
+        },
+        {
+          "question": "Welche Branchen profitieren von Computer Vision?",
+          "answer": "Computer-Vision-Anwendungen sind nützlich in Bereichen wie Sicherheit, Gesundheitswesen, Einzelhandel, Fertigung und Logistik."
+        },
+        {
+          "question": "Wie lange dauert die Entwicklung einer Computer-Vision-Lösung?",
+          "answer": "Die Dauer hängt von der Komplexität ab, in der Regel zwischen 6-12 Wochen."
+        },
+        {
+          "question": "Bietet NearUp auch Computer-Vision-Schulungen an?",
+          "answer": "Ja, wir bieten Workshops und Schulungen zur Implementierung und Nutzung von Computer-Vision-Technologien."
+        }
+      ]
+    }
+  },
+  "predictiveAnalytics": {
     "main": "Prädiktive Analytik mit NearUp",
     "heroDescription": "Nutzen Sie die Kraft der Daten, um zukünftige Entwicklungen vorherzusagen und fundierte Geschäftsentscheidungen zu treffen.",
     "mission": {
@@ -2458,6 +2458,4 @@
       ]
     }
   }
-  }  
-  
-
+}
