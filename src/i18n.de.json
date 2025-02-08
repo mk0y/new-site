@@ -273,11 +273,11 @@
       },
       "phone": {
         "label": "Telefon",
-        "value": "+49 (30) 12345678"
+        "value": "+49 171 336 55 32"
       },
       "office": {
         "label": "Büro",
-        "value": "Musterstraße 123, Berlin 10115 DE"
+        "value": "Friedrichstr. 114A, 10117 Berlin"
       },
       "consultingText": "Beratung",
       "learnMoreText": "Mehr erfahren"
@@ -358,11 +358,22 @@
     },
     "phone": {
       "label": "Telefon",
-      "value": "+49 (30) 12345678"
+      "value": "+49 171 336 55 32"
     },
     "office": {
       "label": "Büro",
-      "value": "Musterstraße 123, Berlin 10115 DE"
+      "value": "Friedrichstr. 114A, 10117 Berlin"
+    },
+    "form": {
+      "title": "Senden Sie uns eine Nachricht",
+      "fullName": "Vollständiger Name",
+      "email": "E-Mail-Adresse",
+      "company": "Firmenname",
+      "phone": "Telefonnummer (Optional)",
+      "message": "Ihre Nachricht",
+      "submit": "Nachricht senden",
+      "thankYou": "Vielen Dank für Ihre Nachricht! Wir werden uns schnellstmöglich um Ihre Anfrage kümmern.",
+      "error": "Es ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut."
     }
   },
   "startups": {
